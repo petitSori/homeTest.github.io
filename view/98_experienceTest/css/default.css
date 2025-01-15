@@ -1,0 +1,2690 @@
+@font-face {
+	font-family: "pretendard";
+	font-style: normal;
+	font-weight: 500;
+	src: url("../../../assets/fonts/Pretendard-Regular.woff2") format("woff2");
+  }
+  @font-face {
+	font-family: "pretendard";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../../../assets/fonts/Pretendard-Bold.woff2") format("woff2");
+  }
+  @font-face {
+	font-family: "pretendard";
+	font-style: normal;
+	font-weight: 800;
+	src: url("../../../assets/fonts/Pretendard-ExtraBold.woff2") format("woff2");
+  }
+  
+body{ width:100%; min-width: 360px; height:100%; overflow-x: hidden; text-align:left; font-size:20px; font-weight:400; font-family:"pretendard", Helvetica, Tahoma, Verdana, Arial, AppleGothic, UnDotum, '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', '굴림', 'Gulim', sans-serif; color:#494A4B; line-height:1.4; letter-spacing: -0.02em !important; -webkit-overflow-scrolling:touch;  }
+body,p,h1,h2,h3,h4,h5,h6,table,caption,form,fieldset,legend,span,div,th,td,address{margin:0; padding:0; letter-spacing: -0.02em;}
+button, span, strong, input, b, em{font-size:inherit; font-family: "pretendard";color:inherit;font-style:normal}
+section, article, aside, header, footer, nav, hgroup, dialog, details, summary, figure, figcaption {display: block;}
+cite{display:inline}
+ul,ol,li,dl,dt,dd{list-style:none; margin:0; padding:0px; letter-spacing: -0.02em;}
+a{display:inline-block;font-size:0}
+a:link {text-decoration:none;} 
+a:visited {text-decoration:none;}
+img{border:0;}
+label, input, textarea, select{vertical-align:middle}
+ol, ul{list-style:none;} 
+table{border-collapse:collapse;table-layout:fixed;}
+fieldset{border:none}
+button, a{cursor: pointer; touch-action:manipulation; height:auto; margin: 0; padding: 0; box-sizing: border-box;}
+button, input, select, button:focus, input:focus, select:focus, textarea{outline: none;}
+button{border:0 none;border-radius:0;background-color:transparent;cursor:pointer;}
+.only-pc {
+	display: block;
+}
+.only-mo {
+	display: none;
+}
+#tutorial {
+	background-color: #F3F4F8;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	min-height: 100vh;
+}
+#tutorial .btn-wrap {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 24px 30px;
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.btn-wrap button {
+	width: 176px;
+}
+.btn-wrap button img {
+	width: 100%;
+	display: block;
+}
+.btn-wrap button.disabled {
+	opacity: 0; /* 투명하게 만듦 */
+	pointer-events: none; /* 클릭 방지 */
+}
+.tab-wrap{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	padding: 24px 30px;
+	display: flex;
+	justify-content: center;
+	box-sizing: border-box;
+}
+.tab-wrap .tab{
+	display: flex;
+}
+.tab-wrap .tab li{
+	height: 62px;
+	margin: 0 10px;
+}
+.tab-wrap .tab li a{
+	display: block;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 60px;
+	color:#AAAAAA;
+	padding: 0 16px;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1;
+}
+.tab-wrap .tab li.active a{
+	font-weight: 700;
+	color: #146EE6; 
+	border-bottom: 3px solid #146EE6;
+}
+.bounce {
+	animation-name: bounce;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.toast {
+	position: absolute;
+	top: auto !important;
+	bottom: 19% !important;
+	left: 50% !important;
+	margin-left: -9.13% !important;
+	opacity: 0;
+	width: 18.26% !important;
+	animation-name: toast;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+	transition-delay:1s;
+	animation-delay: 1s;
+}
+.toast2 {
+	position: absolute;
+	top: 8% !important;
+	left: 50% !important;
+	margin-left: -19.055% !important;
+	opacity: 0;
+	width: 38.11% !important;
+	animation-name: toast2;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+	transition-delay:1s;
+	animation-delay: 1s;
+}
+@keyframes bounce {
+    0% {transform:translateY(0)}
+	50% {transform:translateY(-15%)}
+    100% {transform:translateY(0)}
+}
+@keyframes toast {
+    0% {
+		opacity: 0;
+		transform:translateY(50%)
+	}
+	15% {
+		opacity: 1;
+		transform:translateY(0)
+	}
+	100% {
+		opacity: 1;
+		transform:translateY(0)
+	}
+}
+@keyframes toast2 {
+    0% {
+		opacity: 0;
+		transform:translateY(-50%)
+	}
+	15% {
+		opacity: 1;
+		transform:translateY(0)
+	}
+	100% {
+		opacity: 1;
+		transform:translateY(0)
+	}
+}
+.end_btn{
+	position:absolute;top:0;left:0;
+	width:100%;height:100%;
+	box-sizing:border-box;
+	padding-top:332px;
+	background:rgba(0,0,0,0.85);
+	text-align:center;
+	z-index:10;
+	opacity:0;transition:.6s;visibility:hidden;
+}
+.on{opacity:1;visibility:visible}
+.ani0{transition-delay:0s;animation-delay: 0s;}
+.ani05{transition-delay:.5s;animation-delay: .5s;}
+.ani1{transition-delay:1s;animation-delay: 1s;}
+.ani2{transition-delay:2s;animation-delay: 2s;}
+.ani3{transition-delay:3s;animation-delay: 3s;}
+.ani4{transition-delay:4s;animation-delay: 4s;}
+.ani5{transition-delay:5s;animation-delay: 5s;}
+.ani6{transition-delay:6s;animation-delay: 6s;}
+.ani7{transition-delay:7s;animation-delay: 7s;}
+.ani8{transition-delay:8s;animation-delay: 8s;}
+.ani9{transition-delay:9s;animation-delay: 9s;}
+.ani10{transition-delay:10s;animation-delay: 10s;}
+.ani11{transition-delay:11s;animation-delay: 11s;}
+.ani12{transition-delay:12s;animation-delay: 12s;}
+.ani13{transition-delay:13s;animation-delay: 13s;}
+.ani14{transition-delay:14s;animation-delay: 14s;}
+.ani15{transition-delay:15s;animation-delay: 15s;}
+
+.scroll_wrap{position:absolute;top:241px;left:357px;width:309px;height:446px;overflow:Hidden;}
+.scroll_wrap img{display:block;width:100%;transition:.5s}
+
+
+.animContainer {
+	opacity: 1;
+	position: absolute;
+	bottom: 21%;
+	right: 3%;
+	width: 64px;
+	height: 64px;
+	pointer-events: none;
+}
+.animContainer lottie-player {
+	width: 100%;
+	height: 100%;
+}
+.opacityAni1 {
+	animation-name: opacity;
+	animation-duration: 0.8s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni1.delay {
+	animation-name: opacity2;
+	animation-duration: 1.6s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni2 {
+	animation-name: opacity2;
+	animation-duration: 1.6s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni3 {
+	animation-name: opacity3;
+	animation-duration: 2.4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni4 {
+	animation-name: opacity4;
+	animation-duration: 3.2s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni5 {
+	animation-name: opacity5;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni6 {
+	animation-name: opacity5;
+	animation-duration: 4.8s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni7 {
+	animation-name: opacity5;
+	animation-duration: 5.6s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAniEnd {
+	animation-name: opacityEnd;
+	animation-duration: 0.8s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes opacity {
+	0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes opacity2 {
+	0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes opacity3 {
+	0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes opacity4 {
+	0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes opacityEnd {
+	0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+/* common */
+section.page-box.intro{
+	position: relative;
+}
+section.page-box.intro .intro-box{
+	padding-top: 100px;
+	text-align: center;
+
+}
+section.page-box.intro .intro-box .title{
+	letter-spacing: -0.02em;
+	text-align: center;
+	font-size: 48px;
+	line-height: 1.4;
+	font-weight: 700;
+	color:#222222;
+}
+
+section.page-box.intro .intro-box .title span {
+	letter-spacing: -0.02em;
+	font-size: 48px;
+	line-height: 1.4;
+	font-weight: 700;
+	color:#222222;
+	background: linear-gradient(99.09deg, #288DEC 0%, #3E50D9 100%);
+	color: transparent;
+	-webkit-background-clip: text;
+}
+section.page-box.intro .intro-box .img{
+	width: 480px;
+	margin: 38px auto 0;
+}
+section.page-box.intro .intro-box img{
+	display: block;
+	width: 100%;
+}
+section.page-box.intro .intro-box .bubble-wrap{
+	position: relative;
+	margin-top: 46px;
+	display: inline-block;
+	background-color: #ffffff;
+	padding: 0 32px;
+	border-radius: 100px;
+}
+section.page-box.intro .intro-box .bubble-wrap::after{
+	width: 20px;
+	height: 14px;
+	position: absolute;
+	top: -14px;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	content: '';
+	background: url(../images/bubble_tip.png) no-repeat center / cover;
+
+}
+section.page-box.intro .intro-box .bubble-wrap p{
+	background: linear-gradient(99.09deg, #288DEC 0%, #3E50D9 100%);
+	color: transparent;
+	-webkit-background-clip: text;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 60px;
+}
+section.page-box.intro .intro-box + .desc {
+	display: block;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	color:#666666;
+	font-size: 16px;
+	line-height: 1.4;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+section.page-box.end{
+	position: relative;
+	width: 1440px !important;
+}
+section.page-box.end .end-box{
+	text-align: center;
+
+}
+section.page-box.end .end-box .title{
+	letter-spacing: -0.02em;
+	text-align: center;
+	font-size: 48px;
+	line-height: 1.4;
+	font-weight: 700;
+	color:#222222;
+}
+section.page-box.end .end-box .title span {
+	letter-spacing: -0.02em;
+	font-size: 48px;
+	line-height: 1.4;
+	font-weight: 700;
+	color:#222222;
+	background: linear-gradient(99.09deg, #288DEC 0%, #3E50D9 100%);
+	color: transparent;
+	-webkit-background-clip: text;
+}
+section.page-box.end .end-box .btn {
+	margin-top: 20px;
+	display: inline-flex;
+	gap: 12px;
+}
+section.page-box.end .end-box .btn button{
+	height: 64px;
+	border-radius: 150px;
+	padding: 0 40px;
+}
+section.page-box.end .end-box .btn button.blue{
+	background-color: #146EE6;
+}
+section.page-box.end .end-box .btn button.black{
+	background-color: #343434;
+}
+section.page-box.end .end-box .btn button img {
+	margin-right: 4px;
+	vertical-align: sub;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+section.page-box.end .end-box .btn button span{
+	font-size: 20px; 
+	line-height: 64px;
+	color:#ffffff;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+}
+section.page-box.end .end-box .info-box {
+	margin-top: 48px;
+	display: flex;
+	gap: 88px;
+}
+section.page-box.end .end-box .info-box > div {
+	flex: 1;
+}
+section.page-box.end .end-box .info-box .title {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.4;
+	color:#666666;
+	letter-spacing: -0.02em;
+	margin-bottom: 20px;
+}
+section.page-box.end .end-box .info-box .pos-list{
+
+}
+section.page-box.end .end-box .info-box .pos-list ul{
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section.page-box.end .end-box .info-box .pos-list li{
+	width: 48.82%;
+	box-sizing: border-box;
+	margin-bottom: 16px;
+}
+section.page-box.end .end-box .info-box .pos-list li a{
+	display: flex;
+	align-items: center;
+	background-color: #ffffff;
+	padding: 40px 34px 40px 40px;
+	border-radius: 24px;
+	border: 1px solid #dddddd;
+	box-sizing: border-box;
+}
+section.page-box.end .end-box .info-box .pos-list li a span {
+	position: relative;
+	display: block;
+	font-size: 24px;
+	line-height: 1.4;
+	letter-spacing: -0.02em;
+	padding-right: 36px;
+	margin-left: 19px;
+	color:#222222;
+	font-weight: 700;
+}
+section.page-box.end .end-box .info-box .pos-list li a span::after{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: '';
+	background: url(../images/ic_arrow.png) no-repeat center / cover;
+
+}
+
+section.page-box.end .end-box .info-box .other ul{
+	display: flex;
+	gap: 16px;
+}
+section.page-box.end .end-box .info-box .other ul li{
+	border-radius: 24px;
+	border: 1px solid #dddddd;
+	box-sizing: border-box;
+	padding-top: 40px;
+	background-color: #ffffff;
+}
+section.page-box.end .end-box .info-box .other ul li .name{
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 1.4;
+	margin-bottom: 16px;
+	background: linear-gradient(99.09deg, #288DEC 0%, #3E50D9 100%);
+	color: transparent;
+	-webkit-background-clip: text;
+	letter-spacing: -0.02em;
+}
+section.page-box.end .end-box .info-box .other ul li .link {
+	border: 1px solid #146EE6;
+	height: 52px;
+	padding: 0 24px 0 32px;
+	border-radius: 150px;
+} 
+section.page-box.end .end-box .info-box .other ul li .link span{
+	position: relative;
+	display: inline-block;
+	line-height: 52px;
+	font-weight: 700;
+	font-size: 18px;
+	color: #146EE6;
+	padding-right: 32px;
+} 
+section.page-box.end .end-box .info-box .other ul li .link span::after{
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	content: '';
+	background: url(../images/ic_arrow.png) no-repeat center / cover;
+	filter: brightness(0) saturate(100%) invert(29%) sepia(79%) saturate(2787%) hue-rotate(206deg) brightness(95%) contrast(90%);
+}
+section.page-box.end .end-box .info-box .other ul li img {
+	display: block;
+	margin-top: 8px;
+	width: 100%;
+}
+
+section.page-box.end .end-box + .desc {
+	display: block;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	color:#666666;
+	font-size: 16px;
+	line-height: 1.4;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+section.page-box .step-title {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	font-size: 56px;
+	font-weight: 700;
+	line-height: 1.2;
+	color:#222222;
+}
+section.page-box .step-title span{
+	color:#146EE6;
+}
+
+/* pos_common */
+#matePos {
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#matePos > section {
+	width: 1194px;
+	height: 796px;
+	margin: auto;
+	/* margin-top: 130px; */
+}
+#matePos > section.page-box {
+	display: none;
+}
+#matePos > section.page-box.on {
+	display: block;
+}
+#matePos > section.page-box.on .animContainer {
+	animation-name: opacity2;
+	animation-duration: 1.6s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+#matePos > section.cont { 
+	position: relative;
+}
+#matePos > section.cont img {
+	position: absolute; 
+	top: 0;
+	left: 0;
+	display: block;
+}
+#matePos > section.cont img.ps-r {
+	/* width: 100%; */
+	position: relative;
+	top: auto;
+	left: auto;
+}
+#matePos > section.cont button {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+}
+#matePos > section.cont button img.btn-img {
+	width: 100%;
+	position: relative;
+	top: auto;
+	left: auto;
+}
+#matePos > section.cont img.size-100 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	display: block;
+	width: 100%;
+}
+#matePos > section.cont img.balloon{
+	position:absolute;
+	z-index:3;
+	top: 50%;
+	left: 50%;
+	margin-left: -16.75%;
+	width: 33.5%;
+}
+
+
+/* pos_organize*/
+/* step2 */
+#matePos.organize > section.cont[data-step="2"] img.balloon{
+	top: 64%;
+	left: 68.3%;
+}
+#matePos.organize > section.cont[data-step="2"] button{
+	width: 24.29%;
+	max-width: 290px;
+	margin-left: -12.145%;
+	top: auto;
+	bottom: 35.3%;
+	left: 68.3%;
+}
+#matePos.organize > section.cont[data-step="2"] button .animContainer{
+	bottom: -17%;
+    right: 9%;
+}
+/* step3 */
+#matePos.organize > section.cont[data-step="3"] img.balloon{
+	top: 36%;
+	left: 31%;
+}
+/* step4 */
+#matePos.organize > section.cont[data-step="4"] img.balloon{
+	top: 22%;
+	left: 31%;
+}
+/* step5 */
+#matePos.organize > section.cont[data-step="5"] img.balloon{
+	top: 51%;
+	left: 36%;
+}
+/* step6 */
+#matePos.organize > section.cont[data-step="6"] img.balloon{
+	top: 41%;
+	left: 63.3%;
+}
+#matePos.organize > section.cont[data-step="6"] button{
+	width: 15.411%;
+	max-width: 184px;
+	margin-left: -7.7055%;
+	top: auto;
+	bottom: 42.2%;
+	left: 63.3%;
+}
+#matePos.organize > section.cont[data-step="6"] button .animContainer{
+	bottom: -60%;
+    right: -13%;
+}
+/* step7 */
+#matePos.organize > section.cont[data-step="7"] img.balloon{
+	top: 20%;
+}
+/* step8 */
+#matePos.organize > section.cont[data-step="8"] img.balloon{
+	top: 42%;
+}
+/* step9 */
+#matePos.organize > section.cont[data-step="9"] img.balloon{
+	top: 42%;
+}
+/* step10 */
+#matePos.organize > section.cont[data-step="10"] img.balloon{
+	top: 42%;
+}
+/* step11 */
+#matePos.organize > section.cont[data-step="11"] img.balloon{
+	top: 42%;
+}
+/* step12 */
+#matePos.organize > section.cont[data-step="12"] img.balloon{
+	top: 42%;
+}
+/* step13 */
+#matePos.organize > section.cont[data-step="13"] img.balloon{
+	top: 41%;
+	left: 68%;
+}
+/* step14 */
+#matePos.organize > section.cont[data-step="14"] img.balloon{
+	top: 31.5%;
+	left: 39%;
+}
+/* step15 */
+#matePos.organize > section.cont[data-step="15"] img.balloon{
+	top: 86%;
+	left: 81%;
+}
+
+
+/* pos_orderTable*/
+/* step1 */
+#matePos.orderTable > section.cont[data-step="1"] img.balloon{
+	top: 34%;
+}
+#matePos.orderTable > section.cont[data-step="1"] button{
+	width: 17.002%;
+	max-width: 203px;
+	margin-left: -8.501%;
+	top: auto;
+	bottom: 64.8%;
+	left: 50%;
+}
+#matePos.orderTable > section.cont[data-step="1"] button .animContainer{
+	bottom: -5%;
+    right: -2%;
+}
+/* step2 */
+#matePos.orderTable > section.cont[data-step="2"] img.balloon{
+	top: 27%;
+	left: 69%;
+}
+/* step3 */
+#matePos.orderTable > section.cont[data-step="3"] img.balloon{
+	top: 47%;
+	left: 69%;
+}
+/* step4 */
+#matePos.orderTable > section.cont[data-step="4"] img.balloon{
+	top: 16%;
+	left: 52.5%;
+}
+#matePos.orderTable > section.cont[data-step="4"] button{
+	width: 8.543%;
+	max-width: 102px;
+	margin-left: -4.2715%;
+	top: 25.4%;
+	left: 52.55%;
+}
+#matePos.orderTable > section.cont[data-step="4"] button .animContainer{
+	bottom: -26%;
+    right: -17%;
+}
+
+/* step5 */
+#matePos.orderTable > section.cont[data-step="5"] img.balloon{
+	top: 38%;
+	left: 47.5%;
+}
+/* step6 */
+#matePos.orderTable > section.cont[data-step="6"] img.balloon{
+	top:29%;
+	left: 41%;
+}
+#matePos.orderTable > section.cont[data-step="6"] button{
+	width: 17.84%;
+	max-width: 213px;
+	margin-left: -8.92%;
+	top: auto;
+	bottom: 45.91%;
+	left: 45.21%;
+}
+#matePos.orderTable > section.cont[data-step="6"] button .animContainer{
+	bottom: -8%;
+    right: -8%;
+}
+/* step7 */
+#matePos.orderTable > section.cont[data-step="7"] img.balloon{
+	top:70%;
+	left: 59%;
+}
+#matePos.orderTable > section.cont[data-step="7"] button{
+	width: 46.4%;
+	max-width: 554px;
+	margin-left: -23.2%;
+	top: auto;
+	bottom:13.1%;
+	left: 59.12%;
+}
+#matePos.orderTable > section.cont[data-step="7"] button .animContainer{
+	bottom: -34%;
+    right: 32%;
+}
+/* step8 */
+#matePos.orderTable > section.cont[data-step="8"] img.balloon{
+	top: 43%;
+	left: 29.5%;
+}
+/* step9 */
+#matePos.orderTable > section.cont[data-step="9"] img.balloon{
+	top:69.5%;
+	left: 83.5%;
+}
+#matePos.orderTable > section.cont[data-step="9"] button{
+	width: 13.4%;
+	max-width: 160px;
+	margin-left: -6.7%;
+	top: auto;
+	bottom:6.5%;
+	left: 83.12%;
+}
+#matePos.orderTable > section.cont[data-step="9"] button .animContainer{
+	bottom: -25%;
+    right: -13%;
+}
+/* step10 */
+#matePos.orderTable > section.cont[data-step="10"] img.balloon{
+	top: 34%;
+}
+
+/* pos_orderCall*/
+/* step1 */
+#matePos.orderCall > section.cont[data-step="1"] img.balloon{
+	top: 20%;
+	left: 29%;
+}
+/* step2 */
+#matePos.orderCall > section.cont[data-step="2"] img.balloon{
+	top: 11%;
+	left: 43.5%;
+}
+#matePos.orderCall > section.cont[data-step="2"] button{
+	width: 8.124%;
+	max-width: 97px;
+	margin-left: -4.062%;
+	top: 18.3%;
+	left: 43.45%;
+}
+#matePos.orderCall > section.cont[data-step="2"] button .animContainer{
+	bottom: -35%;
+    right: -22%;
+}
+/* step3 */
+#matePos.orderCall > section.cont[data-step="3"] img.balloon{
+	top: 30%;
+	left: 29%;
+}
+/* step4 */
+#matePos.orderCall > section.cont[data-step="4"] img.balloon{
+	top: 53%;
+	left: 69%;
+}
+/* step5 */
+#matePos.orderCall > section.cont[data-step="5"] img.balloon{
+	top: 48%;
+	left: 63%;
+}
+#matePos.orderCall > section.cont[data-step="5"] button{
+	width: 11.726%;
+	max-width: 140px;
+	margin-left: -5.863%;
+	top: 51.71%;
+	left: 83.32%;
+}
+#matePos.orderCall > section.cont[data-step="5"] button .animContainer{
+	bottom: -54%;
+    right: -8%;
+}
+/* step6 */
+#matePos.orderCall > section.cont[data-step="6"] img.balloon{
+	top: 24%;
+	left: 53%;
+}
+#matePos.orderCall > section.cont[data-step="6"] button{
+	width: 8.124%;
+	max-width: 97px;
+	margin-left: -4.062%;
+	top: 34.7%;
+	left: 52.57%;
+}
+#matePos.orderCall > section.cont[data-step="6"] button .animContainer{
+	bottom: -35%;
+    right: -22%;
+}
+/* step8 */
+#matePos.orderCall > section.cont[data-step="8"] img.balloon{
+	top: 70%;
+	left: 84%;
+}
+#matePos.orderCall > section.cont[data-step="8"] button{
+	width: 17.923%;
+	max-width: 214px;
+	margin-left: 8.9615%;
+	top: 82.96%;
+	left: 62.9%;
+}
+#matePos.orderCall > section.cont[data-step="8"] button .animContainer{
+	bottom: -22%;
+    right: -8%;
+}
+
+/* pos_orderDelivery*/
+/* step1 */
+#matePos.orderDelivery > section.cont[data-step="1"] img.balloon{
+	top: 25%;
+	left: 72%;
+}
+/* step2 */
+#matePos.orderDelivery > section.cont[data-step="2"] img.balloon{
+	top: 54%;
+	left: 73%;
+}
+/* step3 */
+#matePos.orderDelivery > section.cont[data-step="3"] img.balloon{
+	top: 69%;
+	left: 80%;
+}
+#matePos.orderDelivery > section.cont[data-step="3"] button{
+	width: 19.18%;
+	max-width: 229px;
+	margin-left: -9.59%;
+	top: 77.7%;
+	left: 80.22%;
+}
+#matePos.orderDelivery > section.cont[data-step="3"] button .animContainer{
+	bottom: -45%;
+    right: -2%;
+}
+/* step4 */
+#matePos.orderDelivery > section.cont[data-step="4"] img.balloon{
+	top: 18.5%;
+	left: 65%;
+}
+#matePos.orderDelivery > section.cont[data-step="4"] button{
+	width: 17.002%;
+	max-width: 203px;
+	margin-left: -8.501%;
+	top: 27.2%;
+	left: 64.22%;
+}
+#matePos.orderDelivery > section.cont[data-step="4"] button .animContainer{
+	bottom: -34%;
+    right: -7%;
+}
+/* step5 */
+#matePos.orderDelivery > section.cont[data-step="5"] img.balloon{
+	top: 24%;
+	left: 27%;
+}
+/* step6 */
+#matePos.orderDelivery > section.cont[data-step="6"] img.balloon{
+	top: 68.5%;
+	left: 80%;
+}
+#matePos.orderDelivery > section.cont[data-step="6"] button{
+	width: 17.086%;
+	max-width: 204px;
+	margin-left: -8.543%;
+	top: 77.68%;
+	left: 80.42%;
+}
+#matePos.orderDelivery > section.cont[data-step="6"] button .animContainer{
+	bottom: -34%;
+    right: -7%;
+}
+/* step7 */
+#matePos.orderDelivery > section.cont[data-step="7"] img.balloon{
+	top: 49%;
+	left: 72.5%;
+}
+/* step8 */
+#matePos.orderDelivery > section.cont[data-step="8"] img.balloon{
+	top: 56%;
+	left: 72.5%;
+}
+/* step9 */
+#matePos.orderDelivery > section.cont[data-step="9"] img.balloon{
+	top: 58%;
+	left: 43.5%;
+}
+#matePos.orderDelivery > section.cont[data-step="9"] button{
+	width: 8.962%;
+	max-width: 107px;
+	margin-left: -4.481%;
+	top:59%;
+	left: 60.287%;
+	z-index: 4;
+}
+#matePos.orderDelivery > section.cont[data-step="9"] button .animContainer{
+	bottom: -40%;
+    right: -20%;
+}
+/* step10 */
+#matePos.orderDelivery > section.cont[data-step="10"] img.balloon{
+	top: 67%;
+	left: 76.5%;
+}
+#matePos.orderDelivery > section.cont[data-step="10"] button{
+	width: 28.309%;
+	max-width: 338px;
+	margin-left: -14.1545%;
+	top:77.55%;
+	left: 75.656%;
+}
+#matePos.orderDelivery > section.cont[data-step="10"] button > img{
+	opacity: 0.5;
+}
+#matePos.orderDelivery > section.cont[data-step="10"] button .animContainer{
+	bottom: -40%;
+    right: 0%;
+}
+/* step11 */
+#matePos.orderDelivery > section.cont[data-step="11"] img.balloon{
+	top: 26%;
+	left: 38.5%;
+}
+/* step12 */
+#matePos.orderDelivery > section.cont[data-step="12"] img.balloon{
+	top: 67%;
+	left: 60.5%;
+}
+/* step13 */
+#matePos.orderDelivery > section.cont[data-step="13"] img.balloon{
+	top: 67%;
+	left: 72.5%;
+}
+/* step15 */
+#matePos.orderDelivery > section.cont[data-step="15"] img.balloon{
+	top: 26%;
+}
+
+/* pos_orderTogo*/
+/* step1 */
+#matePos.orderTogo > section.cont[data-step="1"] img.balloon{
+	top: 24.5%;
+	left: 71%;
+}
+/* step2 */
+#matePos.orderTogo > section.cont[data-step="2"] img.balloon{
+	top: 53%;
+	left: 73%;
+}
+/* step3 */
+#matePos.orderTogo > section.cont[data-step="3"] img.balloon{
+	top: 68%;
+	left: 80.5%;
+}
+#matePos.orderTogo > section.cont[data-step="3"] button{
+	width: 19.766%;
+	max-width: 236px;
+	margin-left: -9.883%;
+	top:77.55%;
+	left: 79.89%;
+}
+#matePos.orderTogo > section.cont[data-step="3"] button .animContainer{
+	bottom: -40%;
+    right: 0%;
+}
+/* step4 */
+#matePos.orderTogo > section.cont[data-step="4"] img.balloon{
+	top: 25%;
+	left: 72.5%;
+}
+#matePos.orderTogo > section.cont[data-step="4"] button{
+	width: 34.339%;
+	max-width: 410px;
+	margin-left: -17.1695%;
+	top:34.2%;
+	left: 72.61%;
+}
+#matePos.orderTogo > section.cont[data-step="4"] button .animContainer{
+	bottom: -33%;
+    right: 15%;
+}
+/* step5 */
+#matePos.orderTogo > section.cont[data-step="5"] img.balloon{
+	top: 26%;
+	left: 27%;
+}
+/* step6 */
+#matePos.orderTogo > section.cont[data-step="6"] img.balloon{
+	top: 64.5%;
+	left: 80%;
+}
+/* step7 */
+#matePos.orderTogo > section.cont[data-step="7"] img.balloon{
+	top: 40.5%;
+	left: 67.5%;
+}
+#matePos.orderTogo > section.cont[data-step="7"] button{
+	width: 11.4741%;
+	max-width: 137px;
+	margin-left: -5.73705%;
+	top:44%;
+	left: 84.04%;
+}
+#matePos.orderTogo > section.cont[data-step="7"] button .animContainer{
+	bottom: -33%;
+    right: -5%;
+}
+/* step8 */
+#matePos.orderTogo > section.cont[data-step="8"] img.balloon{
+	top: 26%;
+	left: 50%;
+}
+
+/* pos_setDefault*/
+#matePos.setDefault > section.page-box.rotate {
+	overflow: hidden;
+}
+#matePos.setDefault > section.page-box.rotate img.wide{
+	animation: imgChange2 5s step-end 1 forwards;
+	height: 100%;
+}
+@keyframes imgChange2 {
+	0% {
+		left: 0%;
+	}
+	25% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+/* step1 */
+#matePos.setDefault > section.cont[data-step="1"] button{
+	width: 15.997%;
+	max-width: 191px;
+	margin-left: -7.9985%;
+	top:6.54%;
+	left:18.3%;
+}
+#matePos.setDefault > section.cont[data-step="1"] button .animContainer{
+	bottom: 0%;
+    right: 50%;
+}
+#matePos.setDefault > section.cont[data-step="1"] img.balloon{
+	top: 12%;
+	left: 12.8%;
+}
+/* step2 */
+#matePos.setDefault > section.cont[data-step="2"] button{
+	width: 19.347%;
+	max-width: 231px;
+	margin-left: -9.6735%;
+	top:58.1%;
+	left:20%;
+	z-index: 4;
+}
+#matePos.setDefault > section.cont[data-step="2"] button .animContainer{
+	bottom: -10%;
+    right: 15%;
+}
+#matePos.setDefault > section.cont[data-step="2"] img.balloon{
+	top: 58%;
+	left: 41.5%;
+}
+/* step3 */
+#matePos.setDefault > section.cont[data-step="3"] img.balloon{
+	top: 58%;
+}
+/* step4 */
+#matePos.setDefault > section.cont[data-step="4"] img.balloon{
+	top: 52%;
+	left: 71%;
+}
+/* step5 */
+#matePos.setDefault > section.cont[data-step="5"] img.balloon{
+	top: 62%;
+}
+/* step6 */
+#matePos.setDefault > section.cont[data-step="6"] button{
+	width: 24.875%;
+	max-width: 297px;
+	margin-left: -14.4375%;
+	top:85.34%;
+	left:79.4%;
+}
+#matePos.setDefault > section.cont[data-step="6"] button .animContainer{
+	bottom: -30%;
+    right: -5%;
+}
+#matePos.setDefault > section.cont[data-step="6"] img.balloon{
+	top: 74%;
+	left: 78%;
+}
+/* step8 */
+#matePos.setDefault > section.cont[data-step="8"] img.balloon{
+	top: 79%;
+}
+/* step9 */
+#matePos.setDefault > section.cont[data-step="9"] img.balloon{
+	top: 50.5%;
+	left:59.5%;
+}
+/* step10 */
+#matePos.setDefault > section.cont[data-step="10"] img.balloon{
+	top: 79%;
+	left:59%;
+}
+/* step12 */
+#matePos.setDefault > section.cont[data-step="12"] button{
+	width: 79.481%;
+	max-width: 949px;
+	margin-left: -39.7405%;
+	top:86.6%;
+}
+#matePos.setDefault > section.cont[data-step="12"] button .animContainer{
+	bottom: -30%;
+    right: 30%;
+}
+#matePos.setDefault > section.cont[data-step="12"] img.balloon{
+	top: 74%;
+}
+
+/* pos_setTable*/
+/* step1 */
+#matePos.setTable > section.cont[data-step="1"] button{
+	width: 15.997%;
+	max-width: 191px;
+	margin-left: -7.9985%;
+	top:6.54%;
+	left:18.3%;
+}
+#matePos.setTable > section.cont[data-step="1"] button .animContainer{
+	bottom: 0%;
+    right: 50%;
+}
+#matePos.setTable > section.cont[data-step="1"] img.balloon{
+	top: 12%;
+	left: 12.8%;
+}
+/* step2 */
+#matePos.setTable > section.cont[data-step="2"] img.balloon{
+	top: 57.5%;
+	left:43.5%;
+}
+/* step3 */
+#matePos.setTable > section.cont[data-step="3"] img.balloon{
+	top: 24%;
+	left:84%;
+}
+/* step4 */
+#matePos.setTable > section.cont[data-step="4"] img.balloon{
+	top: 39%;
+}          
+/* step6 */
+#matePos.setTable > section.cont[data-step="6"] button{
+	width: 19.347%;
+	max-width: 231px;
+	margin-left: -9.6735%;
+	top:15.9%;
+	left:38.5%;
+}
+#matePos.setTable > section.cont[data-step="6"] button .animContainer{
+	bottom: -14%;
+    right: 3%;
+}
+#matePos.setTable > section.cont[data-step="6"] img.balloon{
+	top: 23%;
+	left: 39.8%;
+}
+/* step7 */
+#matePos.setTable > section.cont[data-step="7"] button{
+	width: 11.642%;
+	max-width: 139px;
+	margin-left: 5.821%;
+	top:15.4%;
+	left:62.3%;
+}
+#matePos.setTable > section.cont[data-step="7"] button .animContainer{
+	bottom: -14%;
+    right: -8%;
+}
+#matePos.setTable > section.cont[data-step="7"] img.balloon{
+	top: 23%;
+	left: 73.8%;
+}
+/* step8 */
+#matePos.setTable > section.cont[data-step="8"] img.balloon{
+	top: 37.5%;
+	left: 79%;
+}   
+/* step9 */
+#matePos.setTable > section.cont[data-step="9"] button{
+	width: 16.248%;
+	max-width: 194px;
+	margin-left: -8.124%;
+	top:63.9%;
+	left:58.2%;
+}
+#matePos.setTable > section.cont[data-step="9"] button .animContainer{
+	bottom: -39%;
+    right: -1%;
+}
+#matePos.setTable > section.cont[data-step="9"] img.balloon{
+	top: 71.5%;
+	left: 58%;
+}
+/* step10 */
+#matePos.setTable > section.cont[data-step="10"] img.balloon{
+	top: 37%;
+	left: 29%;
+}   
+
+/* pos_setMenu*/
+/* step1 */
+#matePos.setMenu > section.cont[data-step="1"] button{
+	width: 15.997%;
+	max-width: 191px;
+	margin-left: -7.9985%;
+	top:6.54%;
+	left:18.3%;
+}
+#matePos.setMenu > section.cont[data-step="1"] button .animContainer{
+	bottom: 0%;
+    right: 50%;
+}
+#matePos.setMenu > section.cont[data-step="1"] img.balloon{
+	top: 12%;
+	left: 12.8%;
+}
+/* step2 */
+#matePos.setMenu > section.cont[data-step="2"] img.balloon{
+	top: 42%;
+}
+/* step3 */
+#matePos.setMenu > section.cont[data-step="3"] button{
+	width: 22.6135%;
+	max-width: 270px;
+	margin-left: -11.30675%;
+	top: 82.7%;
+	left:62.91%;
+}
+#matePos.setMenu > section.cont[data-step="3"] button .animContainer{
+	bottom: -17%;
+    right: 27%;
+}
+#matePos.setMenu > section.cont[data-step="3"] img.balloon{
+	top: 72%;
+	left: 62.8%;
+}
+/* step4 */
+#matePos.setMenu > section.cont[data-step="4"] button{
+	width: 8.376%;
+	max-width: 100px;
+	margin-left: -4.188%;
+	top: 43.3%;
+	left:68.5%;
+}
+#matePos.setMenu > section.cont[data-step="4"] button .animContainer{
+	bottom: -22%;
+    right: -20%;
+}
+#matePos.setMenu > section.cont[data-step="4"] img.balloon{
+	top: 53%;
+	left: 68.5%;
+}
+/* step5 */
+#matePos.setMenu > section.cont[data-step="5"] img.balloon{
+	top: 14%;
+}
+/* step6 */
+#matePos.setMenu > section.cont[data-step="6"] button{
+	width: 17.17%;
+	max-width: 205px;
+	margin-left: -8.585%;
+	top: 63%;
+	left: 58.33%;
+}
+#matePos.setMenu > section.cont[data-step="6"] button .animContainer{
+	bottom: -2%;
+    right: 0%;
+}
+#matePos.setMenu > section.cont[data-step="6"] img.balloon{
+	top: 73%;
+	left: 58.33%;
+}
+/* step7 */
+#matePos.setMenu > section.cont[data-step="7"] img.balloon{
+	top: 54.5%;
+	left: 68.5%;
+}
+/* step8 */
+#matePos.setMenu > section.cont[data-step="8"] button{
+	width: 8.376%;
+	max-width: 100px;
+	margin-left: -4.188%;
+	top: 25.2%;
+	left:76.63%;
+}
+#matePos.setMenu > section.cont[data-step="8"] button .animContainer{
+	bottom: -22%;
+    right: -20%;
+}
+#matePos.setMenu > section.cont[data-step="8"] img.balloon{
+	top: 16%;
+	left: 76.5%;
+}
+/* step9 */
+#matePos.setMenu > section.cont[data-step="9"] img.balloon{
+	top: 79%;
+}
+/* step10 */
+#matePos.setMenu > section.cont[data-step="10"] img.balloon{
+	top: 47%;
+	left: 46.5%;
+}
+/* step11 */
+#matePos.setMenu > section.cont[data-step="11"] img.balloon{
+	top: 45%;
+	left: 66.5%;
+}
+/* step12 */
+#matePos.setMenu > section.cont[data-step="12"] button{
+	width: 19.766%;
+	max-width: 236px;
+	margin-left: -9.883%;
+	top: 67.05%;
+	left:58.48%;
+}
+#matePos.setMenu > section.cont[data-step="12"] button .animContainer{
+	bottom: 0%;
+    right: 7%;
+}
+#matePos.setMenu > section.cont[data-step="12"] img.balloon{
+	top: 78%;
+	left: 58.5%;
+}
+/* step13 */
+#matePos.setMenu > section.cont[data-step="13"] img.balloon{
+	top: 36%;
+	left: 76.5%;
+}
+/* step14 */
+#matePos.setMenu > section.cont[data-step="14"] button{
+	width: 43.049%;
+	max-width: 514px;
+	margin-left: -21.5245%;
+	top: 82.3%;
+	left:68.25%;
+}
+#matePos.setMenu > section.cont[data-step="14"] button .animContainer{
+	bottom: 0%;
+    right: 7%;
+}
+#matePos.setMenu > section.cont[data-step="14"] img.balloon{
+	top: 69%;
+	left: 69.5%;
+}
+/* step15 */
+#matePos.setMenu > section.cont[data-step="15"] img.balloon{
+	top: 36%;
+	left: 68.5%;
+}
+
+/* pos_setPrint*/
+/* step1 */
+#matePos.setPrint > section.cont[data-step="1"] button{
+	width: 15.997%;
+	max-width: 191px;
+	margin-left: -7.9985%;
+	top:6.54%;
+	left:18.3%;
+}
+#matePos.setPrint > section.cont[data-step="1"] button .animContainer{
+	bottom: 0%;
+    right: 50%;
+}
+#matePos.setPrint > section.cont[data-step="1"] img.balloon{
+	top: 12%;
+	left: 12.8%;
+}
+/* step2 */
+#matePos.setPrint > section.cont[data-step="2"] img.balloon{
+	top: 38.8%;
+	left: 40%;
+}
+/* step3 */
+#matePos.setPrint > section.cont[data-step="3"] img.balloon{
+	top: 28.8%;
+	left: 45%;
+}
+/* step4 */
+#matePos.setPrint > section.cont[data-step="4"] img.balloon{
+	top: 35.8%;
+	left: 69%;
+}
+/* step5 */
+#matePos.setPrint > section.cont[data-step="5"] button{
+	width: 20.687%;
+	max-width: 247px;
+	margin-left: -10.3435%;
+	top:55.3%;
+	left:77.63%;
+}
+#matePos.setPrint > section.cont[data-step="5"] button .animContainer{
+	bottom: -60%;
+    right: -6%;
+}
+#matePos.setPrint > section.cont[data-step="5"] img.balloon{
+	top: 46%;
+	left: 83.5%;
+}
+/* step6 */
+#matePos.setPrint > section.cont[data-step="6"] button{
+	width: 5.0254%;
+	max-width: 60px;
+	margin-left: -2.5127%;
+	top:55.3%;
+	left:64.46%;
+}
+#matePos.setPrint > section.cont[data-step="6"] button .animContainer{
+	bottom: -63%;
+    right: -28%;
+}
+#matePos.setPrint > section.cont[data-step="6"] img.balloon{
+	top: 46%;
+	left: 64.5%;
+}
+
+
+
+
+/* pos_close*/
+#matePos.close {}
+/* step2 */
+#matePos.close > section.cont[data-step="2"] button{
+	width: 18.426%;
+	max-width: 220px;
+	margin-left: -9.213%;
+	top:55%;
+	left: 63.25%;
+}
+#matePos.close > section.cont[data-step="2"] button .animContainer{
+	bottom: 0%;
+    right: 0%;
+}
+#matePos.close > section.cont[data-step="2"] img.balloon{
+	top: 47%;
+	left: 64%;
+}
+/* step3 */
+#matePos.close > section.cont[data-step="3"] button{
+	width: 21.19%;
+	max-width: 253px;
+	margin-left: -10.595%;
+	top:54%;
+}
+#matePos.close > section.cont[data-step="3"] button .animContainer{
+	bottom: -8%;
+    right: 8%;
+}
+#matePos.close > section.cont[data-step="3"] img.balloon{
+	top: 68%;
+}
+/* step4 */
+#matePos.close > section.cont[data-step="4"] button{
+	width: 9.046%;
+	max-width: 108px;
+	margin-left: -4.523%;
+	top:36.348%;
+	left: 75.8%;
+}
+#matePos.close > section.cont[data-step="4"] button .animContainer{
+	bottom: -60%;
+    right: 4%;
+}
+#matePos.close > section.cont[data-step="4"] img.balloon{
+	top: 24%;
+	left: 76%;
+}
+/* step5 */
+#matePos.close > section.cont[data-step="5"] button{
+	width: 62.396%;
+	max-width: 745px;
+	margin-left: -31.198%;
+	top:82.45%;
+	left: 58.6%;
+}
+#matePos.close > section.cont[data-step="5"] button .animContainer{
+	bottom: -10%;
+    right: 18%;
+}
+#matePos.close > section.cont[data-step="5"] img.balloon{
+	top: 74%;
+	left: 59%;
+}
+/* step6 */
+#matePos.close > section.cont[data-step="6"] button{
+	width: 22.9481%;
+	max-width: 274px;
+	margin-left: -11.47405%;
+	top:52.84%;
+	left: 57.6%;
+}
+#matePos.close > section.cont[data-step="6"] button .animContainer{
+	bottom: 0%;
+    right: 9%;
+}
+/* step8 */
+#matePos.close > section.cont[data-step="8"] img.balloon{
+	top: 43%;
+	left: 44%;
+}
+/* step9 */
+#matePos.close > section.cont[data-step="9"] img.balloon{
+	top: 28%;
+	left: 58%;
+}
+/* step10 */
+#matePos.close > section.cont[data-step="10"] img.balloon{
+	top: 8%;
+	left: 58%;
+}
+/* step11 */
+#matePos.close > section.cont[data-step="11"] img.balloon{
+	top: 8%;
+	left: 58%;
+}
+/* step12 */
+#matePos.close > section.cont[data-step="12"] img.balloon{
+	top: 8%;
+	left: 58%;
+}
+/* step13 */
+#matePos.close > section.cont[data-step="13"] img.balloon{
+	top: 55%;
+	left: 73%;
+}
+/* step14 */
+#matePos.close > section.cont[data-step="14"] button{
+	width: 21.0222%;
+	max-width: 251px;
+	margin-left: -10.5111%;
+    top: 82.7%;
+    left: 20.82%;
+}
+#matePos.close > section.cont[data-step="14"] button .animContainer{
+	bottom: 0%;
+    right: 4%;
+}
+#matePos.close > section.cont[data-step="14"] img.balloon{
+	top: 82.7%;
+	left: 43%;
+}
+
+
+
+
+
+
+
+
+
+/* pos_payment*/
+#matePos.payment {}
+#matePos.payment > section.page-box.rotate {overflow: hidden;}
+#matePos.payment > section.page-box.rotate img.wide{
+	animation: imgChange 2.5s step-end 1 forwards;
+	height: 100%;
+}
+@keyframes imgChange {
+	0% {
+		left: 0%;
+	}
+	33.333% {
+		left: -100%;
+	}
+	66.666% {
+		left: -200%;
+	}
+	100% {
+		left: -300%;
+	}
+}
+/* step2 */
+#matePos.payment > section.cont[data-step="2"] button{
+	width: 15.662%;
+	max-width: 187px;
+	margin-left: -7.831%;
+	top:18.5%;
+	left: 50.2%;
+}
+#matePos.payment > section.cont[data-step="2"] button .animContainer{
+	bottom: -20%;
+    right: -10%;
+}
+#matePos.payment > section.cont[data-step="2"] img.balloon{
+	top: 34%;
+}
+/* step3 */
+#matePos.payment > section.cont[data-step="3"] img.balloon{
+	top: 45%;
+	left: 43%;
+}
+/* step4 */
+#matePos.payment > section.cont[data-step="4"] button{
+	width: 8.794%;
+	max-width: 105px;
+	margin-left: -4.397%;
+	top:57.1%;
+	left: 42.97%;
+}
+#matePos.payment > section.cont[data-step="4"] button .animContainer{
+	bottom: -50%;
+    right: -20%;
+}
+#matePos.payment > section.cont[data-step="4"] img.balloon{
+	top: 45%;
+	left: 43%;
+}
+/* step5 */
+#matePos.payment > section.cont[data-step="5"] img.balloon{
+	top: 31%;
+	left: 67%;
+}
+/* step6 */
+#matePos.payment > section.cont[data-step="6"] button{
+	width: 18.593%;
+	max-width: 222px;
+	margin-left: -9.2965%;
+	top:67%;
+	left: 58.3%;
+}
+#matePos.payment > section.cont[data-step="6"] button .animContainer{
+	bottom: 0%;
+    right: 6%;
+}
+#matePos.payment > section.cont[data-step="6"] img.balloon{
+	top: 79%;
+	left: 58%;
+}
+/* step8 */
+#matePos.payment > section.cont[data-step="8"] button{
+	width: 14.741%;
+	max-width: 176px;
+	margin-left: -7.3705%;
+	top:26.675%;
+	left: 75.8%;
+}
+#matePos.payment > section.cont[data-step="8"] button .animContainer{
+	bottom: 4%;
+    right: 4%;
+}
+#matePos.payment > section.cont[data-step="8"] img.balloon{
+	top: 15%;
+	left: 76%;
+}
+/* step9 */
+#matePos.payment > section.cont[data-step="9"] img.balloon{
+	top: 49%;
+	left: 68%;
+}
+/* step10 */
+#matePos.payment > section.cont[data-step="10"] button{
+	width: 10.386%;
+	max-width: 124px;
+	margin-left: -5.193%;
+	top:65.245%;
+	left: 42.65%;
+}
+#matePos.payment > section.cont[data-step="10"] button .animContainer{
+	bottom: -11%;
+    right: -11%;
+}
+#matePos.payment > section.cont[data-step="10"] img.balloon{
+	top: 58%;
+	left: 43%;
+}
+/* step11 */
+#matePos.payment > section.cont[data-step="11"] img.balloon{
+	top: 66%;
+	left: 69%;
+}
+/* step12 */
+#matePos.payment > section.cont[data-step="12"] button{
+	width: 20.352%;
+	max-width: 243px;
+	margin-left: -10.176%;
+	top:34.1%;
+	left: 78.9%;
+}
+#matePos.payment > section.cont[data-step="12"] button .animContainer{
+	bottom: 0;
+    right: 0;
+}
+#matePos.payment > section.cont[data-step="12"] img.balloon{
+	top: 22%;
+	left: 79%;
+}
+
+
+
+
+
+
+
+
+/* tablet */
+#mateTablet {
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#mateTablet > section {
+	width: 1194px;
+	height: 796px;
+	margin: auto;
+	/* margin-top: 130px; */
+}
+#mateTablet > section.page-box {
+	display: none;
+}
+#mateTablet > section.page-box.on {
+	display: block;
+}
+#mateTablet > section.page-box.on .animContainer {
+	animation-name: opacity2;
+	animation-duration: 1.6s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+#mateTablet > section.cont { 
+	position: relative;
+}
+#mateTablet > section.cont img {
+	position: absolute; 
+	top: 0;
+	left: 0;
+	display: block;
+}
+#mateTablet > section.cont img.ps-r {
+	/* width: 100%; */
+	position: relative;
+	top: auto;
+	left: auto;
+}
+#mateTablet > section.cont button {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+}
+#mateTablet > section.cont button img.btn-img {
+	width: 100%;
+	position: relative;
+	top: auto;
+	left: auto;
+}
+#mateTablet > section.cont img.size-100 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	display: block;
+	width: 100%;
+}
+#mateTablet > section.cont.scroll .step{
+	z-index: 1;
+}
+#mateTablet > section.cont .scroll-box {
+	width: 1194px;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+#mateTablet > section.cont .scroll-inner-box {
+	width: 34.8%;
+	height: 470px;
+	position: absolute;
+	top: 55.17%;
+	left: 49.95%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 1;
+}
+#mateTablet > section.cont .scroll-inner-box::-webkit-scrollbar {
+	background: transparent;
+	width: 0;
+	height: 0;
+}
+#mateTablet > section.cont .scroll-inner-box::-webkit-scrollbar-thumb {
+	background: transparent;
+}
+#mateTablet > section.cont .scroll-inner-box::-webkit-scrollbar-track {
+	background: transparent;
+}
+#mateTablet > section.cont .scroll-inner-box img{
+	top: 0;
+	left: 0;
+	transform: translate(0, 0);
+	-webkit-transform: translate(0,0);
+	-moz-transform: translate(0,0);
+}
+#mateTablet > section.cont .scroll-box::after {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	content: '';
+	background-image:url(../images/tablet/step3_3.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+#mateTablet > section.cont img.balloon{
+	position:absolute;
+	z-index:3;
+	top: 50%;
+	left: 50%;
+	margin-left: -16.75%;
+	width: 33.5%;
+}
+
+
+
+
+
+/* step2 */
+#mateTablet > section.cont[data-step="2"] img.balloon{
+	top: 72%;
+}
+#mateTablet > section.cont[data-step="2"] button{
+	width: 34.76%;
+	max-width: 415px;
+	margin-left: -17.38%;
+	top: auto;
+	bottom: 6.3%;
+	left: 50%;
+}
+#mateTablet > section.cont[data-step="2"] button .animContainer{
+	bottom: -30%;
+    right: 15%;
+}
+/* step3 */
+#mateTablet > section.cont[data-step="3"] img.balloon{
+	top: 27%;
+}
+/* step4 */
+#mateTablet > section.cont[data-step="4"] button{
+	width: 34.76%;
+	max-width: 415px;
+	margin-left: -17.4%;
+	top: 18.3%;
+	left: 50%;
+}
+#mateTablet > section.cont[data-step="4"] button .animContainer{
+	bottom: -39%;
+    right: 52%;
+}
+#mateTablet > section.cont[data-step="4"] img.balloon{
+	top: 8.5%;
+	left: 46%;
+}
+/* step5 */
+#mateTablet > section.cont[data-step="5"] img.balloon{
+	top: 9%;
+}
+
+/* step6 */
+#mateTablet > section.cont[data-step="6"] img.balloon{
+	top: 36%;
+	left: 42%;
+}
+
+/* step7 */
+#mateTablet > section.cont[data-step="7"] button{
+	width: 16.667%;
+	max-width: 199px;
+	margin-left: -8.3335%;
+	left: 41.7%;
+	top: 29.95%;
+}
+#mateTablet > section.cont[data-step="7"] button .animContainer{
+	bottom: 22%;
+    right: 0%;
+}
+#mateTablet > section.cont[data-step="7"] img.balloon{
+	top: 20%;
+	left: 42%;
+}
+
+/* step8 */
+#mateTablet > section.cont[data-step="8"] img.balloon{
+	top: 39%;
+}
+
+/* step9 */
+#mateTablet > section.cont[data-step="9"] img.balloon{
+	top: 73%;
+	left: 40%;
+}
+
+/* step10 */
+#mateTablet > section.cont[data-step="10"] button{
+	width: 34.76%;
+	max-width: 415px;
+	margin-left: -17.4%;
+	top: 83%;
+}
+#mateTablet > section.cont[data-step="10"] button .animContainer{
+	bottom: -19%;
+    right: 5%;
+}
+#mateTablet > section.cont[data-step="10"] img.balloon{
+	top: 70%;
+	left: 55%;
+}
+
+/* step12 */
+#mateTablet > section.cont[data-step="12"] img.balloon{
+	top: 72%;
+	left: 55%;
+}
+
+/* step13 */
+#mateTablet > section.cont[data-step="13"] button{
+	width: 34.76%;
+	max-width: 415px;
+	margin-left: -17.4%;
+	top: 84.7%;
+}
+#mateTablet > section.cont[data-step="13"] button .animContainer{
+	bottom: -17%;
+    right: 5%;
+}
+#mateTablet > section.cont[data-step="13"] img.balloon{
+	top: 73%;
+	left: 55%;
+}
+/* step14 */
+#mateTablet > section.cont[data-step="14"] img.balloon{
+	top: 32%;
+}
+/* step15 */
+#mateTablet > section.cont[data-step="15"] img.balloon{
+	top: 30%;
+	left: 43%;
+}
+/* step16 */
+#mateTablet > section.cont[data-step="16"] button{
+	width: 34.76%;
+	max-width: 415px;
+	margin-left: -17.31%;
+	top: 62.2%;
+}
+#mateTablet > section.cont[data-step="16"] button .animContainer{
+	bottom: -21%;
+    right: 30%;
+}
+#mateTablet > section.cont[data-step="16"] img.balloon{
+	top: 53%;
+	left: 54%;
+}
+/* step17 */
+#mateTablet > section.cont[data-step="17"] button{
+	width: 34.76%;
+	max-width: 415px;
+	margin-left: -17.31%;
+	top: 83%;
+}
+#mateTablet > section.cont[data-step="17"] button .animContainer{
+	bottom: -21%;
+    right: 5%;
+}
+#mateTablet > section.cont[data-step="17"] img.balloon{
+	top: 72.5%;
+}
+
+/* step18 */
+#mateTablet > section.cont[data-step="18"] img.balloon{
+	top: 31%;
+}
+/* step19 */
+#mateTablet > section.cont[data-step="19"] img.balloon{
+	top: 61%;
+}
+/* step20 */
+#mateTablet > section.cont[data-step="20"] button{
+	width: 8.71%;
+	max-width: 104px;
+	margin-left: -4.355%;
+	top: 40.8%;
+	left: 37.52%;
+}
+#mateTablet > section.cont[data-step="20"] button .animContainer{
+	bottom: -20%;
+    right: 0%;
+}
+#mateTablet > section.cont[data-step="20"] img.balloon{
+	top: 25%;
+	left: 37%;
+}
+/* step21 */
+#mateTablet > section.cont[data-step="21"] img.balloon{
+	top: 24%;
+}
+/* step22 */
+#mateTablet > section.cont[data-step="22"] button{
+	width: 34.76%;
+	max-width: 415px;
+	margin-left: -17.31%;
+	top: 83%;
+}
+#mateTablet > section.cont[data-step="22"] button .animContainer{
+	bottom: -21%;
+    right: 5%;
+}
+#mateTablet > section.cont[data-step="22"] img.balloon{
+	top: 73%;
+}
+/* step23 */
+#mateTablet > section.cont[data-step="23"] img.balloon{
+	top: 43%;
+}
+/* step24 */
+#mateTablet > section.cont[data-step="24"] button{
+	width: 34.76%;
+	max-width: 415px;
+	margin-left: -17.4%;
+	top: 83.7%;
+}
+#mateTablet > section.cont[data-step="24"] button .animContainer{
+	bottom: -3%;
+    right: 5%;
+}
+#mateTablet > section.cont[data-step="24"] img.balloon{
+	top: 70%;
+}
+/* step25 */
+#mateTablet > section.cont[data-step="25"] img.balloon{
+	top: 12%;
+}
+/* step26 */
+#mateTablet > section.cont[data-step="26"] img.balloon{
+	top: 82%;
+	left: 64.5%;
+}
+/* step27 */
+#mateTablet > section.cont[data-step="27"] img.balloon{
+	top: 46%;
+}
+/* step30 */
+#mateTablet > section.cont[data-step="30"] img.balloon{
+	top: 36%;
+	left: 20%;
+}
+/* step31 */
+#mateTablet > section.cont[data-step="31"] button{
+	width: 16.165%;
+	max-width: 193px;
+	margin-left: -8.0825%;
+	top: 18.1%;
+	left: 19.2%;
+}
+#mateTablet > section.cont[data-step="31"] button .animContainer{
+	bottom: -14%;
+    right: 32%;
+}
+#mateTablet > section.cont[data-step="31"] img.balloon{
+	top: 21%;
+	left: 40.5%;
+}
+/* step32 */
+#mateTablet > section.cont[data-step="32"] img.balloon{
+	top: 35.5%;
+	left: 28%;
+}
+/* step33 */
+#mateTablet > section.cont[data-step="33"] img.balloon{
+	top: 43.5%;
+	left: 43%;
+}
+/* step34 */
+#mateTablet > section.cont[data-step="34"] img.balloon{
+	top: 60%;
+	left: 43%;
+}
+/* step35 */
+#mateTablet > section.cont[data-step="35"] img.balloon{
+	top: 46%;
+	left: 79%;
+}
+/* step36 */
+#mateTablet > section.cont[data-step="36"] img.balloon{
+	top: 37%;
+	left: 19%;
+}
+
+/* step38 */
+#mateTablet > section.cont[data-step="38"] img.balloon{
+	top: 42%;
+}
+/* step39 */
+#mateTablet > section.cont[data-step="39"] button{
+	width: 34.76%;
+	max-width: 415px;
+	margin-left: -17.4%;
+	top: 84.76%;
+}
+#mateTablet > section.cont[data-step="39"] button .animContainer{
+	bottom: -23%;
+    right: 62%;
+}
+#mateTablet > section.cont[data-step="39"] img.balloon{
+	top: 72%;
+	left: 39.5%;
+}
+/* step40 */
+#mateTablet > section.cont[data-step="40"] button{
+	width: 11.223%;
+	max-width: 134px;
+	margin-left: -5.6115%;
+	top: 40.8%;
+	left: 39.65%;
+}
+#mateTablet > section.cont[data-step="40"] button .animContainer{
+	bottom: -17%;
+    right: -12%;
+}
+#mateTablet > section.cont[data-step="40"] img.balloon{
+	top: 28%;
+}
+/* step41 */
+#mateTablet > section.cont[data-step="41"] button{
+	width: 19.598%;
+	max-width: 234px;
+	margin-left: -9.799%;
+	top: 84%;
+	left:55%;
+}
+#mateTablet > section.cont[data-step="41"] button .animContainer{
+	bottom: -47%;
+    right: -9%;
+}
+#mateTablet > section.cont[data-step="41"] img.balloon{
+	top: 28%;     
+}
+/* step42 */
+#mateTablet > section.cont[data-step="42"] img.balloon{
+	top: 72%;
+	left: 72%;
+}
+#mateTablet > section.cont[data-step="42"] img.toast{
+    transition-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+/* step43 */
+#mateTablet > section.cont[data-step="43"] img.toast2{
+	width: 38.2% !important;
+	margin-left: -19.1% !important;
+	transition-delay:0.5s;
+	animation-delay: 0.5s;
+}
+#mateTablet > section.cont[data-step="43"] img.balloon{
+	top: 15%;
+}
+/* step44 */
+#mateTablet > section.cont[data-step="44"] img.balloon{
+	top: 37%;
+	left: 31.5%;
+}
+/* step45 */
+#mateTablet > section.cont[data-step="45"] button{
+	width: 10.218%;
+	max-width: 122px;
+	margin-left: -5.109%;
+	top: 23.9%;
+	left: 44.9%;
+}
+#mateTablet > section.cont[data-step="45"] button .animContainer{
+	bottom: -12%;
+    right: -5%;
+}
+#mateTablet > section.cont[data-step="45"] img.balloon{
+	top: 16%;
+	left: 45.5%;     
+}
+#mateTablet > section.page-box.end {
+	width: 946px !important;
+}
+#mateTablet > section.page-box.end .end-box .btn button.black {
+	display: none;
+}
+#mateTablet > section.page-box.end .end-box .info-box .title {
+	display: none;
+}
+#mateTablet > section.page-box.end .end-box .info-box .pos-list {
+	display: none;
+}
+#mateTablet > section.page-box.end .end-box .info-box .other ul {
+	gap: 40px;
+}
+
+@media (max-width: 1440px){
+	body {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.only-pc {
+		display: none;
+	}
+	.only-mo {
+		display: block;
+	}
+
+	section.page-box.end .end-box + .desc {
+		position: relative;
+		text-align: center;
+		bottom: auto;
+		width: 90%;
+		font-size: 14px;
+		margin-bottom: 140px;
+	}
+	
+	#matePos > section.page-box.end {
+		height: auto;
+	}
+	#matePos > section.page-box.end .end-box {
+		margin-top: 125px;
+		margin-bottom: 24px;
+		padding: 0 20px;
+	}
+	#matePos > section.page-box.end .end-box .info-box {
+		display: block;
+	}
+	#matePos > section.page-box.end .end-box .info-box .pos-list {
+		margin-bottom: 48px;
+	}
+
+	#mateTablet > section.page-box.end {
+		height: auto;
+		margin: 0;
+	}
+	#mateTablet > section.page-box.end .end-box {
+		margin-top: 125px;
+		margin-bottom: 24px;
+		padding: 0 20px;
+	}
+	#mateTablet > section.page-box.end .end-box .info-box {
+		display: block;
+	}
+}
+@media (max-width: 1194px){
+	.tab-wrap{
+		padding: 31px 30px;
+	}
+	.tab-wrap .tab li{
+		margin: 0;
+	}
+
+	#matePos > section.wide {
+		max-width: 100%;
+		height: auto;
+		margin: auto;
+	}	
+	#matePos > section.cont.wide img.ps-r {
+		width: 100%;
+	}
+}
+
+@media (max-width: 1024px){
+	.tab-wrap{
+		padding: 36px 30px;
+	}
+	.tab-wrap .tab li{
+		height: 39px;
+	}
+	.tab-wrap .tab li a{
+		font-size: 18px;
+		line-height: 37px;
+		padding: 0 8px;
+	}
+}
+
+@media (max-width: 991px){
+	section.page-box .animContainer {
+		width: 50px;
+		height: 50px;
+	}
+	section.page-box.wide .animContainer {
+		width: 50px;
+		height: 50px;
+	}
+	#matePos > section.wide {
+		max-width: 100%;
+		height: auto;
+		margin: auto;
+	}	
+	#matePos > section.cont.wide img.ps-r {
+		width: 100%;
+	}
+	#mateTablet > section.wide {
+		max-width: 100%;
+		height: auto;
+		margin: auto;
+	}	
+	#mateTablet > section.cont.wide img.ps-r {
+		width: 100%;
+	}
+
+}
+
+@media (max-width: 768px){
+
+	section.page-box .step-title {
+		font-size: 32px;
+		word-break: keep-all;
+	}
+
+	section.page-box .animContainer {
+		width: 28px;
+		height: 28px;
+	}
+	section.page-box.wide .animContainer {
+		width: 25px;
+		height: 25px;
+	}
+
+	.btn-wrap button {
+		width: 120px;
+	}
+	.tab-wrap {
+		padding: 0;
+		margin-top: 68px;
+    }
+	.tab-wrap .tab li {
+		margin: 0 2px;
+	}
+	.tab-wrap .tab li a span{
+		display: none;
+	}
+	section.page-box.end .end-box {
+		margin-top: 60px;
+		margin-bottom: 40px;
+	}
+	section.page-box.end .end-box .title {
+		font-size: 28px;
+	}
+	section.page-box.end .end-box .title span{
+		font-size: 28px;
+	}
+	section.page-box.end .end-box .btn {
+		margin-top: 24px;
+		display: block;
+	}
+	section.page-box.end .end-box .btn button {
+		width: 64.8%;
+		min-width: 217px;
+		height: 52px;
+		padding: 0 32px;
+		display: block;
+		margin: auto;
+	}
+	section.page-box.end .end-box .btn button span {
+		line-height: 52px;
+		font-size: 16px;
+	}
+	section.page-box.end .end-box .btn button img {
+		width: 20px;
+		height: 20px;
+
+	}
+	section.page-box.end .end-box .btn button + button {
+		margin-top: 8px;
+	}
+	#matePos > section.page-box.end .end-box .info-box {
+		margin-top: 64px;
+	}
+	section.page-box.end .end-box .info-box .title {
+		font-size: 16px;
+	}
+	section.page-box.end .end-box .info-box .pos-list ul {
+		display: block;
+	}
+	section.page-box.end .end-box .info-box .pos-list ul li{
+		width: 100%;
+		margin-bottom: 24px;
+	}
+	section.page-box.end .end-box .info-box .pos-list li a {
+		padding: 24px 24px 96px;
+		position: relative;
+		text-align: left;
+		display: block;
+	}
+	section.page-box.end .end-box .info-box .pos-list li a span {
+		margin-left: 0; 
+		display: inline-block;
+		font-size: 18px;
+		padding-right: 28px;
+	}
+	section.page-box.end .end-box .info-box .pos-list li a span::after {
+		width: 24px;
+		height: 24px;
+	}
+	section.page-box.end .end-box .info-box .pos-list li a img {
+		position: absolute;
+		bottom: 16px;
+		right: 20px;
+	}
+	section.page-box.end .end-box .info-box .other ul {
+		display: block;
+	}
+	section.page-box.end .end-box .info-box .other ul li{
+		width: 100%;
+		padding-top: 32px;
+	}
+	section.page-box.end .end-box .info-box .other ul li + li{
+		margin-top: 24px;
+	}
+	section.page-box.end .end-box .info-box .other ul li .name {
+		font-size: 24px;
+		margin-bottom: 8px;
+	}
+	section.page-box.end .end-box .info-box .other ul li .link {
+		height: 48px;
+		padding: 0 20px 0 28px;
+	}
+	section.page-box.end .end-box .info-box .other ul li .link span {
+		line-height: 48px;
+		font-size: 16px;
+		padding-right: 28px;
+	}
+	section.page-box.end .end-box .info-box .other ul li .link span::after {
+		width: 24px;
+		height: 24px;
+	}
+	section.page-box.end .end-box .info-box .other ul li img {
+		margin-top: 4px;
+	}
+	section.page-box.end .end-box + .desc {
+		margin-bottom: 40px;
+		text-align: left;
+	}
+
+	#tutorial .btn-wrap {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 16px 20px;
+		position: fixed;
+		display: flex;
+		justify-content: space-between;
+		top: 0;
+		left: 0;
+	}
+	#tutorial .btn-wrap img{
+		width: 120px;
+		height: auto;
+	}
+	section.page-box.intro .intro-box {
+		padding-top: 0px;
+	}
+	section.page-box.intro .intro-box .title{
+		font-size: 28px;
+	}
+	section.page-box.intro .intro-box .title span{
+		font-size: 28px;
+	}
+	section.page-box.intro .intro-box .img{
+		width: 375px;
+		margin: 32px auto 0;
+	}
+	section.page-box.intro .intro-box .bubble-wrap{
+		margin-top: 36px;
+		padding: 0 24px;
+	}
+	section.page-box.intro .intro-box .bubble-wrap::after {
+		width: 18px;
+		height: 12px;
+		top: -12px;
+	}
+	section.page-box.intro .intro-box .bubble-wrap p {
+		font-size: 16px;
+		line-height: 46px;
+	}
+	section.page-box.intro .intro-box + .desc {
+		position: fixed;
+		bottom: 40px;
+		width: 90%;
+		font-size: 14px;
+		text-align: left;
+	}
+
+
+
+
+
+
+
+	#matePos {
+		/* width: 768px; */
+		margin: auto;
+	}
+	#matePos > section {
+		max-width: 900px;
+		height: auto;
+		margin: auto;
+	}	
+	#matePos > section.page-box.end .end-box {
+		margin-top: 60px;
+		margin-bottom: 40px;
+	}
+
+
+
+
+
+	#mateTablet {
+		/* width: 768px; */
+		margin: auto;
+	}
+	#mateTablet > section {
+		max-width: 700px;
+		height: auto;
+		margin: auto;
+	}	
+	#mateTablet > section.cont img.ps-r {
+		width: 700px;
+	}
+	#mateTablet > section.page-box.end .end-box {
+		margin-top: 60px;
+		margin-bottom: 40px;
+	}
+	#mateTablet > section.cont .scroll-inner-box {
+		height: 276px;
+		position: absolute;
+		top: 55.17%;
+		left: 50%;
+	}
+	#mateTablet > section.cont .scroll-box {
+		max-width: 702px;
+	}
+}

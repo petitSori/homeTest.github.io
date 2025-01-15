@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Comaptible" content="IE=edge, chrome=1">
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, shrink-to-fit=no">
+<title>메이트 포스 체험하기_ 기본설정하기_메뉴 등록/품질 설정</title>
+<script type="text/javascript" src="../../../assets/js/common/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../../assets/js/common/jquery-ui.js"></script>
+<script type="text/javascript" src="../../../assets/js/common/aos.js"></script>
+
+<!-- 체험은 css 별도 -->
+<link rel="stylesheet" href="../../../assets/scss/vendors/aos.css">
+<link rel="stylesheet" href="../css/default.css" />
+</head>
+<body>
+<div id="tutorial">
+	<div class="btn-wrap">
+		<button type="button" class="prev">
+			<img src="../images/btn_prev.png" alt="">
+		</button>
+		<button type="button" class="next">
+			<img src="../images/btn_next.png" alt="">
+		</button>
+	</div>
+	<div class="tab-wrap">
+		<ul class="tab">
+			<li>
+				<a href="setIndex_default.html">기본 <span>설정</span></a>
+			</li>
+			<li>
+				<a href="setIndex_table.html">테이블 <span>설정</span></a>
+			</li>
+			<li class="active">
+				<a href="setIndex_menu.html">메뉴 등록/품질 <span>설정</span></a>
+			</li>
+			<li>
+				<a href="setIndex_print.html">출력물 <span>설정</span></a>
+			</li>
+		</ul>
+	</div>
+	<!--포스별 class명 별도 지정-->
+	<div id="matePos" class="setMenu">
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+<script>
+		AOS.init({
+        duration: 800,
+    })
+
+	let currentIndex = 0; // 현재 섹션 인덱스
+	let sections = []; // 섹션 요소를 저장할 배열
+	let autoSlideInterval; // 자동 슬라이드를 위한 인터벌 변수
+  
+	// REST API 데이터 가져오기
+	fetch("../../../assets/js/sub/data/experienceTest_data/setPos_menu.json")
+	.then(response => response.json())
+	.then(data => {
+		renderSections(data.sections);
+		sections = document.querySelectorAll("#matePos .page-box");
+		updateSectionClass(); // 초기 on 클래스 설정
+		startAutoSlide();
+	})
+	.catch(error => console.error("Error fetching data:", error));
+
+	// Section 동적 생성 함수
+	function renderSections(dataSections) {
+		const container = document.getElementById("matePos");
+		container.innerHTML = ""; // 초기화
+
+		dataSections.forEach((section, index) => {
+			const sectionElement = document.createElement("section");
+			sectionElement.className = `page-box ${section.class || ""}`;
+			sectionElement.dataset.step = section.dataStep;
+
+			// 일반 섹션 렌더링
+			if (section.content) {
+				const introBox = document.createElement("div");
+				introBox.className = "intro-box";
+
+				// 섹션 제목
+				if (section.content.title) {
+					const titleElement = document.createElement("div");
+					titleElement.className = "title";
+					titleElement.dataset.aos = section.content.title.animation || "fade-up";
+					titleElement.innerHTML = section.content.title.text;
+					introBox.appendChild(titleElement);
+				}
+
+				// 섹션 이미지
+				if (section.content.image) {
+					const imageElement = document.createElement("div");
+					imageElement.className = "img";
+					imageElement.dataset.aos = section.content.image.animation.type || "fade-up";
+					imageElement.dataset.aosDelay = section.content.image.animation.delay || "200";
+
+					const img = document.createElement("img");
+					img.src = section.content.image.src;
+					img.alt = section.content.image.alt || "";
+
+					imageElement.appendChild(img);
+					introBox.appendChild(imageElement);
+				}
+
+				// 풍선 텍스트
+				if (section.content.bubble) {
+					const bubbleWrap = document.createElement("div");
+					bubbleWrap.className = "bubble-wrap";
+					bubbleWrap.dataset.aos = section.content.bubble.animation.type || "fade-up";
+					bubbleWrap.dataset.aosDelay = section.content.bubble.animation.delay || "400";
+
+					const bubbleText = document.createElement("p");
+					bubbleText.textContent = section.content.bubble.text;
+					bubbleWrap.appendChild(bubbleText);
+
+					introBox.appendChild(bubbleWrap);
+				}
+
+				sectionElement.appendChild(introBox);
+
+				if (section.content.description) {
+					const descElement = document.createElement("p");
+					descElement.className = "desc";
+					descElement.textContent = section.content.description.text;
+					sectionElement.appendChild(descElement);
+				}
+			}
+
+			// 이미지 추가
+			if (section.images) {
+				section.images.forEach((img) => {
+					const imgElement = document.createElement("img");
+					imgElement.src = img.src;
+					imgElement.className = img.class || "";
+					sectionElement.appendChild(imgElement);
+				});
+			}
+
+			// 중간 텍스트 추가
+			if (section.texts) {
+				const stepTitle = document.createElement("div");
+				stepTitle.className = "step-title";
+				stepTitle.innerHTML = section.texts;
+				sectionElement.appendChild(stepTitle);
+			}
+
+			// 버튼 추가
+			if (section.button) {
+				const button = document.createElement("button");
+				button.type = "button";
+				button.className = "btn-lottie";
+
+				if (section.button.imageSrc) {
+					const img = document.createElement("img");
+					img.src = section.button.imageSrc;
+					img.className = "btn-img";
+					button.appendChild(img);
+				}
+
+				if (section.button.animationSrc) {
+					const animContainer = document.createElement("div");
+					animContainer.className = "animContainer";
+
+					lottie.loadAnimation({
+						container: animContainer,
+						renderer: "svg",
+						loop: true,
+						autoplay: true,
+						path: section.button.animationSrc,
+					});
+
+					button.appendChild(animContainer);
+				}
+
+				button.addEventListener("click", () => {
+					if (currentIndex < dataSections.length - 1) {
+						currentIndex++;
+						updateSectionClass();
+						resetAutoSlide();
+					}
+				});
+
+				sectionElement.appendChild(button);
+			}
+
+			// 풍선 이미지 추가
+			if (section.bubbleImage) {
+				const bubbleImg = document.createElement("img");
+				bubbleImg.src = section.bubbleImage.src;
+				bubbleImg.className = section.bubbleImage.class || "";
+				sectionElement.appendChild(bubbleImg);
+			}
+
+			// 'end' 섹션 추가
+			if (section.class === "end" && section.endContent) {
+				const endBox = document.createElement("div");
+				endBox.className = "end-box";
+
+				// End 섹션 제목
+				if (section.endContent.endBox.title) {
+					const endTitle = document.createElement("div");
+					endTitle.className = "title";
+					endTitle.innerHTML = section.endContent.endBox.title.text;
+					endBox.appendChild(endTitle);
+				}
+
+				// End 섹션 버튼
+				if (section.endContent.endBox.buttons) {
+					const buttonContainer = document.createElement("div");
+					buttonContainer.className = "btn";
+
+					section.endContent.endBox.buttons.forEach((btn) => {
+						const button = document.createElement("button");
+						button.type = btn.type || "button";
+						button.className = btn.class;
+
+						if (btn.iconSrc) {
+							const icon = document.createElement("img");
+							icon.src = btn.iconSrc;
+							button.appendChild(icon);
+						}
+
+						const btnText = document.createElement("span");
+						btnText.textContent = btn.text;
+						button.appendChild(btnText);
+
+						button.addEventListener("click", () => {
+							eval(btn.onClick);
+						});
+
+						buttonContainer.appendChild(button);
+					});
+
+					endBox.appendChild(buttonContainer);
+				}
+
+				// Info Box 추가
+				if (section.endContent.endBox.infoBox) {
+					const infoBox = document.createElement("div");
+					infoBox.className = "info-box";
+
+					// POS List 추가
+					if (section.endContent.endBox.infoBox.posList) {
+						const posList = document.createElement("div");
+						posList.className = "pos-list";
+
+						const posTitle = document.createElement("p");
+						posTitle.className = "title";
+						posTitle.textContent = section.endContent.endBox.infoBox.posList.title;
+						posList.appendChild(posTitle);
+
+						const itemList = document.createElement("ul");
+
+						section.endContent.endBox.infoBox.posList.items.forEach((item) => {
+							const link = document.createElement("li");
+							const linkBox = document.createElement("a"); 
+							linkBox.href = item.href; 
+							link.appendChild(linkBox);
+
+							const img = document.createElement("img"); 
+							img.src = item.imgSrc;
+							linkBox.appendChild(img);
+
+							const text = document.createElement("span"); 
+							text.textContent = item.text;
+							linkBox.appendChild(text);
+
+							itemList.appendChild(link);
+						});
+
+						posList.appendChild(itemList);
+						infoBox.appendChild(posList);
+					}
+
+					// Other Services 추가
+					if (section.endContent.endBox.infoBox.other) {
+						const otherServices = document.createElement("div");
+						otherServices.className = "other";
+
+						const otherTitle = document.createElement("p");
+						otherTitle.className = "title";
+						otherTitle.textContent = section.endContent.endBox.infoBox.other.title;
+						otherServices.appendChild(otherTitle);
+
+						const otherList = document.createElement("ul");
+
+						section.endContent.endBox.infoBox.other.items.forEach((service) => {
+							const serviceItem = document.createElement("li");
+
+							const img = document.createElement("img");
+							img.src = service.imgSrc;
+
+							const name = document.createElement("div");
+							name.className = "name";
+							name.textContent = service.name;
+
+							const link = document.createElement("a");
+							link.className = "link";
+							link.href = service.linkHref;
+							const linkText = document.createElement("span"); 
+							linkText.textContent = service.linkText;
+							link.appendChild(linkText);
+
+							serviceItem.appendChild(name);
+							serviceItem.appendChild(link);
+							serviceItem.appendChild(img);
+							otherList.appendChild(serviceItem);
+						});
+
+						otherServices.appendChild(otherList);
+						infoBox.appendChild(otherServices);
+					}
+
+					endBox.appendChild(infoBox);
+				}
+
+				sectionElement.appendChild(endBox);
+
+				if (section.endContent.description) {
+					const descElement = document.createElement("p");
+					descElement.className = "desc";
+					descElement.textContent = section.endContent.description.text;
+					sectionElement.appendChild(descElement);
+				}
+			}
+
+			container.appendChild(sectionElement);
+		});
+	}
+
+	// 섹션 클래스 업데이트 함수
+	function updateSectionClass() {
+		sections.forEach((section, index) => {
+			if (index === currentIndex) {
+				section.classList.add("on");
+				const images = section.querySelectorAll("img.step, img.balloon, .end-box, .step-title");
+				let bounceIntervalId = null;
+				// 섹션에 속한 이미지 투명도 조정
+				images.forEach((img, imgIndex) => {
+					img.classList.add(`opacityAni${imgIndex + 1}`); // 각 이미지의 시간 차이 설정
+					if (img.classList.contains('balloon')) {
+						img.style.transition = 'transform 0.8s linear';
+
+						// 이미 bounceIntervalId가 설정된 경우 중복 방지
+						if (!img.dataset.bounceId) {
+							let direction = 1;
+
+							const animateBounce = () => {
+								direction = -direction; // 방향 반전
+								img.style.transform = `translateY(${direction * 12}%)`; // 상하 이동
+							};
+
+							bounceIntervalId = setInterval(animateBounce, 450);
+							img.dataset.bounceId = bounceIntervalId; // interval ID 저장
+						}
+					}
+
+					if (img.classList.contains('end-box')) {
+						img.classList.add("opacityAniEnd");
+					}
+				});
+			} else {
+				section.classList.remove("on");
+				// 다른 섹션에 있는 이미지 투명도 조정
+				section.querySelectorAll("img.step, img.balloon, .step-title").forEach(img => {
+					img.classList.remove(`opacityAni${index + 1}`);
+					if (img.classList.contains('balloon')) {
+						img.style.transform = '';
+						img.style.transition = '';
+
+						// bounceIntervalId가 있으면 정리
+						if (img.dataset.bounceId) {
+							clearInterval(img.dataset.bounceId);
+							delete img.dataset.bounceId; // 속성 제거
+						}
+					}
+				});
+			}
+		});
+
+		const ButtonAll = document.querySelector("#tutorial > .btn-wrap");
+		const prevButton = document.querySelector(".prev");
+		const nextButton = document.querySelector(".next");
+
+		if (currentIndex === sections.length - 1) {
+			ButtonAll.style.display = "none"; 
+			stopAutoSlide(); // 마지막 섹션에서는 자동 슬라이드 멈춤
+			if(sections.length === 1){
+				ButtonAll.style.display = "flex"; 
+			}
+		} else {
+			nextButton.classList.remove("disabled");
+		}
+	}
+
+	// 이전 버튼 이벤트
+	document.querySelector(".prev").addEventListener("click", () => {
+		if (currentIndex > 0) {
+			currentIndex--;
+			updateSectionClass();
+			resetAutoSlide();
+		}else if(currentIndex === 0) {
+			window.location.href = "setIndex_intro.html";
+		}
+	});
+
+	// 다음 버튼 이벤트
+	document.querySelector(".next").addEventListener("click", () => {
+		if (currentIndex < sections.length - 1) {
+			currentIndex++;
+			updateSectionClass();
+			resetAutoSlide();
+		}
+	});
+	// 자동 슬라이드 시작
+	function startAutoSlide() {
+		autoSlideInterval = setInterval(() => {
+			if (currentIndex < sections.length - 1) {
+				currentIndex++;
+				updateSectionClass();
+			} else {
+				stopAutoSlide(); // 마지막 섹션에서는 자동 슬라이드 멈춤
+			}
+		}, 5000); // 5초마다 자동으로 다음 섹션으로 이동
+	}
+
+	// 자동 슬라이드 멈춤
+	function stopAutoSlide() {
+		clearInterval(autoSlideInterval);
+	}
+
+	// 자동 슬라이드 리셋 (버튼 클릭 시)
+	function resetAutoSlide() {
+		stopAutoSlide();
+		startAutoSlide();
+	}
+</script>
+</body>
+</html>
