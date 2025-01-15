@@ -471,6 +471,9 @@ section.page-box.end .end-box .info-box .pos-list li a{
 	border: 1px solid #dddddd;
 	box-sizing: border-box;
 }
+section.page-box.end .end-box .info-box .pos-list li a > img {
+	width: 72px;
+}
 section.page-box.end .end-box .info-box .pos-list li a span {
 	position: relative;
 	display: block;
