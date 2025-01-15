@@ -373,7 +373,7 @@
 
 		if (currentIndex === sections.length - 1) {
 			ButtonAll.style.display = "none"; 
-			stopAutoSlide(); // 마지막 섹션에서는 자동 슬라이드 멈춤
+			// stopAutoSlide();
 			if(sections.length === 1){
 				ButtonAll.style.display = "flex"; 
 			}
@@ -404,23 +404,18 @@
 	// 자동 슬라이드 시작
 	function startAutoSlide() {
 		autoSlideInterval = setInterval(() => {
-			if (currentIndex < sections.length - 1) {
-				currentIndex++;
-				updateSectionClass();
-			} else {
-				stopAutoSlide(); // 마지막 섹션에서는 자동 슬라이드 멈춤
-			}
-		}, 8000); // 8초마다 자동으로 다음 섹션으로 이동
+			window.location.href = "orderIndex_table.html";
+		}, 5000);
 	}
 
 	// 자동 슬라이드 멈춤
-	function stopAutoSlide() {
-		clearInterval(autoSlideInterval);
-	}
+	// function stopAutoSlide() {
+	// 	clearInterval(autoSlideInterval);
+	// }
 
 	// 자동 슬라이드 리셋 (버튼 클릭 시)
 	function resetAutoSlide() {
-		stopAutoSlide();
+		// stopAutoSlide();
 		startAutoSlide();
 	}
 </script>
