@@ -1,0 +1,108 @@
+[
+    {
+        "id": "pos",
+        "name": "메이트 포스",
+        "image": "../../assets/images/sub/02_experience/img_pos.png",
+        "url":"#",
+        "desc": [
+            {
+                "text": "내점, 배달, 키오스크 등 매장의 모든 주문 관리"
+            },
+            {
+                "text": "함께 제공되는 영업관리와 사장님 앱으로 스마트한 매장 운영 가능"
+            },
+            {
+                "text": "원하는 기기를 선택하여 사용할 수 있는 윈도우 포스"
+            }
+        ]
+    },
+    {
+        "id": "qr",
+        "name": "메이트 QR오더",
+        "image": "../../assets/images/sub/02_experience/img_qr.png",
+        "url":"#",
+        "desc": [
+            {
+                "text": "앱 설치, 로그인 없이 빠르고 간편한 주문/결제 제공"
+            },
+            {
+                "text": "무약정, 무료 설치, QR 코드 지원으로 초기 도입비0원"
+            },
+            {
+                "text": "스티커, 배너 등 매장 운영에 따른 맞춤형 설치"
+            }
+        ]
+    },
+    {
+        "id": "did",
+        "name": "메이트 DID",
+        "multiple": "Y",
+        "image": "../../assets/images/sub/02_experience/img_did.png",
+        "url":"#",
+        "desc": [
+            {
+                "text": "추가 연동 장비 없이 메이트 포스로 내점/온라인 주문 고객 호출 가능"
+            },
+            {
+                "text": "홍보 콘텐츠 노출로 매장 홍보 창구로 활용 가능"
+            },
+            {
+                "text": "매장 상황에 맞게 설정할 수 있는 다양한 레이아웃 제공"
+            }
+        ]
+    },
+    {
+        "id": "tablet",
+        "name": "메이트 태블릿오더",
+        "multiple": "",
+        "image": "../../assets/images/sub/02_experience/img_tablet.png",
+        "url":"#",
+        "desc": [
+            {
+                "text": "주문/결제 내역을 포스와 직접 연동을 통해 누락없이 정확한 주문 접수"
+            },
+            {
+                "text": "주문/결제 자동화로 인건비 절감과 효율적인 매장 운영 가능"
+            },
+            {
+                "text": "매장 유형에 따른 선불/후불 결제 지원"
+            }
+        ]
+    },
+    {
+        "id": "kds",
+        "name": "메이트 KDS",
+        "multiple": "",
+        "image": "../../assets/images/sub/02_experience/img_kds.png",
+        "url":"#",
+        "desc": [
+            {
+                "text": "주방에서 주문에 대한 실시간 모니터링을 모니터 한 대로 관리"
+            },
+            {
+                "text": "요청사항, 시간 초과에 대한 알림으로 주문 누락, 지연을 방지"
+            },
+            {
+                "text": "주방 프린터의 디지털화로 비용 절감 가능"
+            }
+        ]
+    },
+    {
+        "id": "waiting",
+        "name": "메이트 웨이팅",
+        "multiple": "",
+        "image": "../../assets/images/sub/02_experience/img_wating.png",
+        "url":"#",
+        "desc": [
+            {
+                "text": "줄 설 필요 없이 원하는 장소에서 기다리다 알림톡 받고 편하게 입장 가능"
+            },
+            {
+                "text": "장소/시간 제약 없이 사장님 앱을 통해 자유롭게 웨이팅 고객 관리 가능"
+            },
+            {
+                "text": "매장 운영 형태에 따른 다양한 옵션 활용 (유아입장 가능 매장 , 실내/야외 , 바/일반테이블 설정 등)"
+            }
+        ]
+    }
+]

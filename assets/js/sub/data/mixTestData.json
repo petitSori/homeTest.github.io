@@ -1,0 +1,143 @@
+[
+    {
+        "id": 1,
+        "question": "메이트 포스를<br/> 사용하고 계신가요?",
+        "multiple": "",
+        "image": "../../assets/images/sub/02_experience/ic_landing_6.png",
+        "answers": [
+            {
+                "id": "q1-1",
+                "text": "네! 메이트 포스를 사용하고 있어요",
+                "pd":[]
+            },
+            {
+                "id": "q1-2",
+                "text": "아니요. 메이트 포스를 사용해 보고 싶어요",
+                "pd": ["pos"]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "question": "어떤 형태의 매장을<br/> 운영하고 계신가요?",
+        "multiple": "",
+        "image": "../../assets/images/sub/02_experience/ic_landing_7.png",
+        "answers": [
+            {
+                "id": "q2-1",
+                "text": "홀만 운영하고 있어요",
+                "pd": ["pos"]
+            },
+            {
+                "id": "q2-2",
+                "text": "배달/포장 주문도 같이 운영하고 있어요",
+                "pd": ["pos", "qr", "did", "tablet"]
+            },
+            {
+                "id": "q2-3",
+                "text": "배달/포장 주문만 운영하고 있어요",
+                "pd": ["pos", "did"]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "question": "매장 운영에서 어떤 점이<br/> 가장 고민이 있으신가요?",
+        "multiple": "Y",
+        "image": "../../assets/images/sub/02_experience/ic_landing_8.png",
+        "answers": [
+            {
+                "id": "q3-1",
+                "text": "하나의 기기에서 모든 주문을 관리하고 싶어요",
+                "pd": ["pos"]
+            },
+            {
+                "id": "q3-2",
+                "text": "인건비가 부담돼요",
+                "pd": ["tablet"]
+            },
+            {
+                "id": "q3-3",
+                "text": "주문,결제를 자동화 하고 싶어요",
+                "pd": ["tablet", "qr"]
+            },
+            {
+                "id": "q3-4",
+                "text": "추가 비용을 줄이고 싶어요",
+                "pd": ["qr", "did"]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "question": "주문에 대한 결제는<br/> 어떻게 하고 싶나요?",
+        "multiple": "",
+        "image": "../../assets/images/sub/02_experience/ic_landing_3.png",
+        "answers": [
+            {
+                "id": "q4-1",
+                "text": "결제는 포스에서만 하고 싶어요",
+                "pd": ["pos"]
+            },
+            {
+                "id": "q4-2",
+                "text": "고객이 주문하면서 결제까지 한번에 했으면 좋겠어요",
+                "pd": ["tablet", "qr"]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "question": "피크 타임에<br/> 대기 고객하는 고객이 많나요?",
+        "multiple": "",
+        "image": "../../assets/images/sub/02_experience/ic_landing_9.png",
+        "answers": [
+            {
+                "id": "q5-1",
+                "text": "네. 대기 고객이 많아서 효율성을 개선하고 싶어요",
+                "pd": ["waiting"]
+            },
+            {
+                "id": "q5-2",
+                "text": "아니요 아직은 대기 인원이 많지 않아요",
+                "pd": []
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "question": "테이블 대비 직원수가 적나요?",
+        "multiple": "",
+        "image": "../../assets/images/sub/02_experience/ic_landing_10.png",
+        "answers": [
+            {
+                "id": "q6-1",
+                "text": "네. 직원수가 적어서 고민이에요",
+                "pd": ["tablet", "qr"]
+            },
+            {
+                "id": "q6-2",
+                "text": "아니요 직원수는 적지 않아요",
+                "pd": []
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "question": "테이블 별로<br/> 추가 주문이 많나요?",
+        "multiple": "",
+        "image": "../../assets/images/sub/02_experience/ic_landing_11.png",
+        "answers": [
+            {
+                "id": "q7-1",
+                "text": "네. 추가 주문이 많아서 직원 호출이 잦아요",
+                "pd": ["tablet", "qr"]
+            },
+            {
+                "id": "q7-2",
+                "text": "추가 주문이 많지 않아서 운영하기 괜찮아요",
+                "pd": []
+            }
+        ]
+    }
+]
