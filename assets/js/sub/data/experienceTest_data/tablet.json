@@ -464,7 +464,8 @@
         { "src": "../images/tablet/bg_common.png", "class": "ps-r" },
         { "src": "../images/tablet/step43_1.png", "class": "size-100" },
         { "src": "../images/tablet/step43_toast.png", "class": "toast" },
-        { "src": "../images/tablet/step43_bubble.png", "class": "balloon delay" }
+        { "src": "../images/tablet/step43_bubble.png", "class": "balloon delay pc" },
+        { "src": "../images/tablet/step43_bubble_mo.png", "class": "balloon delay mo" }
       ]
     },
     {
