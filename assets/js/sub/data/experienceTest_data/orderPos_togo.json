@@ -113,22 +113,22 @@
               "title": "메이트 포스 주요 기능 둘러보기",
               "items": [
                 {
-                  "href": "",
+                  "href": "../pos/organizeIndex.html",
                   "imgSrc": "../images/pos/end_1.png",
                   "text": "구성 확인하기"
                 },
                 {
-                  "href": "",
+                  "href": "../pos/paymentIndex.html",
                   "imgSrc": "../images/pos/end_3.png",
                   "text": "결제하기"
                 },
                 {
-                  "href": "",
+                  "href": "../pos/closeIndex.html",
                   "imgSrc": "../images/pos/end_4.png",
                   "text": "마감하기"
                 },
                 {
-                  "href": "",
+                  "href": "../pos/setIndex_intro.html",
                   "imgSrc": "../images/pos/end_5.png",
                   "text": "기본 설정하기"
                 }
@@ -145,7 +145,7 @@
                 },
                 {
                   "name": "메이트 태블릿오더",
-                  "linkHref": "#",
+                  "linkHref": "../tablet/index.html",
                   "linkText": "알아보기",
                   "imgSrc": "../images/pos/end_product_2.png"
                 }

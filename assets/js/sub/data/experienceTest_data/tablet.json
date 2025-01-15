@@ -530,22 +530,22 @@
               "title": "메이트 포스 주요 기능 둘러보기",
               "items": [
                 {
-                  "href": "",
+                  "href": "../pos/organizeIndex.html",
                   "imgSrc": "../images/pos/end_1.png",
                   "text": "구성 확인하기"
                 },
                 {
-                  "href": "",
+                  "href": "../pos/orderIndex_intro.html",
                   "imgSrc": "../images/pos/end_2.png",
                   "text": "주문하기"
                 },
                 {
-                  "href": "",
+                  "href": "../pos/paymentIndex.html",
                   "imgSrc": "../images/pos/end_3.png",
                   "text": "결제하기"
                 },
                 {
-                  "href": "",
+                  "href": "../pos/closeIndex.html",
                   "imgSrc": "../images/pos/end_4.png",
                   "text": "마감하기"
                 }
@@ -556,7 +556,7 @@
               "items": [
                 {
                   "name": "메이트 포스",
-                  "linkHref": "#",
+                  "linkHref": "../pos/organizeIndex.html",
                   "linkText": "알아보기",
                   "imgSrc": "../images/tablet/end_product_1.png"
                 },
