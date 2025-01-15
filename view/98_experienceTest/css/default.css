@@ -40,6 +40,52 @@ button{border:0 none;border-radius:0;background-color:transparent;cursor:pointer
 .only-mo {
 	display: none;
 }
+.loading-wrap {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	z-index: 7900;
+  }
+  .loading-wrap.relative {
+	position: relative;
+	top: auto;
+	right: auto;
+	bottom: auto;
+	left: auto;
+	width: 100%;
+	height: 200px;
+  }
+  .loading-wrap.absolute {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	z-index: 0;
+  }
+  .loading-wrap .spinner {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	z-index: 4000;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+  }
+  .loading-wrap .spinner img {
+	width: 100%;
+	display: block;
+  }
 #tutorial {
 	background-color: #F3F4F8;
 	position: relative;
@@ -2300,6 +2346,9 @@ section.page-box .step-title span{
 	top: 72%;
 	left: 72%;
 }
+#mateTablet > section.cont[data-step="42"] img.balloon.mo{
+	display: none;
+}
 #mateTablet > section.cont[data-step="42"] img.toast{
     transition-delay: 0.5s;
     animation-delay: 0.5s;
@@ -2689,5 +2738,13 @@ section.page-box .step-title span{
 	}
 	#mateTablet > section.cont .scroll-box {
 		max-width: 702px;
+	}
+	#mateTablet > section.cont[data-step="42"] img.balloon.mo{
+		display: block;
+		left: 50%;
+		top:61%;
+	}
+	#mateTablet > section.cont[data-step="42"] img.balloon.pc{
+		display: none;
 	}
 }
