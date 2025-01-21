@@ -73,7 +73,9 @@
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
-        { "src": "../images/pos/set/print/step7_1.png", "class": "size-100" }
+        { "src": "../images/pos/set/print/step7_1.png", "class": "size-100" },
+        { "src": "../images/pos/set/print/step7_2.png", "class": "size-100 step" },
+        { "src": "../images/pos/set/print/step7_bubble.png", "class": "balloon" }
       ]
     },
     {
