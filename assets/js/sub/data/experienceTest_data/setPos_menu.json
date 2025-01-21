@@ -1,19 +1,6 @@
 {
   "sections": [
     {
-      "dataStep": 1,
-      "class": "cont wide",
-      "images": [
-        { "src": "../images/pos/bg_common.png", "class": "ps-r" },
-        { "src": "../images/pos/set/menu/step1_1.png", "class": "size-100" }
-      ],
-      "button": {
-        "imageSrc": "../images/pos/set/menu/step1_2.png",
-        "animationSrc": "../../../assets/js/sub/data/experienceTest_data/hand.json"
-      },
-      "bubbleImage": { "src": "../images/pos/set/menu/step1_bubble.png", "class": "balloon" }
-    },
-    {
       "dataStep": 2,
       "class": "cont wide",
       "images": [

@@ -557,7 +557,7 @@
               "items": [
                 {
                   "name": "메이트 포스",
-                  "linkHref": "../pos/organizeIndex.html",
+                  "linkHref": "#",
                   "linkText": "알아보기",
                   "imgSrc": "../images/tablet/end_product_1.png"
                 },
