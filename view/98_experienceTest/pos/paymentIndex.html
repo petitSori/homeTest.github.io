@@ -9,7 +9,9 @@
 <script type="text/javascript" src="../../../assets/js/common/jquery-ui.js"></script>
 <script type="text/javascript" src="../../../assets/js/common/aos.js"></script>
 
-<!-- 체험은 css 별도 -->
+<!-- 체험은 js, css 별도 -->
+<!-- <script type="text/javascript" src="../js/default.js"></script>
+<script type="text/javascript" src="../js/ui.js"></script> -->
 <link rel="stylesheet" href="../../../assets/scss/vendors/aos.css">
 <link rel="stylesheet" href="../css/default.css" />
 </head>
@@ -368,11 +370,11 @@
 		const nextButton = document.querySelector(".next");
 
 		if (currentIndex === 0) {
-			prevButton.classList.add("disabled");
-		} else {
-			prevButton.classList.remove("disabled");
+			ButtonAll.style.display = "none"; 
+		}else {
+			ButtonAll.style.display = "flex"; 
 		}
-
+		
 		if (currentIndex === sections.length - 1) {
 			ButtonAll.style.display = "none"; 
 			stopAutoSlide(); // 마지막 섹션에서는 자동 슬라이드 멈춤
@@ -404,13 +406,18 @@
 	// 자동 슬라이드 시작
 	function startAutoSlide() {
 		autoSlideInterval = setInterval(() => {
-			if (currentIndex < sections.length - 1) {
+			// 현재 섹션의 버튼 존재 여부 확인
+			const currentSection = sections[currentIndex];
+			const clickButton = currentSection.querySelector('.btn-lottie');
+
+			// 버튼이 없는 경우에만 슬라이드 진행
+			if (!clickButton && currentIndex < sections.length - 1) {
 				currentIndex++;
 				updateSectionClass();
 			} else {
-				stopAutoSlide(); // 마지막 섹션에서는 자동 슬라이드 멈춤
+				stopAutoSlide(); // 버튼이 있거나 마지막 섹션에 도달하면 자동 슬라이드 멈춤
 			}
-		}, 5000); // 8초마다 자동으로 다음 섹션으로 이동
+		}, 5000); // 5초마다 자동으로 다음 섹션으로 이동
 	}
 
 	// 자동 슬라이드 멈춤

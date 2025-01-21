@@ -15,9 +15,9 @@
 </head>
 <body>
 <div id="tutorial">
-	<div class="btn-wrap">
-		<!--포스 체험하기 중 인트로가 따로 존재시 인트로페이지 이전버튼 opacity-->
-		<button type="button" class="prev" style="opacity: 0;">
+	<!--인트로는 무조건 자동 넘김-->
+	<div class="btn-wrap" style="display: none;">
+		<button type="button" class="prev">
 			<img src="../images/btn_prev.png" alt="">
 		</button>
 		<button type="button" class="next" onClick="window.location.href='../pos/setIndex_default.html'">
@@ -375,7 +375,7 @@
 			ButtonAll.style.display = "none"; 
 			// stopAutoSlide();
 			if(sections.length === 1){
-				ButtonAll.style.display = "flex"; 
+				ButtonAll.style.display = "none"; 
 			}
 		} else {
 			nextButton.classList.remove("disabled");
