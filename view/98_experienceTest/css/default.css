@@ -883,7 +883,7 @@ section.page-box .step-title span{
 }
 #matePos.orderTable > section.cont[data-step="6"] button .animContainer{
 	bottom: -8%;
-    right: -8%;
+    right: 40%;
 }
 /* step7 */
 #matePos.orderTable > section.cont[data-step="7"] img.balloon{
@@ -1361,6 +1361,10 @@ section.page-box .step-title span{
 /* step4 */
 #matePos.setTable > section.cont[data-step="4"] img.balloon{
 	top: 39%;
+}    
+/* step5 */
+#matePos.setTable > section.cont[data-step="5"] img.balloon{
+	top: 5%;
 }          
 /* step6 */
 #matePos.setTable > section.cont[data-step="6"] button{
@@ -1531,15 +1535,15 @@ section.page-box .step-title span{
 }
 /* step12 */
 #matePos.setMenu > section.cont[data-step="12"] button{
-	width: 19.766%;
-	max-width: 236px;
-	margin-left: -9.883%;
-	top: 67.05%;
-	left:58.48%;
+	width: 15.913%;
+	max-width: 190px;
+	margin-left: -7.9565%;
+	top: 67%;
+	left:58.33%;
 }
 #matePos.setMenu > section.cont[data-step="12"] button .animContainer{
 	bottom: 0%;
-    right: 7%;
+    right: -3%;
 }
 #matePos.setMenu > section.cont[data-step="12"] img.balloon{
 	top: 78%;
@@ -1636,7 +1640,10 @@ section.page-box .step-title span{
 	top: 46%;
 	left: 64.5%;
 }
-
+/* step7 */
+#matePos.setPrint > section.cont[data-step="7"] img.balloon{
+	top: 46%;
+}
 
 
 
@@ -1711,15 +1718,15 @@ section.page-box .step-title span{
 }
 /* step6 */
 #matePos.close > section.cont[data-step="6"] button{
-	width: 22.9481%;
-	max-width: 274px;
-	margin-left: -11.47405%;
+	width: 15.913%;
+	max-width: 190px;
+	margin-left: -7.9565%;
 	top:52.84%;
-	left: 57.6%;
+	left: 58.1%;
 }
 #matePos.close > section.cont[data-step="6"] button .animContainer{
 	bottom: 0%;
-    right: 9%;
+    right: -3%;
 }
 /* step8 */
 #matePos.close > section.cont[data-step="8"] img.balloon{
@@ -1815,7 +1822,7 @@ section.page-box .step-title span{
     right: -10%;
 }
 #matePos.payment > section.cont[data-step="2"] img.balloon{
-	top: 34%;
+	top: 8%;
 }
 /* step3 */
 #matePos.payment > section.cont[data-step="3"] img.balloon{
@@ -1835,7 +1842,7 @@ section.page-box .step-title span{
     right: -20%;
 }
 #matePos.payment > section.cont[data-step="4"] img.balloon{
-	top: 45%;
+	top: 47%;
 	left: 43%;
 }
 /* step5 */
@@ -1856,20 +1863,20 @@ section.page-box .step-title span{
     right: 6%;
 }
 #matePos.payment > section.cont[data-step="6"] img.balloon{
-	top: 79%;
+	top: 77%;
 	left: 58%;
 }
 /* step8 */
 #matePos.payment > section.cont[data-step="8"] button{
-	width: 14.741%;
-	max-width: 176px;
-	margin-left: -7.3705%;
+	width: 10.637%;
+	max-width: 127px;
+	margin-left: -5.3185%;
 	top:26.675%;
-	left: 75.8%;
+	left: 75.9%;
 }
 #matePos.payment > section.cont[data-step="8"] button .animContainer{
-	bottom: 4%;
-    right: 4%;
+	bottom: 3%;
+    right: -14%;
 }
 #matePos.payment > section.cont[data-step="8"] img.balloon{
 	top: 15%;
