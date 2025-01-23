@@ -631,7 +631,7 @@ section.page-box .step-title span{
 #matePos {
 	width: 100%;
 	height: 100%;
-	min-height: calc(100lvh - 110px);
+	min-height: calc(100lvh - 112px);
 	margin: auto;
 	display: flex;
 	align-items: center;
@@ -727,7 +727,7 @@ section.page-box .step-title span{
 	min-height: 100lvh;
 }
 #matePos.organize:has(>.page-box.cont.wide.on ) {
-	min-height: calc(100lvh - 110px);
+	min-height: calc(100lvh - 112px);
 }
 /* step2 */
 #matePos.organize > section.cont[data-step="2"] img.balloon{
@@ -1652,7 +1652,7 @@ section.page-box .step-title span{
 	min-height: 100lvh;
 }
 #matePos.close:has(>.page-box.cont.wide.on ) {
-	min-height: calc(100lvh - 110px);
+	min-height: calc(100lvh - 112px);
 }
 /* step2 */
 #matePos.close > section.cont[data-step="2"] button{
@@ -1788,7 +1788,7 @@ section.page-box .step-title span{
 	min-height: 100lvh;
 }
 #matePos.payment:has(>.page-box.cont.wide.on ) {
-	min-height: calc(100lvh - 110px);
+	min-height: calc(100lvh - 112px);
 }
 #matePos.payment > section.page-box.rotate {overflow: hidden;}
 #matePos.payment > section.page-box.rotate img.wide{
@@ -1943,7 +1943,7 @@ section.page-box .step-title span{
 	justify-content: center;
 }
 #mateTablet:has(>.page-box.cont.on ) {
-	min-height: calc(100lvh - 110px);
+	min-height: calc(100lvh - 112px);
 }
 #mateTablet > section {
 	width: 1194px;
@@ -2171,7 +2171,7 @@ section.page-box .step-title span{
 	width: 34.76%;
 	max-width: 415px;
 	margin-left: -17.4%;
-	top: 84.7%;
+	top: 84.6%;
 }
 #mateTablet > section.cont[data-step="13"] button .animContainer{
 	bottom: -17%;
@@ -2196,6 +2196,10 @@ section.page-box .step-title span{
 	max-width: 415px;
 	margin-left: -17.31%;
 	top: 62.2%;
+	animation-name: opacity;
+	animation-duration: 0.8s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
 }
 #mateTablet > section.cont[data-step="16"] button .animContainer{
 	bottom: -21%;
@@ -2292,6 +2296,10 @@ section.page-box .step-title span{
 /* step27 */
 #mateTablet > section.cont[data-step="27"] img.balloon{
 	top: 46%;
+}
+/* step29 */
+#mateTablet > section.cont[data-step="29"] img.balloon{
+	top: 14%;
 }
 /* step30 */
 #mateTablet > section.cont[data-step="30"] img.balloon{
