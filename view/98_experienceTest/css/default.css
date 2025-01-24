@@ -1023,8 +1023,7 @@ section.page-box .step-title span{
 	animation: twinkl 1s step-end infinite;
 }
 #matePos.orderDelivery > section.cont[data-step="1"] img.balloon{
-	top: 25%;
-	left: 72%;
+	top: 43%;
 }
 /* step2 */
 #matePos.orderDelivery > section.cont[data-step="2"] img.twinkl{
