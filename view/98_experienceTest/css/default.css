@@ -1162,30 +1162,38 @@ section.page-box .step-title span{
 
 /* pos_orderTogo*/
 /* step1 */
+#matePos.orderTogo > section.cont[data-step="1"] img.twinkl{
+	animation: twinkl 1s step-end infinite;
+}
 #matePos.orderTogo > section.cont[data-step="1"] img.balloon{
-	top: 24.5%;
-	left: 71%;
+	top: 43%;
 }
 /* step2 */
+#matePos.orderTogo > section.cont[data-step="2"] img.twinkl{
+	animation: twinkl 1s step-end infinite;
+}
 #matePos.orderTogo > section.cont[data-step="2"] img.balloon{
 	top: 53%;
 	left: 73%;
 }
 /* step3 */
+#matePos.orderTogo > section.cont[data-step="3"] img.twinkl{
+	animation: twinkl 1s step-end infinite;
+}
 #matePos.orderTogo > section.cont[data-step="3"] img.balloon{
 	top: 68%;
 	left: 80.5%;
 }
 #matePos.orderTogo > section.cont[data-step="3"] button{
-	width: 19.766%;
-	max-width: 236px;
-	margin-left: -9.883%;
-	top:77.55%;
-	left: 79.89%;
+	width: 16.416%;
+	max-width: 196px;
+	margin-left: -8.208%;
+	top: 77.6%;
+	left: 80.3%;
 }
 #matePos.orderTogo > section.cont[data-step="3"] button .animContainer{
 	bottom: -40%;
-    right: 0%;
+    right: -10%;
 }
 /* step4 */
 #matePos.orderTogo > section.cont[data-step="4"] img.balloon{
