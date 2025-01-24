@@ -1019,30 +1019,44 @@ section.page-box .step-title span{
 	height: 100%;
 }
 /* step1 */
+#matePos.orderDelivery > section.cont[data-step="1"] img.twinkl{
+	animation: twinkl 1s step-end infinite;
+}
 #matePos.orderDelivery > section.cont[data-step="1"] img.balloon{
 	top: 25%;
 	left: 72%;
 }
 /* step2 */
+#matePos.orderDelivery > section.cont[data-step="2"] img.twinkl{
+	animation: twinkl 1s step-end infinite;
+}
 #matePos.orderDelivery > section.cont[data-step="2"] img.balloon{
 	top: 54%;
 	left: 73%;
 }
 /* step3 */
+#matePos.orderDelivery > section.cont[data-step="3"] img.twinkl{
+	animation: twinkl 1s step-end infinite;
+}
 #matePos.orderDelivery > section.cont[data-step="3"] img.balloon{
 	top: 69%;
 	left: 80%;
 }
+@keyframes twinkl {
+	50% {
+	  opacity: 0;
+	}
+}
 #matePos.orderDelivery > section.cont[data-step="3"] button{
-	width: 19.18%;
-	max-width: 229px;
-	margin-left: -9.59%;
-	top: 77.7%;
-	left: 80.22%;
+	width: 16.416%;
+	max-width: 196px;
+	margin-left: -8.208%;
+	top: 77.6%;
+	left: 80.3%;
 }
 #matePos.orderDelivery > section.cont[data-step="3"] button .animContainer{
 	bottom: -45%;
-    right: -2%;
+    right: -10%;
 }
 /* step4 */
 #matePos.orderDelivery > section.cont[data-step="4"] img.balloon{
