@@ -7,7 +7,6 @@
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
         { "src": "../images/pos/order/delivery/step1_1.png", "class": "size-100" },
         { "src": "../images/pos/order/delivery/step1_3.png", "class": "size-100 twinkl" },
-        { "src": "../images/pos/order/delivery/step1_2.png", "class": "size-100 step" },
         { "src": "../images/pos/order/delivery/step1_bubble.png", "class": "balloon" }
       ]
     },
