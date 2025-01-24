@@ -6,7 +6,7 @@
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
         { "src": "../images/pos/order/delivery/step1_1.png", "class": "size-100" },
-        { "src": "../images/pos/order/delivery/step1_3.gif", "class": "size-100" },
+        { "src": "../images/pos/order/delivery/step1_3.png", "class": "size-100 twinkl" },
         { "src": "../images/pos/order/delivery/step1_2.png", "class": "size-100 step" },
         { "src": "../images/pos/order/delivery/step1_bubble.png", "class": "balloon" }
       ]
@@ -17,6 +17,7 @@
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
         { "src": "../images/pos/order/delivery/step2_1.png", "class": "size-100" },
+        { "src": "../images/pos/order/delivery/step1_3.png", "class": "size-100 twinkl" },
         { "src": "../images/pos/order/delivery/step2_2.png", "class": "size-100 step" },
         { "src": "../images/pos/order/delivery/step2_bubble.png", "class": "balloon" }
       ]
@@ -26,7 +27,8 @@
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
-        { "src": "../images/pos/order/delivery/step3_1.png", "class": "size-100" }
+        { "src": "../images/pos/order/delivery/step3_1.png", "class": "size-100" },
+        { "src": "../images/pos/order/delivery/step1_3.png", "class": "size-100 twinkl" }
       ],
       "button": {
         "imageSrc": "../images/pos/order/delivery/step3_2.png",
