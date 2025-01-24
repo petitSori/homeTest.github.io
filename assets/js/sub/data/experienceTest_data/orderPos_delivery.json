@@ -148,11 +148,10 @@
     },
     {
       "dataStep": 14,
-      "class": "cont wide",
+      "class": "cont wide rotate",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
-        { "src": "../images/pos/order/delivery/step14_1.png", "class": "size-100" },
-        { "src": "../images/pos/order/delivery/step14_2.gif", "class": "size-100 step" }
+        { "src": "../images/pos/order/delivery/step14_1.png", "class": "wide" }
       ]
     },
     {
