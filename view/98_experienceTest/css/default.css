@@ -1011,6 +1011,13 @@ section.page-box .step-title span{
 }
 
 /* pos_orderDelivery*/
+#matePos.orderDelivery > section.page-box.rotate {
+	overflow: hidden;
+}
+#matePos.orderDelivery > section.page-box.rotate img.wide{
+	animation: imgChange 5s step-end 1 forwards;
+	height: 100%;
+}
 /* step1 */
 #matePos.orderDelivery > section.cont[data-step="1"] img.balloon{
 	top: 25%;
