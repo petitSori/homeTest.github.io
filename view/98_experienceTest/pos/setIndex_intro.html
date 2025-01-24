@@ -14,20 +14,24 @@
 <link rel="stylesheet" href="../css/default.css" />
 </head>
 <body>
-<div id="tutorial">
-	<!--인트로는 무조건 자동 넘김-->
-	<div class="btn-wrap" style="display: none;">
-		<button type="button" class="prev">
-			<img src="../images/btn_prev.png" alt="">
-		</button>
-		<button type="button" class="next" onClick="window.location.href='../pos/setIndex_default.html'">
-			<img src="../images/btn_next.png" alt="">
-		</button>
+	<!-- 루트 엘리먼트 : 시작 -->
+	<div class="root-wrap">
+		<div id="tutorial">
+			<!--인트로는 무조건 자동 넘김-->
+			<div class="btn-wrap" style="display: none;">
+				<button type="button" class="prev">
+					<img src="../images/btn_prev.png" alt="">
+				</button>
+				<button type="button" class="next" onClick="window.location.href='../pos/setIndex_default.html'">
+					<img src="../images/btn_next.png" alt="">
+				</button>
+			</div>
+			<!--포스별 class명 별도 지정-->
+			<div id="matePos" class="setIntro">
+			</div>
+		</div>
 	</div>
-	<!--포스별 class명 별도 지정-->
-	<div id="matePos" class="setIntro">
-	</div>
-</div>
+	<!-- 루트 엘리먼트 : 끝 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
 <!-- 포스에 탭이 있는 화면은 스크립트 다름  -->

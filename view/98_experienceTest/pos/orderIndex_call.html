@@ -14,35 +14,38 @@
 <link rel="stylesheet" href="../css/default.css" />
 </head>
 <body>
-<div id="tutorial">
-	<div class="btn-wrap">
-		<button type="button" class="prev">
-			<img src="../images/btn_prev.png" alt="">
-		</button>
-		<button type="button" class="next">
-			<img src="../images/btn_next.png" alt="">
-		</button>
+	<!-- 루트 엘리먼트 : 시작 -->
+	<div class="root-wrap">
+		<div id="tutorial">
+			<div class="btn-wrap">
+				<button type="button" class="prev">
+					<img src="../images/btn_prev.png" alt="">
+				</button>
+				<button type="button" class="next">
+					<img src="../images/btn_next.png" alt="">
+				</button>
+			</div>
+			<div class="tab-wrap">
+				<ul class="tab">
+					<li>
+						<a href="orderIndex_table.html">테이블 <span>주문</span></a>
+					</li>
+					<li class="active">
+						<a href="orderIndex_call.html">전화 <span>주문</span></a>
+					</li>
+					<li>
+						<a href="orderIndex_delivery.html">배달 <span>주문</span></a>
+					</li>
+					<li>
+						<a href="orderIndex_togo.html">포장 <span>주문</span></a>
+					</li>
+				</ul>
+			</div>
+			<!--포스별 class명 별도 지정-->
+			<div id="matePos" class="orderCall">
+			</div>
+		</div>
 	</div>
-	<div class="tab-wrap">
-		<ul class="tab">
-			<li>
-				<a href="orderIndex_table.html">테이블 <span>주문</span></a>
-			</li>
-			<li class="active">
-				<a href="orderIndex_call.html">전화 <span>주문</span></a>
-			</li>
-			<li>
-				<a href="orderIndex_delivery.html">배달 <span>주문</span></a>
-			</li>
-			<li>
-				<a href="orderIndex_togo.html">포장 <span>주문</span></a>
-			</li>
-		</ul>
-	</div>
-	<!--포스별 class명 별도 지정-->
-	<div id="matePos" class="orderCall">
-	</div>
-</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 <!-- 포스에 탭이 있는 화면은 스크립트 다름  -->
 <script>
