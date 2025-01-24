@@ -14,18 +14,22 @@
 <link rel="stylesheet" href="../css/default.css" />
 </head>
 <body>
-<div id="tutorial">
-	<div class="btn-wrap">
-		<button type="button" class="prev">
-			<img src="../images/btn_prev.png" alt="">
-		</button>
-		<button type="button" class="next">
-			<img src="../images/btn_next.png" alt="">
-		</button>
+	<!-- 루트 엘리먼트 : 시작 -->
+	<div class="root-wrap">
+		<div id="tutorial">
+			<div class="btn-wrap">
+				<button type="button" class="prev">
+					<img src="../images/btn_prev.png" alt="">
+				</button>
+				<button type="button" class="next">
+					<img src="../images/btn_next.png" alt="">
+				</button>
+			</div>
+			<div id="mateTablet" class="tablet">
+			</div>
+		</div>
 	</div>
-	<div id="mateTablet" class="tablet">
-	</div>
-</div>
+	<!-- 루트 엘리먼트 : 끝 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 <script>
 	AOS.init({
