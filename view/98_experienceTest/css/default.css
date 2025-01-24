@@ -1015,7 +1015,7 @@ section.page-box .step-title span{
 	overflow: hidden;
 }
 #matePos.orderDelivery > section.page-box.rotate img.wide{
-	animation: imgChange 4.5s step-end 1 forwards;
+	animation: imgChange 4s step-end 1 forwards;
 	height: 100%;
 }
 /* step1 */
