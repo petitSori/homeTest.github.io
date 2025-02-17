@@ -1334,6 +1334,10 @@ section.page-box .step-title span{
 #matePos.setDefault > section.cont[data-step="6"] img.balloon{
 	top: 23%;
 }
+/* step7 */
+#matePos.setDefault > section.cont[data-step="7"] img.balloon{
+	top: 12%;
+}
 /* step8 */
 #matePos.setDefault > section.cont[data-step="8"] img.balloon{
 	top: 79%;
