@@ -346,13 +346,6 @@
 						// 이미 bounceIntervalId가 설정된 경우 중복 방지
 						if (!img.dataset.bounceId) {
 							let direction = 1;
-
-							const animateBounce = () => {
-								direction = -direction; // 방향 반전
-								img.style.transform = `translateY(${direction * 12}%)`; // 상하 이동
-							};
-
-							bounceIntervalId = setInterval(animateBounce, 450);
 							img.dataset.bounceId = bounceIntervalId; // interval ID 저장
 						}
 					}
