@@ -2107,7 +2107,7 @@ section.page-box .step-title span{
 
 /* step2 */
 #mateTablet > section.cont[data-step="2"] img.balloon{
-	top: 72%;
+	top: 38%;
 }
 #mateTablet > section.cont[data-step="2"] button{
 	width: 34.76%;
@@ -2118,8 +2118,8 @@ section.page-box .step-title span{
 	left: 50%;
 }
 #mateTablet > section.cont[data-step="2"] button .animContainer{
-	bottom: -30%;
-    right: 15%;
+	bottom: 43%;
+    right: 40%;
 }
 /* step3 */
 #mateTablet > section.cont[data-step="3"] img.balloon{
@@ -2176,7 +2176,7 @@ section.page-box .step-title span{
 
 /* step9 */
 #mateTablet > section.cont[data-step="9"] img.balloon{
-	top: 73%;
+	top: 70.5%;
 	left: 40%;
 }
 
