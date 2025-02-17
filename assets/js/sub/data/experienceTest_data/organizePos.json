@@ -1,32 +1,32 @@
 {
   "sections": [
     {
-    "class": "intro on",
-    "dataStep": 1,
-    "content": {
-        "title": {
-        "text": "메이트 포스<br/> <span>기본 구성</span>을 알아볼게요",
-        "animation": "fade-up"
-        },
-        "image": {
-        "src": "../images/pos/pos_intro.png",
-        "alt": "",
-        "animation": {
-            "type": "fade-up",
-            "delay": 200
-        }
-        },
-        "bubble": {
-        "text": "매장의 모든 주문을 하나로, 메이트 포스",
-        "animation": {
-            "type": "fade-up",
-            "delay": 400
-        }
-        },
-        "description": {
-        "text": "· 메이트 체험은 PC에 최적화되어 있어, PC에서 확인하시면 편하게 이용하실 수 있습니다."
-        }
-    }
+      "class": "intro on",
+      "dataStep": 1,
+      "content": {
+          "title": {
+          "text": "메이트 포스<br/> <span>기본 구성</span>을 알아볼게요",
+          "animation": "fade-up"
+          },
+          "image": {
+          "src": "../images/pos/pos_intro.png",
+          "alt": "",
+          "animation": {
+              "type": "fade-up",
+              "delay": 200
+          }
+          },
+          "bubble": {
+          "text": "매장의 모든 주문을 하나로, 메이트 포스",
+          "animation": {
+              "type": "fade-up",
+              "delay": 400
+          }
+          },
+          "description": {
+          "text": "· 메이트 체험은 PC에 최적화되어 있어, PC에서 확인하시면 편하게 이용하실 수 있습니다."
+          }
+      }
     },
     {
       "dataStep": 2,
@@ -66,13 +66,23 @@
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
+        { "src": "../images/pos/organize/step16_1.png", "class": "size-100" },
+        { "src": "../images/pos/organize/step16_2.png", "class": "size-100 step" },
+        { "src": "../images/pos/organize/step16_bubble.png", "class": "balloon" }
+      ]
+    },
+    {
+      "dataStep": 6,
+      "class": "cont wide",
+      "images": [
+        { "src": "../images/pos/bg_common.png", "class": "ps-r" },
         { "src": "../images/pos/organize/step5_1.png", "class": "size-100" },
         { "src": "../images/pos/organize/step5_2.png", "class": "size-100 step" },
         { "src": "../images/pos/organize/step5_bubble.png", "class": "balloon" }
       ]
     },
     {
-      "dataStep": 6,
+      "dataStep": 7,
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
@@ -85,7 +95,7 @@
       "bubbleImage": { "src": "../images/pos/organize/step6_bubble.png", "class": "balloon" }
     },
     {
-      "dataStep": 7,
+      "dataStep": 8,
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
@@ -95,7 +105,7 @@
       ]
     },
     {
-      "dataStep": 8,
+      "dataStep": 9,
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
@@ -105,7 +115,7 @@
       ]
     },
     {
-      "dataStep": 9,
+      "dataStep": 10,
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
@@ -115,7 +125,7 @@
       ]
     },
     {
-      "dataStep": 10,
+      "dataStep": 11,
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
@@ -125,7 +135,7 @@
       ]
     },
     {
-      "dataStep": 11,
+      "dataStep": 12,
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
@@ -135,7 +145,7 @@
       ]
     },
     {
-      "dataStep": 12,
+      "dataStep": 13,
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
@@ -145,7 +155,7 @@
       ]
     },
     {
-      "dataStep": 13,
+      "dataStep": 14,
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
@@ -155,7 +165,7 @@
       ]
     },
     {
-      "dataStep": 14,
+      "dataStep": 15,
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
@@ -165,7 +175,7 @@
       ]
     },
     {
-      "dataStep": 15,
+      "dataStep": 16,
       "class": "cont wide",
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
@@ -176,7 +186,7 @@
     },
     {
       "class": "end",
-      "dataStep": 16,
+      "dataStep": 17,
       "endContent": {
         "endBox": {
           "animation": "fade-up",
