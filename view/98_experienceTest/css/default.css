@@ -753,20 +753,25 @@ section.page-box .step-title span{
 }
 /* step4 */
 #matePos.organize > section.cont[data-step="4"] img.balloon{
-	top: 22%;
+	top: 21.5%;
 	left: 31%;
 }
-/* step5 */
+/* step5-250217 신규추가 */
 #matePos.organize > section.cont[data-step="5"] img.balloon{
-	top: 51%;
-	left: 36%;
+	top: 34%;
+	left: 39%;
 }
 /* step6 */
 #matePos.organize > section.cont[data-step="6"] img.balloon{
+	top: 51%;
+	left: 39%;
+}
+/* step7 */
+#matePos.organize > section.cont[data-step="7"] img.balloon{
 	top: 41%;
 	left: 63.3%;
 }
-#matePos.organize > section.cont[data-step="6"] button{
+#matePos.organize > section.cont[data-step="7"] button{
 	width: 15.411%;
 	max-width: 184px;
 	margin-left: -7.7055%;
@@ -774,17 +779,13 @@ section.page-box .step-title span{
 	bottom: 42.2%;
 	left: 63.3%;
 }
-#matePos.organize > section.cont[data-step="6"] button .animContainer{
+#matePos.organize > section.cont[data-step="7"] button .animContainer{
 	bottom: -60%;
     right: -13%;
 }
-/* step7 */
-#matePos.organize > section.cont[data-step="7"] img.balloon{
-	top: 20%;
-}
 /* step8 */
 #matePos.organize > section.cont[data-step="8"] img.balloon{
-	top: 42%;
+	top: 20%;
 }
 /* step9 */
 #matePos.organize > section.cont[data-step="9"] img.balloon{
@@ -804,16 +805,20 @@ section.page-box .step-title span{
 }
 /* step13 */
 #matePos.organize > section.cont[data-step="13"] img.balloon{
-	top: 41%;
-	left: 68%;
+	top: 42%;
 }
 /* step14 */
 #matePos.organize > section.cont[data-step="14"] img.balloon{
-	top: 31.5%;
-	left: 39%;
+	top: 41%;
+	left: 66%;
 }
 /* step15 */
 #matePos.organize > section.cont[data-step="15"] img.balloon{
+	top: 31.5%;
+	left: 41.5%;
+}
+/* step16 */
+#matePos.organize > section.cont[data-step="16"] img.balloon{
 	top: 86%;
 	left: 81%;
 }
@@ -1316,19 +1321,18 @@ section.page-box .step-title span{
 }
 /* step6 */
 #matePos.setDefault > section.cont[data-step="6"] button{
-	width: 24.875%;
-	max-width: 297px;
-	margin-left: -14.4375%;
-	top:85.34%;
-	left:79.4%;
+	width: 15.746%;
+	max-width: 188px;
+	margin-left: -7.873%;
+	top:33.34%;
+	left: 50.1%;
 }
 #matePos.setDefault > section.cont[data-step="6"] button .animContainer{
-	bottom: -30%;
+	bottom: -10%;
     right: -5%;
 }
 #matePos.setDefault > section.cont[data-step="6"] img.balloon{
-	top: 74%;
-	left: 78%;
+	top: 23%;
 }
 /* step8 */
 #matePos.setDefault > section.cont[data-step="8"] img.balloon{
