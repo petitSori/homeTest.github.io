@@ -909,12 +909,12 @@ section.page-box .step-title span{
 }
 /* step8 */
 #matePos.orderTable > section.cont[data-step="8"] img.balloon{
-	top: 43%;
+	top: 42%;
 	left: 29.5%;
 }
 /* step9 */
 #matePos.orderTable > section.cont[data-step="9"] img.balloon{
-	top:69.5%;
+	top:67.5%;
 	left: 83.5%;
 }
 #matePos.orderTable > section.cont[data-step="9"] button{
