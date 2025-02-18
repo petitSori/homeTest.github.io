@@ -1960,8 +1960,10 @@ section.page-box .step-title span{
 	top: 22%;
 	left: 79%;
 }
-
-
+/* step13 */
+#matePos.payment > section.cont[data-step="13"] img.balloon{
+	top: 69%;
+}
 
 
 
