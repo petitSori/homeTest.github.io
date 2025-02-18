@@ -159,7 +159,8 @@
       "images": [
         { "src": "../images/pos/bg_common.png", "class": "ps-r" },
         { "src": "../images/pos/payment/step13_1.png", "class": "size-100" }
-      ]
+      ],
+      "bubbleImage": { "src": "../images/pos/payment/step13_bubble.png", "class": "balloon" }
     },
     {
       "class": "end",
