@@ -1748,8 +1748,11 @@ section.page-box .step-title span{
 	width: 62.396%;
 	max-width: 745px;
 	margin-left: -31.198%;
-	top:82.45%;
+	top:82.3%;
 	left: 58.6%;
+}
+#matePos.close > section.cont[data-step="5"] button>img{
+	opacity: 0;
 }
 #matePos.close > section.cont[data-step="5"] button .animContainer{
 	bottom: -10%;
