@@ -837,6 +837,9 @@ section.page-box .step-title span{
 	bottom: 64.8%;
 	left: 50%;
 }
+#matePos.orderTable > section.cont[data-step="1"] button > img{
+	opacity: 0;
+}
 #matePos.orderTable > section.cont[data-step="1"] button .animContainer{
 	bottom: -5%;
     right: -2%;
@@ -1727,6 +1730,10 @@ section.page-box .step-title span{
 	margin-left: -4.523%;
 	top:36.348%;
 	left: 75.8%;
+	z-index: 4;
+}
+#matePos.close > section.cont[data-step="4"] button > img{
+	opacity: 0;
 }
 #matePos.close > section.cont[data-step="4"] button .animContainer{
 	bottom: -60%;
@@ -1951,6 +1958,9 @@ section.page-box .step-title span{
 	margin-left: -10.176%;
 	top:34.1%;
 	left: 78.9%;
+}
+#matePos.payment > section.cont[data-step="12"] button > img{
+	opacity: 0;
 }
 #matePos.payment > section.cont[data-step="12"] button .animContainer{
 	bottom: 0;
