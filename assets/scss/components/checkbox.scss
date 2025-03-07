@@ -1,0 +1,152 @@
+/********************************************************/
+/* input checkbox , radio */
+/********************************************************/
+
+.button-input{
+  display: flex;
+  align-items: center;
+  position: relative;
+  white-space: normal;
+  padding: 0;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  // &:hover{opacity: 0.8;}
+  &.disabled{
+    cursor: default;
+    &:hover{opacity: 1;}
+    input{cursor: default;}
+  }
+  input{cursor: pointer;}
+  .text{font-size: 14px; font-weight: 300; line-height: 1.4; color:$color-181A1C;
+    +[class^="checkbox"], +[class^="radio"]{margin-left: 8px;}
+  }
+  [class^="checkbox"],[class^="radio"]{
+    +.text{margin-left: 8px;}
+  }
+
+  .checkbox{
+    input[type="checkbox"]{
+      &+label, &+.check-icon{
+        background: url('../images/icon/ic_check_off.svg');
+        background-size: cover;
+      }
+      &:checked+label, &:checked+.check-icon{ 
+        background: url('../images/icon/ic_check_on.svg');
+        background-size: cover;
+      }
+    }
+  }
+  .radiobox{
+    input[type="radio"]{
+      &+label, &+.check-icon{
+        background: url('../images/icon/ic_radio_off.svg');
+        background-size: cover;
+      }
+      &:checked+label, &:checked+.check-icon{
+        background: url('../images/icon/ic_radio_on.svg');
+        background-size: cover;
+      }
+    }
+  }
+  + .button-input {
+    margin-left: 24px;
+  }
+}
+
+// *****************************************************
+// checkbox
+[class^="checkbox"]{
+  position:relative;
+  display: inline-flex;
+  width:24px;
+  height:24px;
+  vertical-align: middle;
+  input[type="checkbox"] {
+    position: relative;
+    width: 100% !important; height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    opacity: 0 !important;
+    outline: none;
+    &+label, &+.check-icon{
+      background: url('../images/icon/ic_check_off.svg');
+      background-size: cover;
+      position:absolute;
+      width:100%;height:100%;
+      top:0;left:0;
+      outline: none;
+      z-index: 1;
+      //cursor: pointer;
+      transition: all .5 ease-in-out;
+    }
+    &:checked + label, &:checked + .check-icon {
+      display: inline-flex;
+      content: "";
+      position: absolute;
+      top: 0;left: 0;
+      width: 100%;height: 100%;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
+      overflow: hidden;
+      background: url('../images/icon/ic_check_on.svg');
+      background-size: cover;
+    }
+    &:disabled + label, &:disabled + .check-icon{opacity: .3;cursor: default;}
+  }
+}
+
+
+// ******************************************************
+// radio
+.radiobox{
+  position:relative;
+  display: inline-flex;
+  width:20px;
+  height:20px;
+  line-height: 0;
+  vertical-align: middle;
+  input[type="radio"] {
+    position: relative;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: none;
+    opacity: 0 !important;
+    border: 0 !important;
+    & +  label, & +  .check-icon{
+      position:absolute;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      outline: none;
+      z-index: 1;
+      cursor: pointer;
+      background: url('../images/icon/ic_radio_off.svg');
+      background-size: cover;
+      transition: all .5 ease-in-out;
+    }
+    &:checked + label,&:checked + .check-icon {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow: hidden;
+      background: url('../images/icon/ic_radio_on.svg');
+      background-size: cover;
+    }
+    &:disabled + label,&:disabled + .check-icon{
+      cursor: default;
+      opacity: .4;
+    }
+  }
+}

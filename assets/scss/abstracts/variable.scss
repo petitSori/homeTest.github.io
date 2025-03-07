@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1440px;
+
+// 미디어쿼리
+@mixin mobile{
+  @media (max-width: $mobile){ 
+    @content;
+  }
+}
+
+@mixin tablet{
+  @media (max-width: $tablet){ 
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media (min-width: $tablet){
+    @content;
+  }
+}
+
+// important
+$imt : unquote('!important');
+
+// item length
+$itemLength : 100;
+
+$color-1A7CFF:#1A7CFF !default;
+$color-CCE2FF:#CCE2FF !default;
+$color-FF403E:#FF403E !default;
+$color-00B96B:#00B96B !default;
+$color-CCF4DD:#CCF4DD !default;
+$color-ffffff:#ffffff !default;
+$color-F5F7FA:#F5F7FA !default;
+$color-F3F5F7:#F3F5F7 !default;
+$color-E4E6E8:#E4E6E8 !default;
+$color-F8F8F8:#F8F8F8 !default;
+$color-B1B3B5:#B1B3B5 !default;
+$color-7E8082:#7E8082 !default;
+$color-424242:#424242 !default;
+$color-181A1C:#181A1C !default;
+$color-E0E6EF:#E0E6EF !default;
+$color-E6E6E6:#E6E6E6 !default;
+
+
+$colors: () !default;
+$colors: map-merge(
+    (
+      "blue1A7CFF":         $color-1A7CFF,
+      "blueCCE2FF":         $color-CCE2FF,
+      "redFF403E":         $color-FF403E,
+      "green00B96B":         $color-00B96B,
+      "greenCCF4DD":         $color-CCF4DD,
+      "greyffffff":         $color-ffffff,
+      "greyF5F7FA":         $color-F5F7FA,
+      "greyF3F5F7":         $color-F3F5F7,
+      "greyE4E6E8":         $color-E4E6E8,
+      "greyF8F8F8":         $color-F8F8F8,
+      "greyB1B3B5":         $color-B1B3B5,
+      "grey7E8082":         $color-7E8082,
+      "grey424242":         $color-424242,
+      "grey181A1C":         $color-181A1C,
+      "greyE0E6EF":         $color-E0E6EF,
+      "greyE6E6E6":         $color-E6E6E6,
+    ),
+    $colors
+);
+

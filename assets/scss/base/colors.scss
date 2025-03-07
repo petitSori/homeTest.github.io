@@ -1,0 +1,18 @@
+
+@each $color, $value in $colors {
+ .fc-#{$color}{
+   color: #{$value} $imt;
+ }
+ .bg-#{$color}{
+   background-color: #{$value} $imt;
+ }
+}
+
+// 아이콘 색상
+.color-greyffffff{filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(259deg) brightness(102%) contrast(106%);}
+.color-blue1A7CFF{filter: brightness(0) saturate(100%) invert(30%) sepia(100%) saturate(1351%) hue-rotate(200deg) brightness(106%) contrast(101%);}
+
+/* background-color */
+.bg-n{background: none $imt;}
+.bg-img-n{background-image: none $imt;}
+.bg-transparent{background-color: transparent $imt;}

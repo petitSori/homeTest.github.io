@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Comaptible" content="IE=edge, chrome=1">
+<title>결제관리_배민쿠폰 결제</title>
+<!-- SEO: 검색 엔진 최적화 설정 -->
+<meta name="description" content="배민오더 사장님">
+<meta name="keywords" content="배민오더 사장님, ...">
+<!-- 모바일 설정 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- 파비콘 -->
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon_16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon_32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../assets/images/favicon_48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon_64.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon_96.png">
+<link rel="icon" type="image/png" sizes="146x146" href="../assets/images/favicon_146.png">
+
+<link rel="stylesheet" href="../assets/scss/import.css">  
+<script type="text/javascript" src="../assets/js/default.js"></script>
+</head>
+<body>
+
+<!-- 루트 엘리먼트 : 시작 -->
+<div id="app">
+  <!-- 페이지 루트 : 시작 (모바일 nav-wrap.open 시 root-wrap에 hp-100vh클래스 붙여주세요.  )-->
+  <div class="root-wrap">
+
+    <!-- 헤더 : 시작 -->
+    <div class="header-wrap">
+      <nav id="gnbWrap">
+          <h1>
+            <a href="#" class="logo" title="배민오더사장님">
+              <img src="../assets/images/logo_white.png" alt="배민오더사장님로고">
+            </a>
+          </h1>
+          <div class="util-wrap">
+            <span class="fs-12 fc-greyB1B3B5 fw-400">2025년 1월 1일 13:46:20</span>
+            <span class="fs-12 fc-greyffffff fw-400">홍길동</span>
+          </div>
+          <!-- 모바일 햄버거 버튼 -->
+          <button type="button" class="mo-manu">
+            <img src="../assets/images/icon/ic_buger.svg" alt="">
+          </button>
+      </nav>
+    </div>
+    <!-- 헤더 : 끝 -->
+
+    <!--- 컨텐츠 루트: 시작 --->
+    <div class="content-wrap">
+        <!-- 좌 네비게이션 : 시작 (모바일에서는 open 토글 클래스 부탁드립니다.) -->
+        <div class="nav-wrap">
+
+          <!-- 모바일 lnb 헤더 -->
+          <div class="mo-nav-header">
+            <div class="util-wrap">
+              <span class="fs-18 fc-grey181A1C fw-700 dp-b">홍길동</span>
+              <span class="fs-12 fc-grey7E8082 fw-400">2025년 1월 1일 13:46:20</span>
+            </div>
+            <button type="button" class="close">
+              <img src="../assets/images/icon/ic_close.svg" alt="">
+            </button>
+          </div>
+
+          <ul class="main-gnb">
+            <!-- li에 active클래스 붙이면 열림 -->
+            <li class="active">
+              <div class="main-gnb-item">
+                <div class="flex1">결제관리</div>
+                <img src="../assets/images/icon/ic_arrow_down.svg" alt="">
+              </div>
+  
+              <!-- sub gnb --->
+              <ul class="sub-gnb-con">
+                <li>
+                  <a href="#" class="sub-gnb-item  active">
+                    배민쿠폰 결제
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="sub-gnb-item">
+                   배민상품권 결제
+                  </a>
+                </li>
+              </ul>
+            </li>
+  
+            <li class="">
+              <div class="main-gnb-item">
+                <div class="flex1">결제내역</div>
+                <img src="../assets/images/icon/ic_arrow_down.svg" alt="">
+              </div>
+  
+              <!-- sub gnb --->
+              <ul class="sub-gnb-con">
+                <li>
+                  <a href="#" class="sub-gnb-item">
+                    쿠폰 결제내역
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="sub-gnb-item">
+                    상품권 결제내역
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- 좌 네비게이션 : 끝 -->
+
+      <!-- 컨텐츠 : 시작 -->
+      <div class="content-box page">
+        <div class="container ph-40">
+          <div class="content-header">
+            <h3 class="sub-title fs-32">
+              배민쿠폰 결제
+            </h3>
+          </div>
+        </div>
+
+        <!-- 이너 컨텐츠 : 시작 -->
+        <div class="inner-box">
+
+          <!-- 스탭바 : 시작 (스탭이 나오면서 하나씩 활성화)-->
+          <div class="container ph-40">
+            <ul class="tab-type-b">
+              <li class="active">
+                <span>step1</span>
+              </li>
+              <li>
+                <span>step2</span>
+              </li>
+              <li>
+                <span>step3</span>
+              </li>
+              <li>
+                <span>step4</span>
+              </li>
+              <li>
+                <span>step5</span>
+              </li>
+              <li>
+                <span>step6</span>
+              </li>
+            </ul>
+          </div>
+          <!-- 스탭바 : 끝 -->
+
+          <!-- step1 : 시작 (최초 step1 제외 모두 display:none)-->
+          <div class="container has-line ph-40">
+            <div class="fs-16 fw-900 fc-grey181A1C mb-16">주문 방식을 선택하세요</div>
+            <div class="toggle-list-con">
+              <button type="button" class="toggle-item active">
+                <div>
+                  <p class="fc-grey181A1C">내점</p>
+                  <p class="fc-grey7E8082">내점에서 주문된 주문 내역만 결제 가능합니다</p>
+                </div>
+              </button>
+              <button type="button" class="toggle-item">
+                <div>
+                  <p class="fc-grey181A1C">포장</p>
+                  <p class="fc-grey7E8082">포장으로 주문된 주문 내역만 결제 가능합니다</p>
+                </div>
+              </button>
+            </div>
+          </div>
+          <!-- step1 : 끝 -->
+
+          <!-- step2 : 시작 -->
+          <div class="container has-line ph-40" style="display: block;">
+            <div class="fs-16 fw-900 fc-grey181A1C mb-16">주문 정보를 입력하세요</div>
+            
+            <div class="input-field-wrap dp-f align-items-center">
+              <!-- label의 필수 품목에만 require 클래스 붙여주세요!-->
+              <div class="label fc-grey181A1C require">
+                <span>주문번호</span>
+              </div>
+              <div class="input-field-con w-488">
+                <input type="text" placeholder="주문번호를 입력하세요">
+              </div>
+            </div>
+
+            <div class="input-field-wrap dp-f align-items-center">
+              <!-- label의 필수 품목에만 require 클래스 붙여주세요!-->
+              <div class="label fc-grey181A1C require">
+                <span>주문금액</span>
+              </div>
+              <!-- 인풋필드에 단위가 있는 경우 has-unit 클래스 붙여주세요.-->
+              <div class="input-field-con w-488 has-unit">
+                <input type="text" placeholder="주문금액를 입력하세요">
+                <span>원</span>
+              </div>
+            </div>
+
+          </div>
+          <!-- step2 : 끝 -->
+
+          <!-- step3 : 시작-->
+          <div class="container has-line ph-40">
+            <div class="fs-16 fw-900 fc-grey181A1C mb-16">결제 방식을 선택하세요</div>
+            <div class="toggle-list-con">
+              <button type="button" class="toggle-item active">
+                <div>
+                  <p class="fc-grey181A1C">배민 쿠폰</p>
+                  <p class="fc-grey7E8082">배민 쿠폰으로 결제를 진행합니다.</p>
+                </div>
+              </button>
+              <button type="button" class="toggle-item">
+                <div>
+                  <p class="fc-grey181A1C">배민 상품권</p>
+                  <p class="fc-grey7E8082">배민 상품권으로 결제를 진행합니다.</p>
+                </div>
+              </button>
+            </div>
+          </div>
+          <!-- step3 : 끝 -->
+
+
+          <!-- step4 : 시작 -->
+          <div class="container has-line ph-40" style="display: block;">
+            <div class="fs-16 fw-900 fc-grey181A1C mb-16">휴대폰 번호를 입력하세요</div>
+            
+            <div class="input-field-wrap dp-f align-items-center">
+              <!-- label의 필수 품목에만 require 클래스 붙여주세요!-->
+              <div class="label fc-grey181A1C require">
+                <span>휴대폰번호</span>
+              </div>
+
+              <div class="dp-f wd-100p">
+                <div class="input-field-con w-488">
+                  <input type="text" placeholder="휴대폰번호 숫자만 입력">
+  
+                  <!-- //전송 확인 문구-->
+                  <div class="input-msg fc-green00B96B">
+                    <img src="../assets/images/icon/ic_check_circle.svg" alt="" class="mr-4">
+                    휴대폰번호로 인증번호가 전송되었습니다
+                  </div>
+  
+                  <div class="input-msg fc-redFF403E">
+                    <img src="../assets/images/icon/icon_wrong.svg" alt="" class="mr-4">
+                    유효성 체크 문구
+                  </div>
+                </div>
+
+                <button type="button" class="button-outline bd-blue1A7CFF medium ml-8">
+                  전송
+                </button>
+
+              </div>
+            </div>
+
+            <div class="input-field-wrap dp-f align-items-center">
+              <!-- label의 필수 품목에만 require 클래스 붙여주세요!-->
+              <div class="label fc-grey181A1C require">
+                <span>인증번호</span>
+              </div>
+              <div class="dp-f wd-100p">
+                <div class="input-field-con w-488">
+                  <input type="text" placeholder="인증번호 입력">
+                  <div class="fc-blue1A7CFF dp-f ps-a top-14 right-12">
+                    <span>01:41</span>
+                    <button type="button" class="ml-8 text-underline">재전송</button>
+                  </div>
+                  <div class="input-msg">
+                    <div class="fc-grey7E8082">휴대폰번호로 전송된 인증번호를 입력해주세요</div>
+                  </div>
+
+                  <!-- //인증 확인 문구-->
+                  <div class="input-msg fc-green00B96B">
+                    <img src="../assets/images/icon/ic_check_circle.svg" alt="" class="mr-4">
+                    인증이 완료되었습니다
+                  </div>
+
+                  <div class="input-msg fc-redFF403E">
+                    <img src="../assets/images/icon/icon_wrong.svg" alt="" class="mr-4">
+                    사용할 수 없는 인증번호입니다
+                  </div>
+                </div>
+
+                <button type="button" class="button-outline bd-blue1A7CFF medium ml-8">
+                  확인
+                </button>
+              </div>
+            </div>
+
+          </div>
+          <!-- step4 : 끝 -->
+
+          <!-- step5 : 시작 -->
+          <div class="container has-line ph-40" style="display: block;">
+            <div class="fs-16 fw-900 fc-grey181A1C mb-16">할인 쿠폰을 선택하세요</div>
+            <div class="toggle-list-con">
+              <button type="button" class="toggle-item active">
+                <div>
+                  <p class="fc-grey181A1C">10% 할인쿠폰</p>
+                  <p class="fc-grey7E8082">첫 방문 할인 쿠폰 D-20</p>
+                </div>
+              </button>
+              <button type="button" class="toggle-item">
+                <div>
+                  <p class="fc-grey181A1C">10,000원 할인 쿠폰</p>
+                  <p class="fc-grey7E8082">50,000원 이상 주문 시 가능  D-20</p>
+                </div>
+              </button>
+              <button type="button" class="toggle-item">
+                <div>
+                  <p class="fc-grey181A1C">10,000원 할인 쿠폰</p>
+                  <p class="fc-grey7E8082">50,000원 이상 주문 시 가능  D-20</p>
+                </div>
+              </button>
+              <button type="button" class="toggle-item">
+                <div>
+                  <p class="fc-grey181A1C">10,000원 할인 쿠폰</p>
+                  <p class="fc-grey7E8082">50,000원 이상 주문 시 가능  D-20</p>
+                </div>
+              </button>
+            </div>
+          </div>
+          <!-- step5 : 끝 -->
+
+          <!-- step6 : 시작 -->
+          <div class="container has-line ph-40" style="display: block;">
+            <div class="fs-16 fw-900 fc-grey181A1C mb-16">쿠폰 결제를 완료해주세요</div>
+            
+            <div class="input-field-wrap dp-f align-items-center">
+              <div class="label fc-grey181A1C">
+                <span>주문금액</span>
+              </div>
+              <!-- 인풋필드에 단위가 있는 경우 has-unit 클래스 붙여주세요.-->
+              <div class="input-field-con w-488 has-unit">
+                <input type="text" value="25,000" readonly>
+                <span>원</span>
+              </div>
+            </div>
+
+            <div class="input-field-wrap dp-f align-items-center">
+              <div class="label fc-grey181A1C">
+                <span>결제금액</span>
+              </div>
+              <!-- 인풋필드에 단위가 있는 경우 has-unit 클래스 붙여주세요.-->
+              <div class="input-field-con w-488 has-unit">
+                <input type="text" value="22,500" readonly>
+                <span>원</span>
+              </div>
+            </div>
+
+          </div>
+          <!-- step6 : 끝 -->
+
+          <!-- bottom-btn 하단 버튼 영역: 시작 -->
+          <div class="bottom-btn" style="display: block;">
+
+            <!-- toast 버튼에서 위로 올라오기 -->
+            <div class="toast-layer">
+              <div class="dp-f align-items-center">
+                <span><img src="../assets/images/icon/ic_check_circle.svg" alt=""></span>
+                <span>결제완료 되었습니다.</span>
+              </div>
+            </div>
+            <!-- toast 버튼에서 위로 올라오기 -->
+
+            <button class="button-rectangle large">
+              22,500원 결제하기
+            </button>
+          </div>
+          <!-- bottom-btn 하단 버튼 영역: 끝 -->
+
+        </div>
+         <!-- 이너 컨텐츠 : 끝 -->
+
+      </div>
+      <!-- 컨텐츠 : 끝 -->
+    </div>
+    <!--- 컨텐츠 루트 : 끝 --->
+
+  </div>
+  <!-- 페이지 루트 : 끝 -->
+</div>
+<!-- 루트 엘리먼트 : 끝 -->
+
+
+</body>
+</html>

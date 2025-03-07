@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Comaptible" content="IE=edge, chrome=1">
+<title>로그인</title>
+<!-- SEO: 검색 엔진 최적화 설정 -->
+<meta name="description" content="배민오더 사장님">
+<meta name="keywords" content="배민오더 사장님, ...">
+<!-- 모바일 설정 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- 파비콘 -->
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon_16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon_32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../assets/images/favicon_48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon_64.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon_96.png">
+<link rel="icon" type="image/png" sizes="146x146" href="../assets/images/favicon_146.png">
+
+<link rel="stylesheet" href="../assets/scss/import.css">  
+</head>
+<body>
+
+<!-- 루트 엘리먼트 : 시작 -->
+<div id="app">
+  <!-- 페이지 루트 : 시작 -->
+  <div class="root-wrap">
+
+    <!-- 로그인 : 시작 -->
+    <div class="content-wrap">
+      <!-- 로그인페이지는 page 클래스 제거!!! -->
+      <div class="content-box">
+
+        <div class="hp-100vh">
+          <div class="line-box">
+            <div class="container ta-c">
+              <img src="../assets/images/logo_black.png" class="logo" alt="">
+            </div>
+  
+            <div class="container mt-24">
+              <div>
+
+                <div>
+                  <p class="mb-8 ">아이디</p>
+                  <!-- 유효성 검사 에러나는 인풋의 input-field-con에 error 클래스 붙여주세요 -->
+                  <div class="input-field-con">
+                    <input type="text" placeholder="아이디 입력">
+                  </div>
+                </div>
+
+                <div class="ps-r mt-16">
+                  <p class="mb-8">비밀번호</p>
+                  <div class="input-field-con error has-icon">
+                    <input type="text" placeholder="비밀번호 입력">
+                    <div class="input-msg">
+                      <img src="../assets/images/icon/icon_wrong.svg" alt="" class="mr-4">
+                      비밀번호를 입력해주세요
+                    </div>
+
+                     <!-- 보안 아이콘 toggle 버튼  -->
+                    <button type="button" style="display: none;">
+                      <img src="../assets/images/icon/icon_eye_open.svg" alt="">
+                    </button>
+                    <button type="button">
+                      <img src="../assets/images/icon/icon_eye_close.svg" alt="">
+                    </button>
+
+                  </div>
+                </div>
+
+                <div class="check-msg">
+                  <img src="../assets/images/icon/icon_wrong.svg" alt="" class="mr-4">
+                  아이디 또는 비밀번호가 올바르지 않습니다.
+                </div>
+              </div>
+            </div>
+  
+            <!-- 인풋에 value 값이 모두 들어가면 disabled 풀어주세요. -->
+            <div class="container mt-32">
+              <button type="button" class="button-rectangle large size-100 hp-55" disabled>
+                로그인
+              </button>
+            </div>
+  
+            <div class="container mt-24">
+              <label class="button-input justify-start" for="saveId">
+                <div class="checkbox">
+                  <input type="checkbox" id="saveId"> <span class="check-icon"></span>
+                </div>
+                <span class="text fs-16">아이디 저장</span>
+              </label>
+            </div>
+          </div> 
+          <p class="mt-40 fs-14 fc-grey7E8082 ta-c">© Woowa Brothers Corp.</p>          
+        </div>
+
+
+
+      </div>
+    </div>
+    <!-- 헤더 : 끝 -->
+
+  </div>
+  <!-- 페이지 루트 : 끝 -->
+</div>
+<!-- 루트 엘리먼트 : 끝 -->
+
+</body>
+</html>
