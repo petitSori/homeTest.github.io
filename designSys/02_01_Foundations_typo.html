@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 가이드</title>
+    <link rel="stylesheet" href="/assets/scss/styleGuide.css" />
+</head>
+<body class="overflow-h">
+    <!-- 루트 엘리먼트 : 시작 -->
+    <div class="root-wrap height-100">
+        <div class="height-100 dp-f flex-column">
+            <div class="height-100 dp-f flex-column">
+
+                <!-- 네비게이션 : 시작 -->
+                <nav id="navWrap">
+                    <div class="nav-wrap">
+                        <div class="logo">
+                            <a href="#" class="typo-desktop-header-m-bold">
+                                <span>BoB System</span>
+                            </a>
+                        </div>
+                        <div class="gnb height-100">
+                            <div class="gnb-list height-100 dp-f align-items-center gap-32">
+                                <a href="/01_01_Overview_intro.html">
+                                    <span class="typo-desktop-title-s-bold">
+                                        Overview
+                                    </span>
+                                </a>
+                                <a href="#none" class="active">
+                                    <span class="typo-desktop-title-s-bold">
+                                        Foundation
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <span class="typo-desktop-title-s-bold">
+                                        Components
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- 네비게이션 : 끝 -->
+
+                <main class="container dp-f justify-between height-100 overflow-h">
+                    <div class="content dp-f justify-between size-100" style="min-height: 0;">
+                        <div class="dp-f height-100 flex-grow size-100 ps-r">
+
+                            <!-- lnb : 시작 -->
+                            <div id="lnbWrap" class="height-100">
+                                <div class="lnb-list height-100">
+                                    <div class="list-item">
+                                        <ul>
+                                            <li class="active">
+                                                <a href="#none"><span>Typography</span></a>
+                                            </li>
+                                            <li class="">
+                                                <a href=""><span>Color</span></a>
+                                            </li>
+                                            <li class="">
+                                                <a href=""><span>Spacing</span></a>
+                                            </li>
+                                            <li class="">
+                                                <a href=""><span>Icon</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- lnb : 끝 -->
+
+                            <!-- 내용 : 시작 -->
+                            <div id="article">
+                                <div class="size-100 height-100" style="overflow: auto;">
+                                    <div id="mainContent">
+                                        <div class="page">
+                                            <div class="mb-16">
+                                                <h3 class="typo-desktop-header-l-bold mb-8">
+                                                    Typography
+                                                </h3>
+                                                <p>정리 된 Typography Family를 기반으로 사용에 연관하여 고유의 토큰명을 지정하여 사용합니다.</p>
+                                            </div>
+
+                                            <hr style="height: 0;border-top: 3px solid #000;"/>
+
+                                            <div class="mt-64 mb-72">
+                                                <p class="typo-desktop-title-m-bold mb-8">Token</p>
+                                                <p>CSS 기본 구조로 typo.{device}.{role}.{size}.{weight}의 정의로 진행합니다<br/>
+                                                    맨 앞 [타입]의 경우 토큰명이 길어짐의 우려로 축약하여 사용합니다.</p>
+                                                <div style="background-color: #F6F7F8; padding: 24px; margin-top: 16px; font-weight: 400;">
+                                                    typo.desktop.header.xxl.bold <br/>
+                                                    typo.desktop.title.xs.medium <br/>
+                                                    typo.mobile.body.m.regular
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mb-72">
+                                                <p class="typo-desktop-title-m-bold mb-8">Header</p>
+                                                <p>토큰명을 기준으로 반응형과 Desktop, Tablet, Mobile 등을 함께 대응 하는 구조입니다</p>
+                                                <table class="only-guide">
+                                                    <colgroup>
+                                                        <col width="20%">
+                                                        <col width="*">
+                                                        <col width="13%">
+                                                        <col width="14%">
+                                                        <col width="13%">
+                                                        <col width="14%">
+                                                      </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Token Name</td>
+                                                            <td>Role</td>
+                                                            <td>Desktop</td>
+                                                            <td><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></td>
+                                                            <td>Mobile</td>
+                                                            <td><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.header.xl.bold
+                                                                </span>
+                                                            </td>
+                                                            <td>페이지 단위의 타이틀에 사용합니다.<br/> (ex.Visual영역/ Header1)</td>
+                                                            <td class="ta-c">64pt / 120% / -1</td>
+                                                            <td class="typo-desktop-header-xl-bold">텍스트</td>
+                                                            <td class="ta-c">56pt / 120% / -1</td>
+                                                            <td class="typo-mobile-header-xl-bold">텍스트</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.header.xl.medium
+                                                                </span>
+                                                            </td>
+                                                            <td>페이지 단위의 타이틀에 사용합니다.<br/> (ex.Visual영역/ Header1)</td>
+                                                            <td class="ta-c">64pt / 120% / -1</td>
+                                                            <td class="typo-desktop-header-xl-medium">텍스트</td>
+                                                            <td class="ta-c">56pt / 120% / -1</td>
+                                                            <td class="typo-mobile-header-xl-medium">텍스트</td>
+                                                        </tr>
+                                                        <tr class="line">
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.header.l.bold
+                                                                </span>
+                                                            </td>
+                                                            <td>페이지 단위의 타이틀에 사용합니다.<br/> (ex.페이지 상단영역/ Header2)</td>
+                                                            <td class="ta-c">56pt / 120% / -0.8</td>
+                                                            <td class="typo-desktop-header-l-bold">텍스트</td>
+                                                            <td class="ta-c">48pt / 120% / -0.8</td>
+                                                            <td class="typo-mobile-header-l-bold">텍스트</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.header.l.medium
+                                                                </span>
+                                                            </td>
+                                                            <td>페이지 단위의 타이틀에 사용합니다.<br/> (ex.페이지 상단영역/ Header2)</td>
+                                                            <td class="ta-c">56pt / 120% / -0.8</td>
+                                                            <td class="typo-desktop-header-l-medium">텍스트</td>
+                                                            <td class="ta-c">48pt / 120% / -0.8</td>
+                                                            <td class="typo-mobile-header-l-medium">텍스트</td>
+                                                        </tr>
+                                                        <tr class="line">
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.header.m.bold
+                                                                </span>
+                                                            </td>
+                                                            <td>섹션 단위의 타이틀에 주로 사용합니다.<br/> (ex.섹션 타이틀영역/ Header3)</td>
+                                                            <td class="ta-c">48 / 120% / -0.6</td>
+                                                            <td class="typo-desktop-header-m-bold">텍스트</td>
+                                                            <td class="ta-c">40 / 120% / -0.6</td>
+                                                            <td class="typo-mobile-header-m-bold">텍스트</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.header.m.medium
+                                                                </span>
+                                                            </td>
+                                                            <td>섹션 단위의 타이틀에 주로 사용합니다.<br/> (ex.섹션 타이틀영역/ Header3)</td>
+                                                            <td class="ta-c">48 / 120% / -0.6</td>
+                                                            <td class="typo-desktop-header-m-medium">텍스트</td>
+                                                            <td class="ta-c">40 / 120% / -0.6</td>
+                                                            <td class="typo-mobile-header-m-medium">텍스트</td>
+                                                        </tr>
+                                                        <tr class="line">
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.header.s.bold
+                                                                </span>
+                                                            </td>
+                                                            <td>섹션 단위의 타이틀의 하위 위계로 주로 사용합니다.<br/> (Header4)</td>
+                                                            <td class="ta-c">40 / 120% / -0.5</td>
+                                                            <td class="typo-desktop-header-s-bold">텍스트</td>
+                                                            <td class="ta-c">32 / 120% / -0.5</td>
+                                                            <td class="typo-mobile-header-s-bold">텍스트</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.header.s.medium
+                                                                </span>
+                                                            </td>
+                                                            <td>섹션 단위의 타이틀의 하위 위계로 주로 사용합니다.<br/> (Header4)</td>
+                                                            <td class="ta-c">40 / 120% / -0.5</td>
+                                                            <td class="typo-desktop-header-s-medium">텍스트</td>
+                                                            <td class="ta-c">32 / 120% / -0.5</td>
+                                                            <td class="typo-mobile-header-s-medium">텍스트</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <div class="code size-100 mt-16">
+                                                    <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--데스트탑--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-header-xl-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.xl.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-header-xl-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>&nbsp;typo.{device}.header.xl.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-header-l-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.l.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-header-l-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.l.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-header-m-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.m.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-header-m-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.m.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-header-s-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.s.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-header-s-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.s.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--모바일--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-header-xl-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.xl.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-header-xl-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>&nbsp;typo.{device}.header.xl.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-header-l-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.l.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-header-l-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.l.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-header-m-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.m.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-header-m-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.m.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-header-s-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.s.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-header-s-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.header.s.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div class="mb-72">
+                                                <p class="typo-desktop-title-m-bold mb-8">Title</p>
+                                                <p>토큰명을 기준으로 반응형과 Desktop, Tablet, Mobile 등을 함께 대응 하는 구조입니다</p>
+                                                <table class="only-guide">
+                                                    <colgroup>
+                                                        <col width="20%">
+                                                        <col width="*">
+                                                        <col width="13%">
+                                                        <col width="14%">
+                                                        <col width="13%">
+                                                        <col width="14%">
+                                                      </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Token Name</td>
+                                                            <td>Role</td>
+                                                            <td>Desktop</td>
+                                                            <td><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></td>
+                                                            <td>Mobile</td>
+                                                            <td><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.title.l.bold
+                                                                </span>
+                                                            </td>
+                                                            <td>페이지 단위의 타이틀에 사용합니다.<br/> (ex.페이지 상단영역/Title1)</td>
+                                                            <td class="ta-c">32pt / 130% / -0.6</td>
+                                                            <td class="typo-desktop-title-l-bold">텍스트</td>
+                                                            <td class="ta-c">24pt / 130% / -0.2</td>
+                                                            <td class="typo-mobile-title-l-bold">텍스트</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.title.l.medium
+                                                                </span>
+                                                            </td>
+                                                            <td>페이지 단위의 타이틀에 사용합니다.<br/> (ex.페이지 상단영역/Title1)</td>
+                                                            <td class="ta-c">32pt / 130% / -0.6</td>
+                                                            <td class="typo-desktop-title-l-medium">텍스트</td>
+                                                            <td class="ta-c">32pt / 130% / -0.6</td>
+                                                            <td class="typo-mobile-title-l-medium">텍스트</td>
+                                                        </tr>
+                                                        <tr class="line">
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.title.m.bold
+                                                                </span>
+                                                            </td>
+                                                            <td>페이지 단위의 타이틀에 사용합니다.<br/> (ex.페이지 상단영역/Title2)</td>
+                                                            <td class="ta-c">24pt / 130% / 0</td>
+                                                            <td class="typo-desktop-title-m-bold">텍스트</td>
+                                                            <td class="ta-c">24pt / 130% / 0</td>
+                                                            <td class="typo-mobile-title-m-bold">텍스트</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.title.m.medium
+                                                                </span>
+                                                            </td>
+                                                            <td>페이지 단위의 타이틀에 사용합니다.<br/> (ex.페이지 상단영역/Title2)</td>
+                                                            <td class="ta-c">24pt / 130% / 0</td>
+                                                            <td class="typo-desktop-title-m-medium">텍스트</td>
+                                                            <td class="ta-c">20pt / 130% / 0</td>
+                                                            <td class="typo-mobile-title-m-medium">텍스트</td>
+                                                        </tr>
+                                                        <tr class="line">
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.title.s.bold
+                                                                </span>
+                                                            </td>
+                                                            <td>서브 타이틀에 주로 사용합니다.<br/> (Title3)</td>
+                                                            <td class="ta-c">48 / 120% / -0.6</td>
+                                                            <td class="typo-desktop-title-s-bold">텍스트</td>
+                                                            <td class="ta-c">40 / 120% / -0.6</td>
+                                                            <td class="typo-mobile-title-s-bold">텍스트</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="grey-label">
+                                                                    typo.{device}.title.s.medium
+                                                                </span>
+                                                            </td>
+                                                            <td>서브 타이틀에 주로 사용합니다.<br/> (Title3)</td>
+                                                            <td class="ta-c">20pt / 130% / 0</td>
+                                                            <td class="typo-desktop-title-s-medium">텍스트</td>
+                                                            <td class="ta-c">20pt / 130% / 0</td>
+                                                            <td class="typo-mobile-title-s-medium">텍스트</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <div class="code size-100 mt-16">
+                                                    <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--데스트탑--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-title-l-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.title.l.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-title-l-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>&nbsp;typo.{device}.title.l.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-title-m-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.title.m.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-title-m-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.title.m.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-title-s-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.title.s.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-title-s-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.title.s.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--모바일--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-title-xl-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.title.l.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-title-xl-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>&nbsp;typo.{device}.title.l.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-title-m-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.title.m.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-title-m-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.title.m.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-title-s-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.title.s.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-title-s-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.title.s.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div class="mb-72">
+                                                <p class="typo-desktop-title-m-bold mb-8">Body</p>
+                                                <p>토큰명을 기준으로 반응형과 Desktop, Tablet, Mobile 등을 함께 대응하는 구조입니다</p>
+                                                
+                                                <table class="only-guide">
+                                                    <colgroup>
+                                                    <col width="20%">
+                                                    <col width="*">
+                                                    <col width="13%">
+                                                    <col width="14%">
+                                                    <col width="13%">
+                                                    <col width="14%">
+                                                    </colgroup>
+                                                    <thead>
+                                                    <tr>
+                                                        <td>Token Name</td>
+                                                        <td>Role</td>
+                                                        <td>Desktop</td>
+                                                        <td><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></td>
+                                                        <td>Mobile</td>
+                                                        <td><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></td>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td><span class="grey-label">typo.{device}.body.l.bold</span></td>
+                                                        <td>기본 본문보다 조금 큰 사이즈입니다.<br/> (body1)</td>
+                                                        <td class="ta-c">18px / 140% / 0</td>
+                                                        <td class="typo-desktop-body-l-bold">텍스트</td>
+                                                        <td class="ta-c">16px / 140% / 0</td>
+                                                        <td class="typo-mobile-body-l-bold">텍스트</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="grey-label">typo.{device}.body.l.medium</span></td>
+                                                        <td>기본 본문보다 조금 큰 사이즈입니다.<br/> (body1)</td>
+                                                        <td class="ta-c">18px / 140% / 0</td>
+                                                        <td class="typo-desktop-body-l-medium">텍스트</td>
+                                                        <td class="ta-c">16px / 140% / 0</td>
+                                                        <td class="typo-mobile-body-l-medium">텍스트</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="grey-label">typo.{device}.body.l.regular</span></td>
+                                                        <td>기본 본문보다 조금 큰 사이즈입니다.<br/> (body1)</td>
+                                                        <td class="ta-c">18px / 140% / 0</td>
+                                                        <td class="typo-desktop-body-l-regular">텍스트</td>
+                                                        <td class="ta-c">16px / 140% / 0</td>
+                                                        <td class="typo-mobile-body-l-regular">텍스트</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="grey-label">typo.{device}.body.m.medium</span></td>
+                                                        <td>기본 본문 텍스트 사이즈입니다.<br/> (body2)</td>
+                                                        <td class="ta-c">16px / 140% / 0</td>
+                                                        <td class="typo-desktop-body-m-medium">텍스트</td>
+                                                        <td class="ta-c">14px / 140% / 0</td>
+                                                        <td class="typo-mobile-body-m-medium">텍스트</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="grey-label">typo.{device}.body.m.regular</span></td>
+                                                        <td>기본 본문 텍스트 사이즈입니다.<br/> (body2)</td>
+                                                        <td class="ta-c">16px / 140% / 0</td>
+                                                        <td class="typo-desktop-body-m-regular">텍스트</td>
+                                                        <td class="ta-c">14px / 140% / 0</td>
+                                                        <td class="typo-mobile-body-m-regular">텍스트</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="grey-label">typo.{device}.body.s.medium</span></td>
+                                                        <td>본문 보조, 하위 위계의 텍스트 사이즈입니다.<br/> (body3)</td>
+                                                        <td class="ta-c">14px / 140% / 0</td>
+                                                        <td class="typo-desktop-body-s-medium">텍스트</td>
+                                                        <td class="ta-c">12px / 140% / 0</td>
+                                                        <td class="typo-mobile-body-s-medium">텍스트</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="grey-label">typo.{device}.body.s.regular</span></td>
+                                                        <td>본문 보조, 하위 위계의 텍스트 사이즈입니다.<br/> (body3)</td>
+                                                        <td class="ta-c">14px / 140% / 0</td>
+                                                        <td class="typo-desktop-body-s-regular">텍스트</td>
+                                                        <td class="ta-c">12px / 140% / 0</td>
+                                                        <td class="typo-mobile-body-s-regular">텍스트</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <div class="code size-100 mt-16">
+                                                    <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--데스트탑--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-body-l-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.body.l.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-body-l-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>&nbsp;typo.{device}.body.l.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-body-l-regular"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>&nbsp;typo.{device}.body.l.regular<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-body-m-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.body.m.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-body-m-regular"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.body.m.regular<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-body-s-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.body.s.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-body-s-regular"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.body.s.regular<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--모바일--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-body-l-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.body.l.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-body-l-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>&nbsp;typo.{device}.body.l.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-body-l-regular"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>&nbsp;typo.{device}.body.l.regular<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-body-m-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.body.m.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-body-m-regular"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.body.m.regular<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-body-s-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.body.s.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-body-s-regular"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.body.s.regular<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <p class="typo-desktop-title-m-bold mb-8">Caption</p>
+                                            <p>토큰명을 기준으로 반응형과 Desktop, Tablet, Mobile 등을 함께 대응 하는 구조입니다</p>
+                                            <table class="only-guide">
+                                                <colgroup>
+                                                    <col width="24%">
+                                                    <col width="*">
+                                                    <col width="13%">
+                                                    <col width="12%">
+                                                    <col width="13%">
+                                                    <col width="12%">
+                                                  </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <td>Token Name</td>
+                                                        <td>Role</td>
+                                                        <td>Desktop</td>
+                                                        <td><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></td>
+                                                        <td>Mobile</td>
+                                                        <td><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="grey-label">
+                                                                typo.{device}.caption.m.medium
+                                                            </span>
+                                                        </td>
+                                                        <td>기본 캡션 및 라벨 텍스트 사이즈입니다.<br/> (caption1)</td>
+                                                        <td class="ta-c">12 / 150% / 0</td>
+                                                        <td class="typo-desktop-caption-m-medium">텍스트</td>
+                                                        <td class="ta-c">10 / 150% / 0</td>
+                                                        <td class="typo-mobile-caption-m-medium">텍스트</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="grey-label">
+                                                                typo.{device}.caption.m.regular
+                                                            </span>
+                                                        </td>
+                                                        <td>기본 캡션 및 라벨 텍스트 사이즈입니다.<br/> (caption1)</td>
+                                                        <td class="ta-c">12 / 150% / 0</td>
+                                                        <td class="typo-desktop-caption-m-regular">텍스트</td>
+                                                        <td class="ta-c">10 / 150% / 0</td>
+                                                        <td class="typo-mobile-caption-m-regular">텍스트</td>
+                                                    </tr>
+                                                    <tr class="line">
+                                                        <td>
+                                                            <span class="grey-label">
+                                                                typo.{device}.caption.s.bold
+                                                            </span>
+                                                        </td>
+                                                        <td>가장 작은 단위의 텍스트 사이즈입니다.<br/> (caption2)</td>
+                                                        <td class="ta-c">10 / 150% / 0</td>
+                                                        <td class="typo-desktop-caption-s-bold">텍스트</td>
+                                                        <td class="ta-c">8 / 150% / 0</td>
+                                                        <td class="typo-mobile-caption-s-bold">텍스트</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="grey-label">
+                                                                typo.{device}.caption.s.medium
+                                                            </span>
+                                                        </td>
+                                                        <td>가장 작은 단위의 텍스트 사이즈입니다.<br/> (caption2)</td>
+                                                        <td class="ta-c">10 / 150% / 0</td>
+                                                        <td class="typo-desktop-caption-s-medium">텍스트</td>
+                                                        <td class="ta-c">8 / 150% / 0</td>
+                                                        <td class="typo-mobile-caption-s-medium">텍스트</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="grey-label">
+                                                                typo.{device}.caption.s.regular
+                                                            </span>
+                                                        </td>
+                                                        <td>가장 작은 단위의 텍스트 사이즈입니다.<br/> (caption2)</td>
+                                                        <td class="ta-c">10 / 150% / 0</td>
+                                                        <td class="typo-desktop-caption-s-regular">텍스트</td>
+                                                        <td class="ta-c">8 / 150% / 0</td>
+                                                        <td class="typo-mobile-caption-s-regular">텍스트</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <div class="code size-100 mt-16">
+                                            <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--데스트탑--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-caption-m-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.caption.m.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-caption-m-regular"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>&nbsp;typo.{device}.caption.m.regular<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-caption-s-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>&nbsp;typo.{device}.caption.s.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-caption-s-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.caption.s.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-desktop-caption-s-regular"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.caption.s.regular<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--모바일--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-caption-m-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.caption.m.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-caption-m-regular"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>&nbsp;typo.{device}.caption.m.regular<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-caption-s-bold"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>&nbsp;typo.{device}.caption.s.bold<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-caption-s-medium"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.caption.s.medium<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"typo-mobile-caption-s-regular"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>typo.{device}.caption.s.regular<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 내용 : 끝 -->
+
+                        </div>
+                    </div>
+                </main>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 루트 엘리먼트 : 끝 -->
+</body>
+</html>

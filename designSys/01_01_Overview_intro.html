@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 가이드</title>
+    <link rel="stylesheet" href="/assets/scss/styleGuide.css" />
+</head>
+<body>
+    <!-- 루트 엘리먼트 : 시작 -->
+    <div class="root-wrap height-100">
+        <div class="height-100 dp-f flex-column">
+            <div class="height-100 dp-f flex-column">
+
+                <!-- 네비게이션 : 시작 -->
+                <nav id="navWrap">
+                    <div class="nav-wrap">
+                        <div class="logo">
+                            <a href="#" class="typo-desktop-header-m-bold">
+                                <span>BoB System</span>
+                            </a>
+                        </div>
+                        <div class="gnb height-100">
+                            <div class="gnb-list height-100 dp-f align-items-center gap-32">
+                                <a href="#" class="active">
+                                    <span class="typo-desktop-title-s-bold">
+                                        Overview
+                                    </span>
+                                </a>
+                                <a href="/02_01_Foundations_typo.html">
+                                    <span class="typo-desktop-title-s-bold">
+                                        Foundation
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <span class="typo-desktop-title-s-bold">
+                                        Components
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- 네비게이션 : 끝 -->
+
+                <main class="container dp-f flex-grow flex-column size-100 height-100">
+                    <div class="content dp-f flex-grow flex-column" style="min-height: 0;">
+                        <div class="dp-f height-100 flex-grow size-100 ps-r">
+                            <!-- lnb : 시작 -->
+                            <div id="lnbWrap" class="dp-f flex-column height-100">
+                                <div class="lnb-list dp-f flex-column height-100">
+                                    <div class="list-item">
+                                        <ul>
+                                            <li class="active">
+                                                <a href=""><span>Introduction</span></a>
+                                            </li>
+                                            <li>
+                                                <a href=""><span>Getting Started</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- lnb : 끝 -->
+                        </div>
+                    </div>
+                </main>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 루트 엘리먼트 : 끝 -->
+</body>
+</html>

@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+$tablet: 1024px;
+$desktop: 1560px;
+
+// 미디어쿼리
+@mixin desktop{
+  @media (max-width: $desktop){
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media (min-width: $tablet){
+    @content;
+  }
+}
+
+// important
+$imt : unquote('!important');
+
+// item length
+$itemLength : 120;
+
+//브라보 
+$color-primary:#42936C !default;//green700
+
+$color-grey0:#FFFFFF !default;
+$color-grey100:#F8F8F8 !default;
+$color-grey200:#F2F2F2 !default;
+$color-grey300:#E8E8E8 !default;
+$color-grey400:#DDDDDD !default;
+$color-grey500:#CCCCCC !default;
+$color-grey600:#AAAAAA !default;
+$color-grey700:#666666 !default;
+$color-grey800:#343434 !default;
+$color-grey900:#222222 !default;
+$color-grey900-black:#000000 !default;
+
+$color-grey-blue-100 : #F3F5F7 !default;
+
+$color-green-dark:#00402A !default;//green900
+$color-green-sub:#DCF4DC !default;//green300
+$color-green500:#A9D9B5 !default;
+$color-green100:#F7FDF7 !default;
+$color-green-light:#EEFAEE !default;
+$color-yellow-dark:#E69500 !default;
+$color-yellow-primary:#F2B91F !default;
+$color-yellow-light:#FDF5DF !default;
+$color-orange-dark:#803216 !default;
+$color-orange-primary:#E25F30 !default;
+$color-orange-light:#FDE9E2 !default;
+$color-red500:#E83A23 !default;
+$color-red-light:#F4DCDC !default;
+//그래프 사용
+$color-sky:#50BDD0 !default;
+$color-green:#70B962 !default;
+
+$colorF7F7F7:#F7F7F7 !default;
+$color3CAA69:#3CAA69 !default;
+$colorE47B38:#E47B38 !default;
+$colorE25F30:#E25F30 !default;
+$color407FDE:#407FDE !default;
+$colorDC9F0E:#DC9F0E !default;
+$colorD95F44:#D95F44 !default;
+
+$colors: () !default;
+$colors: map-merge(
+    (
+      "primary" :      $color-primary,
+      "grey-0" :      $color-grey0,
+      "grey-100" :      $color-grey100,
+      "grey-200" :      $color-grey200,
+      "grey-300" :      $color-grey300,
+      "grey-400" :      $color-grey400,
+      "grey-500" :      $color-grey500,
+      "grey-600" :      $color-grey600,
+      "grey-700" :      $color-grey700,
+      "grey-800" :      $color-grey800,
+      "grey-900" :      $color-grey900,
+      "grey-900-black" :      $color-grey900-black,
+
+      "grey-blue-100" :      $color-grey-blue-100,
+
+      "green" :      $color-green,
+      "green-dark" :     $color-green-dark,
+      "green-sub" :     $color-green-sub,
+      "green-500" :     $color-green500,
+      "green-100" :     $color-green100,
+      "green-light" :     $color-green-light,
+      "yellow-dark" :     $color-yellow-dark,
+      "yellow-primary" :     $color-yellow-primary,
+      "yellow-light" :     $color-yellow-light,
+      "orange-dark" :     $color-orange-dark,
+      "orange-primary" :     $color-orange-primary,
+      "orange-light" :     $color-orange-light,
+      "red-500" :     $color-red500,
+      "red-light" :     $color-red-light,
+      "sky" :     $color-sky,
+
+      "grey-f7f7f7" :      $colorF7F7F7,
+      "green-3CAA69" :      $color3CAA69,
+      "orange-E47B38" :      $colorE47B38,
+      "orange-E25F30" :      $colorE25F30,
+      "blue-407FDE" :      $color407FDE,
+      "yellow-DC9F0E" :      $colorDC9F0E,
+      "red-D95F44" :      $colorD95F44,
+    ),
+    $colors
+);
+
