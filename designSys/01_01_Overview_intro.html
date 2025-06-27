@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>스타일 가이드</title>
-    <link rel="stylesheet" href="/assets/scss/styleGuide.css" />
+    <link rel="stylesheet" href="./assets/scss/styleGuide.css" />
 </head>
-<body>
+<body class="overflow-h">
     <!-- 루트 엘리먼트 : 시작 -->
     <div class="root-wrap height-100">
         <div class="height-100 dp-f flex-column">
@@ -22,12 +22,12 @@
                         </div>
                         <div class="gnb height-100">
                             <div class="gnb-list height-100 dp-f align-items-center gap-32">
-                                <a href="#" class="active">
+                                <a href="#none" class="active">
                                     <span class="typo-desktop-title-s-bold">
                                         Overview
                                     </span>
                                 </a>
-                                <a href="/02_01_Foundations_typo.html">
+                                <a href="./02_01_Foundations_typo.html">
                                     <span class="typo-desktop-title-s-bold">
                                         Foundation
                                     </span>
@@ -43,18 +43,19 @@
                 </nav>
                 <!-- 네비게이션 : 끝 -->
 
-                <main class="container dp-f flex-grow flex-column size-100 height-100">
-                    <div class="content dp-f flex-grow flex-column" style="min-height: 0;">
+                <main class="container dp-f justify-between height-100 overflow-h">
+                    <div class="content dp-f justify-between size-100" style="min-height: 0;">
                         <div class="dp-f height-100 flex-grow size-100 ps-r">
+
                             <!-- lnb : 시작 -->
-                            <div id="lnbWrap" class="dp-f flex-column height-100">
-                                <div class="lnb-list dp-f flex-column height-100">
+                            <div id="lnbWrap" class="height-100">
+                                <div class="lnb-list height-100">
                                     <div class="list-item">
                                         <ul>
                                             <li class="active">
-                                                <a href=""><span>Introduction</span></a>
+                                                <a href="#none"><span>Introduction</span></a>
                                             </li>
-                                            <li>
+                                            <li class="">
                                                 <a href=""><span>Getting Started</span></a>
                                             </li>
                                         </ul>
@@ -62,6 +63,26 @@
                                 </div>
                             </div>
                             <!-- lnb : 끝 -->
+
+                            <!-- 내용 : 시작 -->
+                            <div id="article">
+                                <div class="size-100 height-100" style="overflow: auto;">
+                                    <div id="mainContent">
+                                        <div class="page">
+                                            <div class="mb-16">
+                                                <h3 class="typo-desktop-header-l-bold mb-8">
+                                                    Introduction
+                                                </h3>
+                                                <p class="typo-desktop-body-l-regular">BoB 디자인 시스템을 소개합니다.</p>
+                                            </div>
+
+                                            <hr style="height: 0;border-top: 3px solid #000;"/>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 내용 : 끝 -->
+
                         </div>
                     </div>
                 </main>
