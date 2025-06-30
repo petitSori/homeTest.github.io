@@ -1,0 +1,33 @@
+// abstracts
+@import './abstracts/variable';
+@import './abstracts/typography';
+
+// base
+@import './base/common';
+@import './base/font';
+@import './base/reset';
+
+// // components
+// @import './components';
+
+// // vendors
+// @import './vendors';
+
+
+//default 설정 
+:root {
+    --default-primary-color: #{$color-fill-brand-primary};
+    --default-contents-color: #{$color-contents-default};
+}
+
+#root {
+    background-color: $color-fill-brand-primary-soft;
+    color: $color-contents-default;
+    border: 1px solid $color-border-accent;
+    @include typo(desktop, body, l, regular);
+}
+
+
+
+
+

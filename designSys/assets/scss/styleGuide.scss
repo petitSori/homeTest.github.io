@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 // import
-@import './import';
+@import './layout';
 
 
 table { width: 100%;}
@@ -90,20 +90,23 @@ table { width: 100%;}
 .only-guide {
     margin-top: 16px;
     width: 100%;
-    thead {
+    > thead {
         height: 56px;
         background-color: #EAEAEA;
         text-align: center;
         font-weight: 700;
         font-size: 16px;
     }
-    tbody {
-        tr {
-            td {
+    > tbody {
+        > tr {
+            >td {
                 height: 80px;
                 padding: 8px 18px;
                 box-sizing: border-box;
                 font-weight: 400;
+                .colorscripter-code {
+
+                }
             }
             &.line {
                 td {

@@ -18,7 +18,7 @@ address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal;}
 
 button{border:0 none;border-radius:0;background-color:transparent;cursor:pointer;}
 
-a{color:$color-grey900;text-decoration:none;}
+a{color:$color-contents-default;text-decoration:none;}
 a:active, a:hover{text-decoration:none;}
 a:active{background-color:transparent;}
 
@@ -33,7 +33,7 @@ body{
   -webkit-text-size-adjust: none;
   overflow-y: auto;
   line-height: 1.4; font-size:14px;
-  color:$color-grey900;
+  color:$color-contents-default;
 }
 
 a, abbr, address, article, aside, audio, b, blockquote, body, br, button, canvas, caption, cite, code, col, data, datalist, dd, del, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form,
@@ -51,7 +51,7 @@ sub, sup, table, td, textarea, th, time, u, ul, var, video{
 *:focus:not(:focus-visible) {outline: none;}
 /* Optional: Customize .focus-visible */
 a, button, [class*="button"]{
-  &:focus-visible {outline:$color-grey900 auto 1px !important;}
+  &:focus-visible {outline:$color-border-default auto 1px !important;}
 }
 input,textarea{
   &:focus-visible{outline: none !important;}
@@ -90,25 +90,8 @@ button, a, input, img, div, span, p{-webkit-tap-highlight-color: rgba(0,0,0,0) !
 hr {
   margin-top: 0;
   margin-bottom: 0;
-  &.dash {
-    border: none;
-    height: 2px;
-    background-image: linear-gradient(to left ,$color-grey500 50%,
-    rgba(255,255,255,0) 0%);
-    background-position: bottom; 
-    background-size: 8px 1px;/*점선 간격 수정*/
-    background-repeat: repeat-x;
-  }
 }
-/* input , select */
-//@media screen and (-webkit-min-device-pixel-ratio:0) {
-//  select:focus,
-//  textarea:focus,
-//  input:focus {
-//    font-size: 16px; zoom: 1;
-//    background: transparent;
-//  }
-//}
+
 
 select, input[type="text"], input[type="search"], input[type="date"],
 input[type="password"], .container-line input[type="time"], input[type="datetime-local"],
@@ -142,7 +125,7 @@ input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-search-results-decoration { display: none; }
 input[type="checkbox"]:checked:after{content: none;}
-input::placeholder, textarea::placeholder{color:$color-grey500; font-weight: 400;}
+input::placeholder, textarea::placeholder{color:$color-contents-placeholder; font-weight: 400;}
 textarea{-webkit-appearance: none;-moz-appearance: none;appearance: none;padding: 0 0.5em;box-sizing: border-box;background: transparent;}
 
 input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { /* WebKit browsers */ color:transparent; transition: color .15s ease-out; }
@@ -151,7 +134,7 @@ input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { /* Mozilla Fir
 input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color:transparent; transition: color .15s ease-out; }
 
 input[disabled], textarea[disabled],
-select[disabled='disabled'], select:disabled{color: $color-grey500 !important; opacity:1; -webkit-text-fill-color: $color-grey500 !important;}
+select[disabled='disabled'], select:disabled{color: $color-contents-disabled !important; opacity:1; -webkit-text-fill-color: $color-contents-disabled !important;}
 
 // *****************************************************
 
@@ -354,13 +337,6 @@ select[disabled='disabled'], select:disabled{color: $color-grey500 !important; o
   .minus-mb-#{$i} { margin-bottom: 0px + -$i $imt;}
 }
 
-@media (max-width: $tablet){
-  .ph-40 {
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-  }
-}
-
 //// overflow
 .overflow-h{overflow: hidden $imt;}
 .overflow-v{overflow: visible $imt;}
@@ -495,20 +471,6 @@ select[disabled='disabled'], select:disabled{color: $color-grey500 !important; o
 @for $i from 1 through $itemLength {
   .bdr-br-#{$i} {border-bottom-right-radius: 0px + $i $imt;}
 }
-
-.bd-n{border:none !important;}
-.bd-white{border:1px solid $color-grey0 $imt;}
-@each $bdName, $bdColor in $colors {
-  @for $i from 1 through 15 {
-    .bd-#{$bdName}-#{$i}{border:0px + $i solid #{$bdColor} $imt;}
-    .bd-#{$bdName}{border:1px solid #{$bdColor};}
-    .bd-#{$bdName}-r#{$i}{border-right:0px + $i solid $bdColor;}
-    .bd-#{$bdName}-l#{$i}{border-left:0px + $i solid $bdColor;}
-    .bd-#{$bdName}-t#{$i}{border-top:0px + $i solid $bdColor;}
-    .bd-#{$bdName}-b#{$i}{border-bottom:0px + $i solid $bdColor;}
-  }
-}
-
 
 //// box-shadow
 .box-shadow{box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.07) !important;}
