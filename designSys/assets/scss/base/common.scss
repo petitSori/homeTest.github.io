@@ -205,12 +205,6 @@ select[disabled='disabled'], select:disabled{color: $color-contents-disabled !im
   .wd-#{$i} {width:0px  + $i $imt;}
 }
 
-
-.size-0{width:0% !important;}
-@for $i from 1 through 100 {
-  .size-#{$i} { width: 0% + $i $imt; min-width: 0% + $i $imt;}
-}
-.size-33{width:33.3333% !important;}
 .wh-0 {height:0; width:0px;}
 @for $i from 1 through $itemLength {
   .wh-#{$i} {width:0px  + $i $imt; height:0px  + $i $imt;}

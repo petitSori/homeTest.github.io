@@ -1,0 +1,302 @@
+$icon-size: (
+  16: 1rem,
+  24: 1.5rem,
+  32: 2rem,
+  40: 2.5rem,
+  48: 3rem,
+  56: 3.5rem,
+  64: 4rem,
+  120: 7.5rem,
+) !default;
+
+@mixin svg-icon($effect: null) {
+    display: inline-flex;
+    background-color: $color-contents-default;
+    forced-color-adjust: none;
+    @if ($effect == 'pure') { 
+		background-color: transparent !important;
+	}
+}
+@mixin svg-icon-size-only($size: 24) {
+    $resolved-size: if(map-has-key($icon-size, $size), map-get($icon-size, $size), $size);
+    width: $resolved-size;
+    height: $resolved-size;
+}
+
+
+//svg icon setting
+@mixin icon-set ($name: null, $effect: null) {
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center center;
+	-webkit-mask-size: contain;
+	mask-repeat: no-repeat;
+	mask-position: center center;
+	mask-size: contain;
+	-webkit-mask-image: url(../../../assets/images/icon/#{$name}.svg);
+	mask-image: url(../../../assets/images/icon/#{$name}.svg);
+    @if ($effect == 'pure') { //mask 효과 없이 디자인된 svg 그대로 사용
+		-webkit-mask-image: none;
+		mask-image: none;
+		background-image: url(../../../assets/images/icon/#{$name}.svg);
+		background-color: transparent !important;
+		background-size: contain;
+		background-repeat: no-repeat;
+		-webkit-mask: none;
+		mask: none;
+	}
+}
+
+
+$icon-list: (
+    //direction
+    "arrow-chevron-left": ic_arrow_chevron_left,
+    "arrow-chevron-right": ic_arrow_chevron_right,
+    "arrow-chevron-line-left": ic_arrow_chevron_line_left,
+    "arrow-chevron-line-right": ic_arrow_chevron_line_right,
+    "arrow-chevron-down": ic_arrow_chevron_down,
+    "arrow-chevron-up": ic_arrow_chevron_up,
+    "arrow-left": ic_arrow_left,
+    "arrow-right": ic_arrow_right,
+    "arrow-down": ic_arrow_down,
+    "arrow-up": ic_arrow_up,
+    "arrow-north-west": ic_arrow_north_west,
+    "arrow-north-east": ic_arrow_north_east,
+    "arrow-south-west": ic_arrow_south_west,
+    "arrow-south-east": ic_arrow_south_east,
+    "arrow-chevron-alt-left": ic_arrow_chevron_alt_left,
+    "arrow-chevron-alt-right": ic_arrow_chevron_alt_right,
+    "arrow-chevron-alt-down": ic_arrow_chevron_alt_down,
+    "arrow-chevron-alt-up": ic_arrow_chevron_alt_up,
+    "arrow-alt-left": ic_arrow_alt_left,
+    "arrow-alt-right": ic_arrow_alt_right,
+    "arrow-alt-down": ic_arrow_alt_down,
+    "arrow-alt-up": ic_arrow_alt_up,
+    "arrow-alt-north-west": ic_arrow_alt_north_west,
+    "arrow-alt-north-east": ic_arrow_alt_north_east,
+    "arrow-alt-south-west": ic_arrow_alt_south_west,
+    "arrow-alt-south-east": ic_arrow_alt_south_east,
+    "left": ic_left,
+    "right": ic_right,
+    "double-arrow-left": ic_double_arrow_left,
+    "double-arrow-right": ic_double_arrow_right,
+    "double-arrow-down": ic_double_arrow_down,
+    "double-arrow-up": ic_double_arrow_up,
+    "bar-left": ic_bar_left,
+    "bar-right": ic_bar_right,
+    "arrow-fill-left": ic_arrow_fill_left,
+    "arrow-fill-right": ic_arrow_fill_right,
+    "arrow-fill-down": ic_arrow_fill_down,
+    "arrow-fill-up": ic_arrow_fill_up,
+    "circle-arrow-left": ic_circle_arrow_left,
+    "circle-arrow-right": ic_circle_arrow_right,
+    "circle-arrow-down": ic_circle_arrow_down,
+    "circle-arrow-up": ic_circle_arrow_up,
+    "circle-arrow-fill-left": ic_circle_arrow_fill_left,
+    "circle-arrow-fill-right": ic_circle_arrow_fill_right,
+    "circle-arrow-fill-down": ic_circle_arrow_fill_down,
+    "circle-arrow-fill-up": ic_circle_arrow_fill_up,
+
+    //navigate
+    "menu": ic_menu,
+    "search": ic_search,
+    "search-fill": ic_search_fill,
+    "search-alt": ic_search_alt,
+    "home": ic_home,
+    "home-fill": ic_home_fill,
+    "more-vert": ic_more_vert,
+    "more-hori": ic_more_hori,
+    "refresh": ic_refresh,
+    "refresh-10s": ic_refresh_10s,
+    "refresh-3s": ic_refresh_3s,
+    "close": ic_close,
+    "check": ic_check,
+    "setting": ic_setting,
+    "setting2": ic_setting2,
+    "setting-fill": ic_setting_fill,
+    "filter-default": ic_filter_default,
+    "filter2-vert": ic_filter2_vert,
+    "filter2": ic_filter2,
+    "filter3": ic_filter3,
+    "filter3-fill": ic_filter3_fill,
+    "mate": ic_mate,
+
+    //status
+    "circle-cancle": ic_circle_cancle,
+    "circle-cancle-fill": ic_circle_cancle_fill,
+    "check-box": ic_check_box,
+    "check-box-fill": ic_check_box_fill,
+    "circle-check": ic_circle_check,
+    "circle-check-fill": ic_circle_check_fill,
+    "square-plus": ic_square_plus,
+    "square-plus-fill": ic_square_plus_fill,
+    "square-minus": ic_square_minus,
+    "square-minus-fill": ic_square_minus_fill,
+    "circle-plus": ic_circle_plus,
+    "circle-plus-fill": ic_circle_plus_fill,
+    "circle-minus": ic_circle_minus,
+    "circle-minus-fill": ic_circle_minus_fill,
+    "circle-info": ic_circle_info,
+    "circle-info-fill": ic_circle_info_fill,
+    "circle-info2": ic_circle_info2,
+    "circle-info2-fill": ic_circle_info2_fill,
+    "circle-important": ic_circle_important,
+    "warning-sharp": ic_warning_sharp,
+    "warning-sharp-fill": ic_warning_sharp_fill,
+    "block": ic_block,
+    "menu2-right": ic_menu2_right,
+    "menu2-left": ic_menu2_left,
+    "move": ic_move,
+    "plus": ic_plus,
+    "minus": ic_minus,
+    "minus-s": ic_minus_s,
+    "mobile-turn-right": ic_mobile_turn_right,
+    "mobile-turn-left": ic_mobile_turn_left,
+    "trashcan": ic_trashcan,
+    "bookmark": ic_bookmark,
+    "bookmark-fill": ic_bookmark_fill,
+    "align": ic_align,
+    "copy": ic_copy,
+    "pin": ic_pin,
+    "pin-fill": ic_pin_fill,
+
+    //location,time
+    "circle-time": ic_circle_time,
+    "circle-time-fill": ic_circle_time_fill,
+    "alarm": ic_alarm,
+    "location-on": ic_location_on,
+    "location-fill": ic_location_fill,
+    "internet": ic_internet,
+    "map": ic_map,
+    "arrow-minimize": ic_arrow_minimize,
+    "arrow-minimize2": ic_arrow_minimize2,
+    "arrow-fullscreen": ic_arrow_fullscreen,
+    "arrow-fullscreen2": ic_arrow_fullscreen2,
+    "arrow-angle-contract": ic_arrow_angle_contract,
+    "arrow-angle-expand": ic_arrow_angle_expand,
+    "calendar": ic_calendar,
+    "calendar2": ic_calendar2,
+
+    //function
+    "notice": ic_notice,
+    "square-upload": ic_square_upload,
+    "square-download": ic_square_download,
+    "square-upload2": ic_square_upload2,
+    "square-download2": ic_square_download2,
+    "upload": ic_upload,
+    "download": ic_download,
+    "star": ic_star,
+    "star-half-fill": ic_star_half_fill,
+    "star-fill": ic_star_fill,
+    "people": ic_people,
+    "person": ic_person,
+    "notifications": ic_notifications,
+    "notifications2": ic_notifications2,
+    "notifications-fill": ic_notifications_fill,
+    "notifications-fill-off": ic_notifications_fill_off,
+    "grid": ic_grid,
+    "grid-fill": ic_grid_fill,
+    "out": ic_out,
+    "in": ic_in,
+    "out-fill": ic_out_fill,
+    "wifi1-bar": ic_wifi1_bar,
+    "wifi2-bar": ic_wifi2_bar,
+    "wifi": ic_wifi,
+    "wifi-off": ic_wifi_off,
+    "list": ic_list,
+    "list2": ic_list2,
+    "visibility": ic_visibility,
+    "visibility-off": ic_visibility_off,
+    "cellular-fill": ic_cellular_fill,
+    "headset": ic_headset,
+    "headset-fill": ic_headset_fill,
+    "phone": ic_phone,
+    "phone-fill": ic_phone_fill,
+    "id": ic_id,
+    "qr": ic_qr,
+    "image": ic_image,
+    "category": ic_category,
+    "category-fill": ic_category_fill,
+    "mail-open": ic_mail_open,
+    "mail-open-fill": ic_mail_open_fill,
+    "mail": ic_mail,
+    "mail-fill": ic_mail_fill,
+    "radio2-abled": ic_radio2_abled,
+    "radio2-selected": ic_radio2_selected,
+
+    //etc
+    "bar": ic_bar,
+    "bar-alt": ic_bar_alt,
+    "credit-card": ic_credit_card,
+    "credit-card-fill": ic_credit_card_fill,
+    "store": ic_store,
+    "cash-won": ic_cash_won,
+    "sale-fill": ic_sale_fill,
+    "coin-fill": ic_coin_fill,
+    "tell-fill": ic_tell_fill,
+    "sandglass": ic_sandglass,
+    "sandglass-fill": ic_sandglass_fill,
+    "motorcycle": ic_motorcycle,
+    "motorcycle-quick": ic_motorcycle_quick,
+    "food": ic_food,
+    "food-fill": ic_food_fill,
+
+    "empty2": ic_empty2,
+    "graph": ic_graph,
+    "graph-fill": ic_graph_fill,
+    "rocket-sharp-fill": ic_rocket_sharp_fill,
+    "paper": ic_paper,
+    "message-fill": ic_message_fill,
+    "devide-fill": ic_devide_fill,
+    "devide2-fill": ic_devide2_fill,
+    "box": ic_box,
+    "box2": ic_box2,
+    "cup": ic_cup,
+    "cup-fill": ic_cup_fill,
+    "version": ic_version,
+    "qrcode": ic_qrcode,
+    "wallet": ic_wallet,
+    "wallet-fill": ic_wallet_fill,
+    "receipt": ic_receipt,
+    "receipt-fill": ic_receipt_fill,
+    "bullet-square": ic_bullet_square,
+    "signal": ic_signal,
+    "browser": ic_browser,
+    "memo": ic_memo,
+    "leaf": ic_leaf,
+    "leaf-fill": ic_leaf_fill,
+);
+
+$pure-icon-list: (
+    //navigate
+    "filter-new": ic_filter_new,
+);
+
+
+[class^="ic-"] {
+    @include svg-icon(); 
+    @include svg-icon-size-only();
+  
+    // 아이콘 설정 반복
+    @each $class-name, $icon-name in $icon-list {
+        // pure 리스트에 포함되어 있으면 제외
+        @if not map-has-key($pure-icon-list, $class-name) {
+            &.ic-#{$class-name} {
+            @include icon-set($icon-name);
+            }
+        }
+    }
+
+    // pure 아이콘들
+    @each $class-name, $icon-name in $pure-icon-list {
+        &.ic-#{$class-name} {
+        @include icon-set($icon-name, 'pure');
+        }
+    }
+  
+    // 크기 클래스 처리
+    @each $key, $val in $icon-size {
+      &.size-#{$key} {
+        @include svg-icon-size-only($key);
+      }
+    }
+  }

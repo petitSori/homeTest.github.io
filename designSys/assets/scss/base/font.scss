@@ -1,5 +1,5 @@
 
-$font-path: "../../assets/fonts/";
+$font-path: "../../../assets/fonts/";
 $weights: (
         300: "Regular",
         400: "Medium",
@@ -12,6 +12,7 @@ $weights: (
     font-family: "pretendard";
     font-style: normal;
       font-weight: $weight;
+      src: url("#{$font-path}Pretendard-#{$file}.woff2") format("woff2");
       src: url("#{$font-path}Pretendard-#{$file}.woff2") format("woff2");
   }
 }

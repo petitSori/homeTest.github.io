@@ -73,10 +73,20 @@ table { width: 100%;}
         }
     }
 }
-
+main {
+    .content  {
+        width: 100%;
+    }
+}
 #article {
     width: 100%;
     padding-left: 240px;
+    .icon-list {
+        i {
+            margin: 0 24px;
+            margin-bottom: 40px;
+        }
+    }
 }
 
 #mainContent {

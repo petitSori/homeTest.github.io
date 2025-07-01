@@ -132,6 +132,9 @@ $colors: map-merge(
     .text-#{$color} {
       color: #{$value} $imt;
     }
+    .bg-#{$color} {
+      background-color: #{$value} $imt;
+    }
   }
   @if str-index($color, "border-") {
     .bd-#{$color} {
