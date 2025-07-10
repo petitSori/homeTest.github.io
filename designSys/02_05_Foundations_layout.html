@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 가이드</title>
+    <link rel="stylesheet" href="./assets/scss/styleGuide.css" />
+</head>
+<body class="overflow-h">
+    <!-- 루트 엘리먼트 : 시작 -->
+    <div class="root-wrap height-100">
+        <div class="height-100 dp-f flex-column">
+            <div class="height-100 dp-f flex-column">
+
+                <!-- 네비게이션 : 시작 -->
+                <nav id="navWrap">
+                    <div class="nav-wrap">
+                        <div class="logo">
+                            <a href="#" class="typo-desktop-header-m-bold">
+                                <span>BoB System</span>
+                            </a>
+                        </div>
+                        <div class="gnb height-100">
+                            <div class="gnb-list height-100 dp-f align-items-center gap-32">
+                                <a href="./01_01_Overview_intro.html">
+                                    <span class="typo-desktop-title-s-bold">
+                                        Overview
+                                    </span>
+                                </a>
+                                <a href="./02_01_Foundations_typo.html" class="active">
+                                    <span class="typo-desktop-title-s-bold">
+                                        Foundation
+                                    </span>
+                                </a>
+                                <a href="#none">
+                                    <span class="typo-desktop-title-s-bold">
+                                        Components
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- 네비게이션 : 끝 -->
+
+                <main class="container dp-f justify-between height-100 overflow-h">
+                    <div class="content dp-f justify-between size-100" style="min-height: 0;">
+                        <div class="dp-f height-100 flex-grow size-100 ps-r">
+
+                            <!-- lnb : 시작 -->
+                            <div id="lnbWrap" class="height-100">
+                                <div class="lnb-list height-100">
+                                    <div class="list-item">
+                                        <ul>
+                                            <li class="">
+                                                <a href="./02_01_Foundations_typo.html"><span>Typography</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="./02_02_Foundations_color.html"><span>Color</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="./02_03_Foundations_icon.html"><span>Icon</span></a>
+                                            </li>
+                                            <li class="">
+                                                <a href="./02_04_Foundations_spacing.html"><span>Spacing</span></a>
+                                            </li>
+                                            <li class="active" >
+                                                <a href="./02_05_Foundations_layout.html"><span>Grid & Layout</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- lnb : 끝 -->
+
+                            <!-- 내용 : 시작 -->
+                            <div id="article">
+                                <div class="size-100 height-100" style="overflow: auto;">
+                                    <div id="mainContent">
+                                        <div class="page">
+                                            <div class="margin-b-16">
+                                                <h3 class="typo-desktop-header-l-bold mb-8">
+                                                    Grid
+                                                </h3>
+                                                <p>MATE 프로덕트에서 사용 할 코어 그리드 시스템 규칙을 정의합니다.</p>
+                                            </div>
+
+                                            <hr style="height: 0;border-top: 3px solid #000;"/>
+                                            
+                                            <div class="margin-t-64 mb-72">
+                                                <p class="typo-desktop-title-m-bold mb-8">Column</p>
+                                                <p>컬럼 단위를 사용해 콘텐츠의 크기를 조정합니다.<br/>
+                                                    콘텐츠 영역을 동일 너비의 균일한 컬럼으로 나눠 1개 이상의 컬럼을 조합해 콘텐츠의 크기를 경정합니다.<br/>
+                                                    컬럼의 너비는 백분율로 설정되어 다양하 ㄴ화면 크기에 맞게 조정되며, 개수는 브레이크포인트 범위에 따라 정해집니다.<br/>
+                                                    기본으로 4 컬럼 그리드를 사용하며, 8 또는 12컬럼 그리드도 사용할 수 있습니다.</p>
+
+                                                <div style="margin-top: 16px; font-weight: 400;">
+                                                    <div>
+                                                        <div class="container gird-guide margin-b-40">
+                                                            <div class="row">
+                                                              <div class="col-1">
+                                                                 <div>col1</div>
+                                                              </div>
+                                                              <div class="col-1">
+                                                                <div>col2</div>
+                                                              </div>
+                                                              <div class="col-1">
+                                                                <div>col3</div>
+                                                              </div>
+                                                              <div class="col-1">
+                                                                <div>col4</div>
+                                                              </div>
+                                                              <div class="col-1">
+                                                                <div>col5</div>
+                                                              </div>
+                                                              <div class="col-1">
+                                                                <div>col6</div>
+                                                              </div>
+                                                              <div class="col-1">
+                                                                <div>col7</div>
+                                                              </div>
+                                                              <div class="col-1">
+                                                                <div>col8</div>
+                                                              </div>
+                                                              <div class="col-1">
+                                                                <div>col9</div>
+                                                              </div>
+                                                              <div class="col-1">
+                                                                <div>col10</div>
+                                                              </div>
+                                                              <div class="col-1">
+                                                                <div>col11</div>
+                                                              </div>
+                                                              <div class="col-1">
+                                                                <div>col12</div>
+                                                              </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container gird-guide margin-b-40">
+                                                            <div class="row">
+                                                              <div class="col-tablet-4 col-desktop-2 col-1">
+                                                                 <div>col1</div>
+                                                              </div>
+                                                              <div class="col-tablet-4 col-desktop-2 col-1">
+                                                                <div>col2</div>
+                                                              </div>
+                                                              <div class="col-tablet-4 col-desktop-3 col-1">
+                                                                <div>col3</div>
+                                                              </div>
+                                                              <div class="col-tablet-4 col-desktop-5 col-1">
+                                                                <div>col3</div>
+                                                              </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- 내용 : 끝 -->
+                        </div>
+                    </div>
+                </main>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 루트 엘리먼트 : 끝 -->
+</body>
+</html>
