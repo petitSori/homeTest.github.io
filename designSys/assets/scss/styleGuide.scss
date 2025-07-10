@@ -3,7 +3,9 @@
 // import
 @import './layout';
 
-
+.margin-t-72 {margin-top: 72px;}
+.margin-b-72 {margin-bottom: 72px;}
+.margin-b-40 {margin-bottom: 40px;}
 table { width: 100%;}
 #navWrap {
     .nav-wrap {
@@ -74,6 +76,13 @@ table { width: 100%;}
     }
 }
 main {
+    &.container {
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
     .content  {
         width: 100%;
     }
@@ -129,6 +138,21 @@ main {
         padding: 10px;
         border-radius: 6px;
         background-color: #F0F0F0;
+    }
+}
+.gird-guide {
+    .row {
+        > div {
+            height: 100%;
+            > div {
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                background-color: rgba($color: #ff0000, $alpha: 0.2);
+            }
+        }
     }
 }
 

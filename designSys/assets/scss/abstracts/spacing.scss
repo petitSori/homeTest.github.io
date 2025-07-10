@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+$spacing-0: 0px;
+$spacing-4: 4px;
+$spacing-8: 8px;
+$spacing-16: 16px;
+$spacing-24: 24px;
+$spacing-32: 32px;
+$spacing-40: 40px;
+$spacing-48: 48px;
+$spacing-56: 56px;
+$spacing-64: 64px;
+
+$spacing-values: (
+  0: $spacing-0,
+  4: $spacing-4,
+  8: $spacing-8,
+  16: $spacing-16,
+  24: $spacing-24,
+  32: $spacing-32,
+  40: $spacing-40,
+  48: $spacing-48,
+  56: $spacing-56,
+  64: $spacing-64
+);
+
+@function get-spacing($size) {
+  @return map-get($spacing-values, $size);
+}
+
+@mixin spacing($property, $direction, $size) {
+  $value: map-get($spacing-values, $size);
+
+  $prop: $property;
+
+  @if $direction == top {
+    #{$prop}-top: $value;
+  } @else if $direction == bottom {
+    #{$prop}-bottom: $value;
+  } @else if $direction == left {
+    #{$prop}-left: $value;
+  } @else if $direction == right {
+    #{$prop}-right: $value;
+  } @else if $direction == x {
+    #{$prop}-left: $value;
+    #{$prop}-right: $value;
+  } @else if $direction == y {
+    #{$prop}-top: $value;
+    #{$prop}-bottom: $value;
+  } @else if $direction == all {
+    #{$prop}: $value;
+  } @else {
+    @warn "space: direction `#{$direction}` 지원하지 않습니다. (top, bottom, left, right, x, y, all)";
+  }
+}
+
+@each $size, $value in $spacing-values {
+  // margin
+  .margin-#{$size} { margin: $value !important; }
+  .margin-t-#{$size} { margin-top: $value !important; }
+  .margin-b-#{$size} { margin-bottom: $value !important; }
+  .margin-l-#{$size} { margin-left: $value !important; }
+  .margin-r-#{$size} { margin-right: $value !important; }
+  .margin-x-#{$size} {
+    margin-left: $value !important;
+    margin-right: $value !important;
+  }
+  .margin-y-#{$size} {
+    margin-top: $value !important;
+    margin-bottom: $value !important;
+  }
+
+  // negative margin
+  .negative-margin-#{$size} { margin: -$value !important; }
+  .negative-margin-t-#{$size} { margin-top: -$value !important; }
+  .negative-margin-b-#{$size} { margin-bottom: -$value !important; }
+  .negative-margin-l-#{$size} { margin-left: -$value !important; }
+  .negative-margin-r-#{$size} { margin-right: -$value !important; }
+  .negative-margin-x-#{$size} {
+    margin-left: -$value !important;
+    margin-right: -$value !important;
+  }
+  .negative-margin-y-#{$size} {
+    margin-top: -$value !important;
+    margin-bottom: -$value !important;
+  }
+
+  // padding
+  .padding-#{$size} { padding: $value !important; }
+  .padding-t-#{$size} { padding-top: $value !important; }
+  .padding-b-#{$size} { padding-bottom: $value !important; }
+  .padding-l-#{$size} { padding-left: $value !important; }
+  .padding-r-#{$size} { padding-right: $value !important; }
+  .padding-x-#{$size} {
+    padding-left: $value !important;
+    padding-right: $value !important;
+  }
+  .padding-y-#{$size} {
+    padding-top: $value !important;
+    padding-bottom: $value !important;
+  }
+}

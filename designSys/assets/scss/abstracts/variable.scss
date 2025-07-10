@@ -147,3 +147,28 @@ $colors: map-merge(
     }
   }
 }
+
+//grid 
+$grid-breakpoints: (
+  mobile: 360px,
+  tablet: 768px,
+  desktop: 1200px
+);
+
+$grid-columns: (
+  mobile: 4,
+  tablet: 8,
+  desktop: 12
+);
+
+$grid-gutter: (
+  mobile: 16px,
+  tablet: 16px,
+  desktop: 22px
+);
+
+$grid-margin: (
+  mobile: 20px,
+  tablet: 24px,
+  desktop: 40px
+);
