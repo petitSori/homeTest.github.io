@@ -28,29 +28,38 @@ $spacing-values: (
   @return map-get($spacing-values, $size);
 }
 
-@mixin spacing($property, $direction, $size) {
-  $value: map-get($spacing-values, $size);
-
+@mixin spacing($property, $direction-or-size, $size: null) {
   $prop: $property;
-
-  @if $direction == top {
-    #{$prop}-top: $value;
-  } @else if $direction == bottom {
-    #{$prop}-bottom: $value;
-  } @else if $direction == left {
-    #{$prop}-left: $value;
-  } @else if $direction == right {
-    #{$prop}-right: $value;
-  } @else if $direction == x {
-    #{$prop}-left: $value;
-    #{$prop}-right: $value;
-  } @else if $direction == y {
-    #{$prop}-top: $value;
-    #{$prop}-bottom: $value;
-  } @else if $direction == all {
-    #{$prop}: $value;
+  $value: null;
+  @if type-of($direction-or-size) == number {
+    $value: map-get($spacing-values, $direction-or-size);
+    $direction-or-size: null;
   } @else {
-    @warn "space: direction `#{$direction}` 지원하지 않습니다. (top, bottom, left, right, x, y, all)";
+    @if $size == null {
+      @error "spacing 믹스인 호출 오류: 방향이 주어졌을 경우 크기($size)를 지정해야 합니다. (예: @include spacing(margin, t, 24);)";
+    }
+    $value: map-get($spacing-values, $size);
+  }
+
+
+  @if $direction-or-size == null {
+    #{$prop}: $value;
+  } @else if $direction-or-size == t {
+    #{$prop}-top: $value;
+  } @else if $direction-or-size == b {
+    #{$prop}-bottom: $value;
+  } @else if $direction-or-size == l {
+    #{$prop}-left: $value;
+  } @else if $direction-or-size == r {
+    #{$prop}-right: $value;
+  } @else if $direction-or-size == x {
+    #{$prop}-left: $value;
+    #{$prop}-right: $value;
+  } @else if $direction-or-size == y {
+    #{$prop}-top: $value;
+    #{$prop}-bottom: $value;
+  } @else {
+    @warn "spacing: direction `#{$direction-or-size}` 지원하지 않습니다. (t, b, l, r, x, y, 또는 생략)";
   }
 }
 
