@@ -25,16 +25,18 @@
     @include typo(desktop, body, l, regular);
 
     //margin 예시
-    @include spacing(margin, left, 24);// margin-left:24px;
+    @include spacing(margin, t, 24);// margin-top:24px;
+    @include spacing(margin, l, 24);// margin-left:24px;
     @include spacing(margin, x, 24);// margin-left:24px; margin-right: 24px;
     @include spacing(margin, y, 24);// margin-top:24px; margin-bottom: 24px;
-    @include spacing(margin, all, 24);// margin:24px;
+    @include spacing(margin, 24);// margin:24px;
 
     //padding 예시
-    @include spacing(padding, left, 24);// padding-left:24px;
+    @include spacing(padding, r, 24);// padding-right:24px;
+    @include spacing(padding, l, 24);// padding-left:24px;
     @include spacing(padding, x, 24);// padding-left:24px; padding-right: 24px;
     @include spacing(padding, y, 24);// padding-top:24px; padding-bottom: 24px;
-    @include spacing(padding, all, 24);// padding:24px;
+    @include spacing(padding, 24);// padding:24px;
 }
 
 
