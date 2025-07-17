@@ -8,7 +8,7 @@ $itemLength : 120;
 
 //default 설정 
 :root {
-  --color-fill-brand-primary: #0F6CF0;
-  --color-contents-default: #1D1E20;
-  --border-accent: 1px solid #1D1E20;
+  --color-fill-brand-primary: #{$color-fill-brand-primary};
+  --color-contents-default: #{$color-contents-default};
+  --border-accent: 1px solid #{$color-border-accent};
 }
