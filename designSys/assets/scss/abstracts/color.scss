@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+//fill 
+$color-fill-brand-primary:#0F6CF0 !default;
+$color-fill-brand-primary-soft:#F0F6FE !default;
+$color-fill-brand-primary-accent:#0347A0 !default;
+$color-fill-brand-secondary:#00C896 !default;
+$color-fill-brand-secondary-soft:#E6F9F4 !default;
+$color-fill-primary:#35383B !default;
+$color-fill-primary-alt:#4D5056 !default;
+$color-fill-secondary:#656A72 !default;
+$color-fill-tertiary:#878D97 !default;
+$color-fill-quaternary:#B9BEC6 !default;
+$color-fill-quinary:#D3D6DA !default;
+$color-fill-senary:#E9EAEC !default;
+$color-fill-septenary:#F4F5F6 !default;
+$color-fill-disabled:#D3D6DA !default;
+$color-fill-disabled-soft:#E9EAEC !default;
+$color-fill-clear: rgba(#FFFFFF, 0) !default;
+$color-fill-white:#FFFFFF !default;
+$color-fill-overlay:#000000 !default;
+$color-fill-overlay-80: rgba(#000000, 0.8) !default;
+$color-fill-overlay-60: rgba(#000000, 0.6) !default;
+$color-fill-overlay-40: rgba(#000000, 0.4) !default;
+$color-fill-overlay-10: rgba(#000000, 0.1) !default;
+$color-fill-benefit:#F20D80 !default;
+$color-fill-benefit-soft:#FFEBF5 !default;
+$color-fill-sale:#F83A3A !default;
+$color-fill-sale-soft:#FDECEC !default;
+$color-fill-warning:#F83A3A !default;
+$color-fill-warning-soft:#FDECEC !default;
+
+//contents 
+$color-contents-default:#1D1E20 !default;
+$color-contents-subtle:#656A72 !default;
+$color-contents-muted:#878D97 !default;
+$color-contents-placeholder:#A4A9B2 !default;
+$color-contents-disabled:#B9BEC6 !default;
+$color-contents-white:#FFFFFF !default;
+$color-contents-brand-primary:#0F6CF0 !default;
+$color-contents-brand-secondary:#00C896 !default;
+$color-contents-sale:#F83A3A !default;
+$color-contents-warning:#F83A3A !default;
+$color-contents-benefit:#F20D80 !default;
+
+//border 
+$color-border-accent:#1D1E20 !default;
+$color-border-default:#E9EAEC !default;
+$color-border-subtle:#D3D6DA !default;
+$color-border-muted:#F4F5F6 !default;
+$color-border-disabled:#D3D6DA !default;
+$color-border-white:#FFFFFF !default;
+$color-border-brand-primary:#0F6AEB !default;
+$color-border-brand-primary-deep:#0347A0 !default;
+$color-border-warning:#F83A3A !default;
+$color-border-sale:#F83A3A !default;
+$color-border-benefit:#F20D80 !default;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "fill-brand-primary" :      $color-fill-brand-primary,
+    "fill-brand-primary-soft" :      $color-fill-brand-primary-soft,
+    "fill-brand-primary-accent" :      $color-fill-brand-primary-accent,
+    "fill-brand-secondary" :      $color-fill-brand-secondary,
+    "fill-brand-secondary-soft" :      $color-fill-brand-secondary-soft,
+    "fill-primary" :      $color-fill-primary,
+    "fill-primary-alt" :      $color-fill-primary-alt,
+    "fill-secondary" :      $color-fill-secondary,
+    "fill-tertiary" :      $color-fill-tertiary,
+    "fill-quaternary" :      $color-fill-quaternary,
+    "fill-quinary" :      $color-fill-quinary,
+    "fill-senary" :      $color-fill-senary,
+    "fill-septenary" :      $color-fill-septenary,
+    "fill-disabled" :      $color-fill-disabled,
+    "fill-disabled-soft" :      $color-fill-disabled-soft,
+    "fill-clear" :      $color-fill-clear,
+    "fill-white" :      $color-fill-white,
+    "fill-overlay" :      $color-fill-overlay,
+    "fill-overlay-80" :      $color-fill-overlay-80,
+    "fill-overlay-60" :      $color-fill-overlay-60,
+    "fill-overlay-40" :      $color-fill-overlay-40,
+    "fill-overlay-10" :      $color-fill-overlay-10,
+    "fill-benefit" :      $color-fill-benefit,
+    "fill-benefit-soft" :      $color-fill-benefit-soft,
+    "fill-sale" :      $color-fill-sale,
+    "fill-sale-soft" :      $color-fill-sale-soft,
+    "fill-warning" :      $color-fill-warning,
+    "fill-warning-soft" :      $color-fill-warning-soft,
+
+    "contents-default" :      $color-contents-default,
+    "contents-subtle" :      $color-contents-subtle,
+    "contents-muted" :      $color-contents-muted,
+    "contents-placeholder" :      $color-contents-placeholder,
+    "contents-disabled" :      $color-contents-disabled,
+    "contents-white" :      $color-contents-white,
+    "contents-brand-primary" :      $color-contents-brand-primary,
+    "contents-brand-secondary" :      $color-contents-brand-secondary,
+    "contents-sale" :      $color-contents-sale,
+    "contents-warning" :      $color-contents-warning,
+    "contents-benefit" :      $color-contents-benefit,
+
+    "border-accent" :      $color-border-accent,
+    "border-default" :      $color-border-default,
+    "border-subtle" :      $color-border-subtle,
+    "border-muted" :      $color-border-muted,
+    "border-disabled" :      $color-border-disabled,
+    "border-white" :      $color-border-white,
+    "border-brand-primary" :      $color-border-brand-primary,
+    "border-brand-primary-deep" :      $color-border-brand-primary-deep,
+    "border-warning" :      $color-border-warning,
+    "border-sale" :      $color-border-sale,
+    "border-benefit" :      $color-border-benefit,
+  ),
+  $colors
+);
+
+
+@each $color, $value in $colors {
+  @if str-index($color, "fill-") {
+    .bg-#{$color} {
+      background-color: #{$value} !important;
+    }
+  }
+  @if str-index($color, "contents-") {
+    .text-#{$color} {
+      color: #{$value} !important;
+    }
+    .bg-#{$color} {
+      background-color: #{$value} !important;
+    }
+  }
+  @if str-index($color, "border-") {
+    .bd-#{$color} {
+      border: 1px solid #{$value} !important;
+    }
+    @for $i from 2 through 5 {
+      .bd-#{$color}-#{$i}{
+        border:0px + $i solid #{$value} !important;
+      }
+    }
+  }
+}

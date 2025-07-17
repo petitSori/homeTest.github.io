@@ -8,18 +8,8 @@
 // // vendors
 // @import './vendors';
 
-
-//default 설정 
-:root {
-    --default-primary-color: #{$color-fill-brand-primary};
-    --default-contents-color: #{$color-contents-default};
-    @each $size, $value in $icon-size {
-		--default-icon-size-#{$size}: #{$value};
-	}
-}
-
 #root {
-    background-color: $color-fill-brand-primary-soft;
+    background-color: $color-fill-brand-primary;
     color: $color-contents-default;
     border: 1px solid $color-border-accent;
     @include typo(desktop, body, l, regular);
