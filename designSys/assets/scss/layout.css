@@ -3781,6 +3781,12 @@
   padding-bottom: 64px !important;
 }
 
+:root {
+  --color-fill-brand-primary: #0F6CF0;
+  --color-contents-default: #1D1E20;
+  --border-accent: 1px solid #1D1E20;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -13597,9 +13603,9 @@ template {
 }
 
 #root {
-  background-color: #0F6CF0;
-  color: #1D1E20;
-  border: 1px solid #1D1E20;
+  background-color: var(--color-fill-brand-primary);
+  color: var(--color-contents-default);
+  border: var(--border-accent);
   font-size: 18px !important;
   font-weight: 300 !important;
   line-height: 1.4 !important;

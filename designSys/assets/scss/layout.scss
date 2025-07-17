@@ -9,9 +9,9 @@
 // @import './vendors';
 
 #root {
-    background-color: $color-fill-brand-primary;
-    color: $color-contents-default;
-    border: 1px solid $color-border-accent;
+    background-color: var(--color-fill-brand-primary);
+    color: var(--color-contents-default);
+    border: var(--border-accent);
     @include typo(desktop, body, l, regular);
 
     //margin 예시

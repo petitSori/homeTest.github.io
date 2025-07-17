@@ -5,3 +5,10 @@ $imt : unquote('!important');
 
 // item length
 $itemLength : 120;
+
+//default 설정 
+:root {
+  --color-fill-brand-primary: #0F6CF0;
+  --color-contents-default: #1D1E20;
+  --border-accent: 1px solid #1D1E20;
+}
