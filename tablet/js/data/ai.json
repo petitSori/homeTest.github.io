@@ -60,7 +60,7 @@
       "button": {
         "imageSrc": "./images/ai/step6_btn.png"
       },
-      "bubbleImage": { "src": "../images/ai/step6_bubble.png", "class": "balloon" }
+      "bubbleImage": { "src": "./images/ai/step6_bubble.png", "class": "balloon" }
     },
     {
       "dataStep": 7,
@@ -80,7 +80,7 @@
       "button": {
         "imageSrc": "./images/ai/step8_btn.png"
       },
-      "bubbleImage": { "src": "../images/ai/step8_bubble.png", "class": "balloon" }
+      "bubbleImage": { "src": "./images/ai/step8_bubble.png", "class": "balloon" }
     },
     {
       "dataStep": 9,
@@ -103,7 +103,7 @@
       "button": {
         "imageSrc": "./images/ai/step10_btn.png"
       },
-      "bubbleImage": { "src": "../images/ai/step10_bubble.png", "class": "balloon" }
+      "bubbleImage": { "src": "./images/ai/step10_bubble.png", "class": "balloon" }
     },
     {
       "dataStep": 11,
@@ -116,7 +116,7 @@
       "button": {
         "imageSrc": "./images/ai/step11_btn.png"
       },
-      "bubbleImage": { "src": "../images/ai/step11_bubble.png", "class": "balloon" }
+      "bubbleImage": { "src": "./images/ai/step11_bubble.png", "class": "balloon" }
     },
     {
       "dataStep": 12,
@@ -139,7 +139,7 @@
       "button": {
         "imageSrc": "./images/ai/step13_btn.png"
       },
-      "bubbleImage": { "src": "../images/ai/step13_bubble.png", "class": "balloon" }
+      "bubbleImage": { "src": "./images/ai/step13_bubble.png", "class": "balloon" }
     },
     {
       "dataStep": 14,
