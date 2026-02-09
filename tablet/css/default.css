@@ -1,6 +1,6 @@
 :root {
 	--scale-x: calc(100vw / 1920);
-	--scale-y: calc(100dvh/ 1200);
+	--scale-y: calc(100vh/ 1200);
 	--scale: min(var(--scale-x), var(--scale-y));
   }
 
@@ -24,7 +24,7 @@ button{border:0 none;border-radius:0;background-color:transparent;cursor:pointer
 #tutorial {
 	position: relative;
 	width: 100vw;
-	height: 100dvh;
+	height: 100vh;
 	overflow: hidden;
 	background-color: #222;
 	display: flex;
