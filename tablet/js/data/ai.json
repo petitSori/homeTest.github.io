@@ -25,7 +25,7 @@
       "class": "cont",
       "images": [
         { "src": "./images/ai/step3.png", "class": "size-100" },
-        { "src": "./images/ai/step3_popup.png", "class": "size-100 step" }
+        { "src": "./images/ai/step3_popup.gif", "class": "step background" }
       ]
     },
     {
