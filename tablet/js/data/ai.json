@@ -14,7 +14,7 @@
       "dataStep": 2,
       "class": "cont",
       "images": [
-        { "src": "./images/ai/step2.png", "class": "size-100" }
+        { "src": "./images/ai/step2.gif", "class": "size-100" }
       ],
       "button": {
         "imageSrc": "./images/ai/step2_btn.png"
