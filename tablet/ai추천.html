@@ -150,7 +150,7 @@
 				button.addEventListener("click", () => {
 					// 🔹 cont + end 클래스가 있는 섹션이면 reload
 					if (sectionElement.classList.contains("cont") && sectionElement.classList.contains("end")) {
-						location.reload();
+						window.location.replace("index.html");
 						return;
 					}
 
