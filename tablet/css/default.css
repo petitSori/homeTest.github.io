@@ -1,0 +1,326 @@
+:root {
+	--vh: 1vh;
+	--scale-x: calc(100vw / 1920);
+	--scale-y: calc((var(--vh) * 100) / 1200);
+	--scale: min(var(--scale-x), var(--scale-y));
+  }
+
+body{ width:100%; height:100%; overflow-x: hidden; text-align:left; font-size:20px; font-weight:400; font-family:"pretendard", Helvetica, Tahoma, Verdana, Arial, AppleGothic, UnDotum, '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', '굴림', 'Gulim', sans-serif; color:#494A4B; line-height:1.4; letter-spacing: -0.02em !important; -webkit-overflow-scrolling:touch;  }
+body,p,h1,h2,h3,h4,h5,h6,table,caption,form,fieldset,legend,span,div,th,td,address{margin:0; padding:0; letter-spacing: -0.02em;}
+button, span, strong, input, b, em{font-size:inherit; font-family: "pretendard";color:inherit;font-style:normal}
+section, article, aside, header, footer, nav, hgroup, dialog, details, summary, figure, figcaption {display: block;}
+cite{display:inline}
+ul,ol,li,dl,dt,dd{list-style:none; margin:0; padding:0px; letter-spacing: -0.02em;}
+a{display:inline-block;font-size:0}
+a:link {text-decoration:none;} 
+a:visited {text-decoration:none;}
+img{border:0;}
+label, input, textarea, select{vertical-align:middle}
+ol, ul{list-style:none;} 
+table{border-collapse:collapse;table-layout:fixed;}
+fieldset{border:none}
+button, a{cursor: pointer; touch-action:manipulation; height:auto; margin: 0; padding: 0; box-sizing: border-box;}
+button, input, select, button:focus, input:focus, select:focus, textarea{outline: none;}
+button{border:0 none;border-radius:0;background-color:transparent;cursor:pointer;}
+#tutorial {
+	position: relative;
+	width: 100vw;
+	height: calc(var(--vh) * 100);
+	overflow: hidden;
+	background-color: #222;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.bounce {
+	animation-name: bounce;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.toast {
+	position: absolute;
+	top: auto !important;
+	bottom: 19% !important;
+	left: 50% !important;
+	margin-left: -9.13% !important;
+	opacity: 0;
+	width: 18.26% !important;
+	animation-name: toast;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+	transition-delay:1s;
+	animation-delay: 0s;
+}
+.toast2 {
+	position: absolute;
+	top: 8% !important;
+	left: 50% !important;
+	margin-left: -19.055% !important;
+	opacity: 0;
+	width: 38.11% !important;
+	animation-name: toast2;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+	transition-delay:1s;
+	animation-delay: 0s;
+}
+@keyframes bounce {
+    0% {
+		transform:translateY(-20%);
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform:translateY(50%);
+		opacity: 0;
+	}
+}
+@keyframes toast {
+    0% {
+		opacity: 0;
+		transform:translateY(50%)
+	}
+	15% {
+		opacity: 1;
+		transform:translateY(0)
+	}
+	100% {
+		opacity: 1;
+		transform:translateY(0)
+	}
+}
+@keyframes toast2 {
+    0% {
+		opacity: 0;
+		transform:translateY(-50%)
+	}
+	15% {
+		opacity: 1;
+		transform:translateY(0)
+	}
+	100% {
+		opacity: 1;
+		transform:translateY(0)
+	}
+}
+
+@keyframes delayBtn {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.on{opacity:1;visibility:visible}
+.ani0{transition-delay:0s;animation-delay: 0s;}
+.ani05{transition-delay:.5s;animation-delay: .5s;}
+.ani1{transition-delay:1s;animation-delay: 1s;}
+.ani2{transition-delay:2s;animation-delay: 2s;}
+.ani3{transition-delay:3s;animation-delay: 3s;}
+.ani4{transition-delay:4s;animation-delay: 4s;}
+.ani5{transition-delay:5s;animation-delay: 5s;}
+.ani6{transition-delay:6s;animation-delay: 6s;}
+.ani7{transition-delay:7s;animation-delay: 7s;}
+.ani8{transition-delay:8s;animation-delay: 8s;}
+.ani9{transition-delay:9s;animation-delay: 9s;}
+.ani10{transition-delay:10s;animation-delay: 10s;}
+.ani11{transition-delay:11s;animation-delay: 11s;}
+.ani12{transition-delay:12s;animation-delay: 12s;}
+.ani13{transition-delay:13s;animation-delay: 13s;}
+.ani14{transition-delay:14s;animation-delay: 14s;}
+.ani15{transition-delay:15s;animation-delay: 15s;}
+
+.scroll_wrap{position:absolute;top:241px;left:357px;width:309px;height:446px;overflow:Hidden;}
+.scroll_wrap img{display:block;width:100%;transition:.5s}
+
+
+.animContainer {
+	opacity: 1;
+	position: absolute;
+	bottom: 21%;
+	right: 3%;
+	width: 64px;
+	height: 64px;
+	pointer-events: none;
+}
+.animContainer lottie-player {
+	width: 100%;
+	height: 100%;
+}
+.opacityAni1 {
+	animation-name: opacity;
+	animation-duration: 0.8s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni1.delay {
+	animation-name: opacity2;
+	animation-duration: 1.6s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni2 {
+	animation-name: opacity2;
+	animation-duration: 1.6s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni3 {
+	animation-name: opacity3;
+	animation-duration: 2.4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni4 {
+	animation-name: opacity4;
+	animation-duration: 3.2s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni5 {
+	animation-name: opacity5;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni6 {
+	animation-name: opacity5;
+	animation-duration: 4.8s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAni7 {
+	animation-name: opacity5;
+	animation-duration: 5.6s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.opacityAniEnd {
+	animation-name: opacityEnd;
+	animation-duration: 0.8s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes opacity {
+	0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes opacity2 {
+	0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes opacity3 {
+	0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes opacity4 {
+	0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes opacityEnd {
+	0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+#mateTablet {
+	position: relative;
+	width: 1920px;
+	height: 1200px;
+	max-width: none;
+	max-height: none;
+	transform: scale(var(--scale));
+	transform-origin: center center;
+}
+#mateTablet > section {
+	position: relative;
+	width: 100%;
+	padding-bottom: 62.5%;
+	overflow: hidden;
+	touch-action: manipulation;
+}
+#mateTablet > section.page-box {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+}
+#mateTablet > section.page-box.on {
+	display: block;
+}
+#mateTablet > section.cont img {
+	z-index: 1;
+	display: block;
+}
+#mateTablet > section.cont img.size-100 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	display: block;
+	width: 100%;
+}
+#mateTablet > section.cont.scroll .step{
+	z-index: 1;
+}
+
+#mateTablet > section.cont .scroll-box {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+	z-index: 0;
+}
+#mateTablet > section.cont .scroll-inner-box::-webkit-scrollbar {
+	background: transparent;
+	width: 0;
+	height: 0;
+}
+#mateTablet > section.cont .scroll-inner-box::-webkit-scrollbar-thumb {
+	background: transparent;
+}
+#mateTablet > section.cont .scroll-inner-box::-webkit-scrollbar-track {
+	background: transparent;
+}
+#mateTablet > section.cont .scroll-inner-box img{
+	top: 0;
+	left: 0;
+	transform: translate(0, 0);
+	-webkit-transform: translate(0,0);
+	-moz-transform: translate(0,0);
+}
+#mateTablet > section.cont button {
+	position: absolute;
+	z-index: 1;
+}
+#mateTablet > section.cont button img {
+	transition: transform 0.1s ease-out;
+}
+#mateTablet > section.cont button:active img{
+	transform: scale(0.96);
+	-webkit-transform: scale(0.96);
+	-moz-transform: scale(0.96);
+}
+
+#mateTablet > section.cont button img.btn-img {
+	width: 100%;
+	position: relative;
+	top: auto;
+	left: auto;
+}
