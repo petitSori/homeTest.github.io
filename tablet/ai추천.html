@@ -254,6 +254,18 @@
 			}
 		});
 	}
+	function updateScale() {
+	const vh = window.innerHeight;
+	const scale = vh / 1200;
+
+	document.documentElement.style.setProperty('--scale', scale);
+}
+
+	// 최초 실행
+	updateScale();
+
+	// 리사이즈 대응
+	window.addEventListener('resize', updateScale);
 </script>
 </body>
 </html>
