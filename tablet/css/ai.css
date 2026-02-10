@@ -182,7 +182,9 @@
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	animation: cardFloat 1.6s ease-in-out infinite;
+	transition: 0.2s all;
+	animation: cardFloat 1.7s ease-in-out infinite;
+	will-change: transform;
 }
 
 #mateTablet > section.cont[data-step="14"] .deco{
@@ -213,7 +215,7 @@
 
 
 @keyframes cardFloat {
-	0% { transform: translateX(-50%) translateY(15%); }
-	50% { transform: translateX(-50%) translateY(0); }
+	0%   { transform: translateX(-50%) translateY(15%); }
+	50%  { transform: translateX(-50%) translateY(1%); }
 	100% { transform: translateX(-50%) translateY(15%); }
 }
