@@ -23,9 +23,9 @@ label, input, textarea, select{vertical-align:middle}
 ol, ul{list-style:none;} 
 table{border-collapse:collapse;table-layout:fixed;}
 fieldset{border:none}
-button, a{cursor: pointer; touch-action:manipulation; height:auto; margin: 0; padding: 0; box-sizing: border-box;-webkit-tap-highlight-color: transparent !important;}
-button, input, select, button:focus, input:focus, select:focus, textarea{outline: none; -webkit-tap-highlight-color: transparent !important;}
-button{border:0 none;border-radius:0;background-color:transparent;cursor:pointer; -webkit-tap-highlight-color: transparent !important;}
+button, a{outline: none; cursor: pointer; touch-action:manipulation; height:auto; margin: 0; padding: 0; box-sizing: border-box;-webkit-tap-highlight-color: transparent; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+button, input, select, button:focus, input:focus, select:focus, textarea{outline: none; -webkit-tap-highlight-color: transparent;-webkit-tap-highlight-color: rgba(0, 0, 0, 0)}
+button{border:0 none;border-radius:0;background-color:transparent;cursor:pointer; -webkit-tap-highlight-color: transparent;-webkit-tap-highlight-color: rgba(0, 0, 0, 0)}
 #tutorial {
 	position: relative;
 	width: 100vw;
