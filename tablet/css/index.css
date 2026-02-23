@@ -1,0 +1,27 @@
+/* step */
+#mateTablet > section.cont[data-step="1"] a{
+	display: block;
+	position: absolute;
+	width: 32.02%;
+	top: 40.6%;
+	left: 16.5%;
+	z-index: 1;
+}
+
+#mateTablet > section.cont[data-step="1"] a + a{
+	left: auto;
+	right: 16.5%;
+}
+
+#mateTablet > section.cont[data-step="1"] a img{
+	position: relative;
+	width: 100%;
+	transition: 0.2s all;
+}
+
+#mateTablet > section.cont[data-step="1"] a:active img{
+	transform: scale(0.96);
+	-webkit-transform: scale(0.96);
+	-moz-transform: scale(0.96);
+}
+
