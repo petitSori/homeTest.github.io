@@ -23,7 +23,7 @@ label, input, textarea, select{vertical-align:middle}
 ol, ul{list-style:none;} 
 table{border-collapse:collapse;table-layout:fixed;}
 fieldset{border:none}
-button, a{cursor: pointer; touch-action:manipulation; height:auto; margin: 0; padding: 0; box-sizing: border-box;}
+button, a{cursor: pointer; touch-action:manipulation; height:auto; margin: 0; padding: 0; box-sizing: border-box;-webkit-tap-highlight-color: transparent;}
 button, input, select, button:focus, input:focus, select:focus, textarea{outline: none;}
 button{border:0 none;border-radius:0;background-color:transparent;cursor:pointer;}
 #tutorial {
@@ -310,6 +310,14 @@ button{border:0 none;border-radius:0;background-color:transparent;cursor:pointer
 #mateTablet > section.cont button {
 	position: absolute;
 	z-index: 1;
+}
+#mateTablet > section.cont button img {
+	transition: transform 0.1s ease-out;
+}
+#mateTablet > section.cont button:active img{
+	transform: scale(0.96);
+	-webkit-transform: scale(0.96);
+	-moz-transform: scale(0.96);
 }
 
 #mateTablet > section.cont button img.btn-img {
