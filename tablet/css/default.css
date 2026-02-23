@@ -242,7 +242,7 @@ button{border:0 none;border-radius:0;background-color:transparent;cursor:pointer
 	height: 800px;
 	max-width: none;
 	max-height: none;
-	transform: scale(var(--scale));
+	transform: scale(max(calc(100vw / 1340),calc((var(--vh) * 100) / 800)));
 	transform-origin: center center;
 }
 #mateTablet > section {
