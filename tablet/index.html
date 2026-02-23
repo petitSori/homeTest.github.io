@@ -31,17 +31,20 @@
 
 
 	<script>
-		function setViewportUnit() {
-			const vh = window.innerHeight * 0.01;
-			document.documentElement.style.setProperty('--vh', `${vh}px`);
-		
-			const scale = window.innerHeight / 800;
-			document.documentElement.style.setProperty('--scale', scale);
-		}
-		
-		setViewportUnit();
-		window.addEventListener('resize', setViewportUnit);
-		window.addEventListener('orientationchange', setViewportUnit);
+
+	function updateScale() {
+		const vh = window.innerHeight;
+		const scale = vh / 800;
+
+		document.documentElement.style.setProperty('--scale', scale);
+	}
+
+	// 최초 실행
+	updateScale();
+
+	// 리사이즈 대응
+	window.addEventListener('resize', updateScale);
+	
 	</script>
 </body>
 </html>
