@@ -311,14 +311,6 @@ button{border:0 none;border-radius:0;background-color:transparent;cursor:pointer
 	position: absolute;
 	z-index: 1;
 }
-#mateTablet > section.cont button img {
-	transition: transform 0.1s ease-out;
-}
-#mateTablet > section.cont button:active img{
-	transform: scale(0.96);
-	-webkit-transform: scale(0.96);
-	-moz-transform: scale(0.96);
-}
 
 #mateTablet > section.cont button img.btn-img {
 	width: 100%;
