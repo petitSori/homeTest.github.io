@@ -235,11 +235,16 @@ button:active {
 	0% {opacity: 0;}
     100% {opacity: 1;}
 }
+.test {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: 16px;
+}
 #mateMobile {
 	position: relative;
 	width: 100%;
-	height: 812px;
-	/* max-width: 375px; */
+	height: 100%;
 }
 #mateMobile > section {
 	position: relative;
@@ -247,15 +252,10 @@ button:active {
 	min-height: 100%;
 	overflow: hidden;
 	touch-action: manipulation;
+	text-align: center;
 }
 #mateMobile > section.page-box {
 	display: none;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
 }
 #mateMobile > section.page-box.on {
 	display: block;
@@ -263,16 +263,10 @@ button:active {
 #mateMobile > section.cont img {
 	z-index: 1;
 	display: block;
+	width: 100%;
 }
 #mateMobile > section.cont img.size-100 {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
 	display: block;
-	width: 100%;
 }
 #mateMobile > section.cont.scroll .step{
 	z-index: 1;
