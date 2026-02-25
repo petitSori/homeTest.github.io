@@ -31,7 +31,7 @@ button:active {
 #tutorial {
 	position: relative;
 	width: 100%;
-	min-height: 100vh;
+	min-height: 100svh;
 	overflow: hidden;
 	background-color: #222;
 }
@@ -239,7 +239,7 @@ button:active {
 	position: relative;
 	width: 100%;
 	height: 812px;
-	max-width: 375px;
+	/* max-width: 375px; */
 }
 #mateMobile > section {
 	position: relative;
