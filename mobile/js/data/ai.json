@@ -1,0 +1,157 @@
+{
+  "sections": [
+    {
+      "dataStep": 1,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step1.png", "class": "size-100" }
+      ],
+      "button": {
+        "imageSrc": "./images/ai/step1_btn.png"
+      }
+    },
+    {
+      "dataStep": 2,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step2.gif", "class": "size-100" }
+      ],
+      "button": {
+        "imageSrc": "./images/ai/step2_btn.png"
+      }
+    },
+    {
+      "dataStep": 3,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step3.png", "class": "size-100" },
+        { "src": "./images/ai/step3_popup.gif", "class": "step background" }
+      ]
+    },
+    {
+      "dataStep": 4,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step4.png", "class": "size-100" },
+        { "src": "./images/ai/step4_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/ai/step4_bubble.png"
+      }
+    },
+    {
+      "dataStep": 5,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step5.png", "class": "size-100" },
+        { "src": "./images/ai/step5_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/ai/step5_bubble.png"
+      }
+    },
+    {
+      "dataStep": 6,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step6.png", "class": "size-100" },
+        { "src": "./images/ai/step6_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/ai/step6_btn.png"
+      },
+      "bubbleImage": { "src": "./images/ai/step6_bubble.png", "class": "balloon" }
+    },
+    {
+      "dataStep": 7,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step7.png", "class": "size-100" },
+        { "src": "./images/ai/step7_popup.png", "class": "size-100 step" },
+        { "src": "./images/ai/step7_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/ai/step7_btn.png"
+      },
+      "bubbleImage": { "src": "./images/ai/step7_bubble.png", "class": "balloon" }
+    },
+    {
+      "dataStep": 8,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step8.png", "class": "size-100" },
+        { "src": "./images/ai/step8_popup.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/ai/step8_bubble.png"
+      }
+    },
+    {
+      "dataStep": 9,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step9.png", "class": "size-100" },
+        { "src": "./images/ai/step9_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/ai/step9_btn.png"
+      },
+      "bubbleImage": { "src": "./images/ai/step9_bubble.png", "class": "balloon" }
+    },
+    {
+      "dataStep": 10,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step10.png", "class": "size-100" },
+        { "src": "./images/ai/step10_1.png", "class": "size-100 step" },
+        { "src": "./images/ai/step10_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/ai/step10_btn.png"
+      },
+      "bubbleImage": { "src": "./images/ai/step10_bubble.png", "class": "balloon" }
+    },
+    {
+      "dataStep": 11,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step11.png", "class": "size-100" },
+        { "src": "./images/ai/step11_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/ai/step11_bubble.png"
+      }
+    },
+    {
+      "dataStep": 12,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step12.png", "class": "size-100" },
+        { "src": "./images/ai/step12_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/ai/step12_btn.png"
+      },
+      "bubbleImage": { "src": "./images/ai/step12_bubble.png", "class": "balloon" }
+    },
+    {
+      "dataStep": 13,
+      "class": "cont",
+      "images": [
+        { "src": "./images/ai/step13.png", "class": "size-100" },
+        { "src": "./images/ai/step13_deco.png", "class": "deco"  }
+      ]
+    },
+    {
+      "dataStep": 14,
+      "class": "cont end",
+      "images": [
+        { "src": "./images/ai/end.png", "class": "size-100" },
+        { "src": "./images/ai/end_deco.gif", "class": "deco" }
+      ],
+      "button": {
+        "imageSrc": "./images/ai/end_btn.png"
+      }
+    }
+  ]
+}
