@@ -1,0 +1,61 @@
+{
+  "sections": [
+    {
+      "dataStep": 1,
+      "class": "cont",
+      "images": [
+        { "src": "./images/promotion/event1/step1.png", "class": "size-100" },
+        { "src": "./images/promotion/event1/step1_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/promotion/event1/step1_bubble.png"
+      }
+    },
+    {
+      "dataStep": 2,
+      "class": "cont scroll",
+      "images": [
+        { "src": "./images/promotion/event1/scroll_bg.png", "class": "size-100 z-1" }
+      ],
+      "scrollBox": {
+        "src": "./images/promotion/event1/scroll_img.png", "class": "size-100"
+      }
+    },
+    {
+      "dataStep": 3,
+      "class": "cont",
+      "images": [
+        { "src": "./images/promotion/event1/step3.png", "class": "size-100" },
+        { "src": "./images/promotion/event1/step3_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/promotion/event1/step3_bubble.png"
+      }
+    },
+    {
+      "dataStep": 4,
+      "class": "cont",
+      "images": [
+        { "src": "./images/promotion/event1/step3.png", "class": "size-100" },
+        { "src": "./images/promotion/event1/step4_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/promotion/event1/step4_btn.png"
+      },
+      "bubbleImage": { "src": "./images/promotion/event1/step4_bubble.png", "class": "balloon" }
+    },
+    {
+      "dataStep": 5,
+      "class": "cont url",
+      "images": [
+        { "src": "./images/promotion/event1/step5.png", "class": "size-100" },
+        { "src": "./images/promotion/event1/step4_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+          "imageSrc": "./images/promotion/event1/step5_btn.png",
+          "url": "../tablet/promotion_event1.html"
+      },
+      "bubbleImage": { "src": "./images/promotion/event1/step5_bubble.png", "class": "balloon" }
+    }
+  ]
+}
