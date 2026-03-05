@@ -1,0 +1,118 @@
+/* step */
+
+#mateTablet > section.cont[data-step="1"] .balloon{
+	position: absolute;
+	width: 30.896%;
+	bottom:8.875%;
+	left: 50%;
+	margin-left: -15.448%;
+
+	opacity: 0;
+	animation: delayBtn 0.5s ease forwards;
+	animation-delay: 1.8s;
+}
+
+#mateTablet > section.cont[data-step="2"] button{
+	position: absolute;
+	width: 50.15%;
+	bottom: 7.375%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+#mateTablet > section.cont[data-step="2"] .balloon{
+	position: absolute;
+	width: 30.6%;
+	bottom:18.5%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+#mateTablet > section.cont[data-step="3"] button{
+	position: absolute;
+	width: 90.449%;
+	bottom:6.5%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+#mateTablet > section.cont[data-step="3"] .balloon{
+	position: absolute;
+	width: 25.97%;
+	bottom:18.5%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+#mateTablet > section.cont[data-step="4"] button{
+	position: absolute;
+	width: 39.03%;
+	bottom:17.875%;
+	left: 12.76%;
+
+	opacity: 0;
+	animation: delayBtn 0.5s ease forwards;
+	animation-delay: 1s;
+}
+
+#mateTablet > section.cont[data-step="5"] button{
+	position: absolute;
+	width: 47.314%;
+	bottom:2.6%;
+	right: 2.388%;
+}
+
+#mateTablet > section.cont[data-step="5"] .balloon{
+	position: absolute;
+	width: 35.448%;
+	bottom:14.5%;
+	right: 8.2835%;
+}
+
+#mateTablet > section.cont[data-step="6"] .deco {
+	position: absolute;
+	width: 26.12%;
+	bottom: 6.25%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+#mateTablet > section.cont[data-step="7"] .z-2{
+	z-index: 2;
+}
+
+#mateTablet > section.cont[data-step="7"] .lottie-box{
+	position: absolute;
+	width: 47.05%;
+	top: 50%;
+	left: 3%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+}
+
+#mateTablet > section.cont[data-step="7"] button{
+	position: absolute;
+	width: 41.045%;
+	bottom:33.1875%;
+	right: 5.97%;
+	z-index: 2;
+}
+
+#mateTablet > section.cont[data-step="7"] .balloon{
+	position: absolute;
+	width: 34.63%;
+	bottom:18.5625%;
+	right: 8.768%;
+	z-index: 2;
+}

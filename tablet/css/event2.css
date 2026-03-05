@@ -1,0 +1,102 @@
+/* step */
+
+#mateTablet > section.cont[data-step="1"] .balloon{
+	position: absolute;
+	width: 22.91%;
+	bottom:14.5%;
+	right: 14.589%;
+}
+
+#mateTablet > section.cont[data-step="1"] button{
+	position: absolute;
+	width: 47.314%;
+	bottom: 2.5%;
+	right: 2.388%;
+}
+
+#mateTablet > section.cont[data-step="2"] .balloon{
+	position: absolute;
+	width: 26.045%;
+	bottom:14.5%;
+	right: 13.02%;
+}
+#mateTablet > section.cont[data-step="2"] button{
+	position: absolute;
+	width: 47.314%;
+	bottom: 2.5%;
+	right: 2.388%;
+}
+#mateTablet > section.cont[data-step="3"] .deco {
+	position: absolute;
+	width: 26.12%;
+	bottom: 6.25%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+#mateTablet > section.cont[data-step="4"] .z-2{
+	z-index: 2;
+}
+
+#mateTablet > section.cont[data-step="4"] .lottie-box{
+	position: absolute;
+	width: 47.05%;
+	top: 50%;
+	left: 3%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+}
+#mateTablet > section.cont[data-step="4"] .balloon{
+	position: absolute;
+	width: 33.73%;
+	bottom:4.125%;
+	left: 50%;
+	margin-left: -16.865%;
+	z-index: 2;
+
+	opacity: 0;
+	animation: delayBtn 0.5s ease forwards;
+	animation-delay: 1.6s;
+}
+#mateTablet > section.cont[data-step="5"] button{
+	position: absolute;
+	width: 50.15%;
+	bottom: 7.375%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+#mateTablet > section.cont[data-step="6"] .z-2{
+	z-index: 2;
+}
+
+#mateTablet > section.cont[data-step="6"] button{
+	position: absolute;
+	width: 41.045%;
+	bottom:33.1875%;
+	right: 5.97%;
+	z-index: 2;
+}
+
+#mateTablet > section.cont[data-step="6"] .balloon{
+	position: absolute;
+	width: 34.63%;
+	bottom:18.5625%;
+	right: 8.768%;
+	z-index: 2;
+}
+
+#mateTablet > section.cont[data-step="6"] .lottie-box{
+	position: absolute;
+	width: 47.05%;
+	top: 50%;
+	left: 3%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+}
