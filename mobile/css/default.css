@@ -1,6 +1,6 @@
 :root {
 	--vh: 1vh;
-	--scale-x: calc(100vw / 2080);
+	--scale-x: calc(100vw / 1080);
 	--scale-y: calc((var(--vh) * 100) / 2340);
 	--scale: min(var(--scale-x), var(--scale-y));
 }
@@ -48,7 +48,7 @@ button:active {
 .mobile #tutorial {
 	position: relative;
 	width: 100%;
-	height: calc(var(--vh) * 100);
+	height: 100dvh;
 	/* min-height: 100svh; */
 	overflow: hidden;
 	background-color: #222;
