@@ -1,5 +1,5 @@
 :root {
-	--vh: 1vh;
+	--vh: 1svh;
 	--scale-x: calc(100vw / 1080);
 	--scale-y: calc((var(--vh) * 100) / 2340);
 	--scale: min(var(--scale-x), var(--scale-y));
