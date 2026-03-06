@@ -1,0 +1,13 @@
+{
+  "sections": [
+    {
+      "dataStep": 1,
+      "class": "cont",
+      "lottieSrc": "./images/promotion/loading.json",
+      "images": [
+        { "src": "./images/promotion/loading.png", "class": "size-100" },
+        { "src": "./images/promotion/loading_img.gif", "class": "gif" }
+      ]
+    }
+  ]
+}

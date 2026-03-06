@@ -1,0 +1,28 @@
+{
+  "sections": [
+    {
+      "dataStep": 1,
+      "class": "cont",
+      "images": [
+        { "src": "./images/promotion/end_bg.png", "class": "size-100" },
+        { "src": "./images/promotion/end_dim.png", "class": "size-100 step" }
+      ],
+      "button": {
+        "imageSrc": "./images/promotion/end_btn.png"
+      },
+      "bubbleImage": { "src": "./images/promotion/end_bubble.png", "class": "balloon" }
+    },
+    {
+      "dataStep": 2,
+      "class": "cont url",
+      "images": [
+        { "src": "./images/promotion/header.png", "class": "size-100 fixed" },
+        { "src": "./images/promotion/result_img.png", "class": "size-100" }
+      ],
+      "button": {
+        "imageSrc": "./images/promotion/home_btn.png",
+        "url":"./promotion_gate.html"
+      }
+    }
+  ]
+}
