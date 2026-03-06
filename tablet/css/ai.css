@@ -1,0 +1,234 @@
+/* step */
+#mateTablet > section.cont[data-step="1"] button{
+	position: absolute;
+	width: 6%;
+	bottom: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+#mateTablet > section.cont[data-step="1"] button img{
+	animation-name: bounce !important;
+	animation-duration: 1.2s !important;
+	animation-iteration-count: infinite !important;
+	animation-timing-function: linear !important; 
+}
+
+#mateTablet > section.cont[data-step="2"] button{
+	position: absolute;
+	width: 95.25%;
+	bottom:4%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	z-index: 2;
+}
+#mateTablet > section.cont[data-step="2"]::after{
+	width: 100%;
+	height: 19.25%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content:'';
+	background: linear-gradient(180deg, rgba(23, 23, 23, 0) 0%, #171717 100%);
+	z-index: 1;
+}
+
+#mateTablet > section.cont[data-step="3"] .background{
+	position: absolute;
+	width: 37.46%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	z-index: 2;
+}
+#mateTablet > section.cont[data-step="3"]:has(.background.opacityAni1)::after{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content:'';
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 1;
+	animation-name: opacity;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+#mateTablet > section.cont[data-step="4"] button {
+	position: absolute;
+	width: 22.69%;
+	top: 30.5%;
+	left: 0.7%;
+
+	opacity: 0;
+	animation: delayBtn 0.5s ease forwards;
+	animation-delay: 1s;
+}
+#mateTablet > section.cont[data-step="5"] button {
+	position: absolute;
+	width: 22.69%;
+	top: 30.5%;
+	left: 0.7%;
+
+	opacity: 0;
+	animation: delayBtn 0.5s ease forwards;
+	animation-delay: 1s;
+}
+#mateTablet > section.cont[data-step="6"] button{
+	position: absolute;
+	width: 26.194%;
+	top: 18.2%;
+	left: 24.1%;
+}
+
+#mateTablet > section.cont[data-step="6"] .balloon {
+	position: absolute;
+	width: 36.05%;
+	bottom: 22%;
+	left: 19.17%;
+}
+#mateTablet > section.cont[data-step="7"] button{
+	position: absolute;
+	width: 44.82%;
+	bottom: 6.5%;
+	right: 4.58%;
+
+	animation-name: opacity;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+#mateTablet > section.cont[data-step="7"] .balloon {
+	position: absolute;
+	width: 31.42%;
+	bottom: 18.5%;
+	right: 11.4%;
+}
+#mateTablet > section.cont[data-step="8"] button {
+	position: absolute;
+	width: 22.69%;
+	top: 30.5%;
+	left: 0.7%;
+
+	opacity: 0;
+	animation: delayBtn 0.5s ease forwards;
+	animation-delay: 1s;
+}
+#mateTablet > section.cont[data-step="9"] button{
+	position: absolute;
+	width: 48.508%;
+	top: 44.75%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+#mateTablet > section.cont[data-step="9"] button img{
+	margin-left: -0.1%;
+}
+
+#mateTablet > section.cont[data-step="9"] .balloon {
+	position: absolute;
+	width: 27.4%;
+	bottom: 17.625%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+#mateTablet > section.cont[data-step="10"] button{
+	position: absolute;
+	width: 47.015%;
+	bottom: 6.5%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+#mateTablet > section.cont[data-step="10"] .balloon {
+	position: absolute;
+	width: 35.75%;
+	bottom: 18.625%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+#mateTablet > section.cont[data-step="11"] button {
+	position: absolute;
+	width: 30.6%;
+	top: 27.875%;
+	right: 37.3%;
+
+	opacity: 0;
+	animation: delayBtn 0.5s ease forwards;
+	animation-delay: 1s;
+}
+
+#mateTablet > section.cont[data-step="12"] button{
+	position: absolute;
+	width: 47.313%;
+	bottom: 2.5%;
+	right: 2.4%;
+}
+
+#mateTablet > section.cont[data-step="12"] .balloon {
+	position: absolute;
+	width: 26.05%;
+	bottom: 14.5%;
+	right: 13%;
+}
+
+#mateTablet > section.cont[data-step="13"] .deco {
+	position: absolute;
+	width: 26.12%;
+	bottom: 6.25%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+#mateTablet > section.cont[data-step="14"] .deco{
+	position: absolute;
+	width: 47.05%;
+	top: 50%;
+	left: 3%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+}
+
+#mateTablet > section.cont[data-step="14"] button{
+	position: absolute;
+	width: 41.04%;
+	bottom: 33.1%;
+	right: 6%;
+}
+
+/* #mateTablet > section.cont[data-step="2"] .scroll-inner-box {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+} */
+
+
+@keyframes cardFloat {
+	0%   { transform: translateX(-50%) translateY(15%); }
+	50%  { transform: translateX(-50%) translateY(0%); }
+	100% { transform: translateX(-50%) translateY(15%); }
+}
