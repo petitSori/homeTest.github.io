@@ -8,6 +8,17 @@
         { "src": "./images/promotion/loading.png", "class": "size-100" },
         { "src": "./images/promotion/loading_img.gif", "class": "gif" }
       ]
+    },
+    {
+      "dataStep": 2,
+      "class": "cont url",
+      "images": [
+        { "src": "./images/promotion/gate_bg.png", "class": "size-100" }
+      ],
+      "button": [
+        { "imageSrc": "./images/promotion/event1_btn.png", "url": "./promotion_event1_app.html" },
+        { "imageSrc": "./images/promotion/event2_btn.png", "url": "./promotion_event2_app.html" }
+      ]
     }
   ]
 }
