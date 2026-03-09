@@ -1,0 +1,30 @@
+/* step */
+#mateMobile > section.cont[data-step="1"] .gif{
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 37.19%;
+	left: 0;
+}
+
+#mateMobile > section.cont[data-step="1"] .lottie-box{
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 54.433%;
+	left: 0;
+}
+
+#mateMobile > section.cont[data-step="2"] button{
+	display: block;
+	position: absolute;
+	width: 89.33%;
+	top: 21.18%;
+	left: 5.33%;
+}
+
+#mateMobile > section.cont[data-step="2"] button + button{
+	top: 50.61%;
+}
+
+
