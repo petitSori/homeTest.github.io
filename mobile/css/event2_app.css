@@ -1,0 +1,92 @@
+/* step */
+#mateMobile > section.cont[data-step="1"] button {
+	position: absolute;
+	width: 57.8%;
+	top: 3.078%;
+	left: 50%;
+	margin-left: -28.9%;
+
+	opacity: 0;
+	animation: delayBtn 0.5s ease forwards;
+	animation-delay: 1s;
+}
+#mateMobile > section.cont[data-step="2"] .slide-img {
+	position: absolute;
+	top:24.384%;
+	left: 0;
+	width: 178.67%;
+}
+#mateMobile > section.cont[data-step="2"].on .slide-img img {
+	animation: slide 2s ease forwards;
+	animation-delay: 1;
+}
+
+#mateMobile > section.cont[data-step="3"] button {
+	position: absolute;
+	width: 68%;
+	top: 5.665%;
+	left: 50%;
+	margin-left: -34%;
+
+	opacity: 0;
+	animation: delayBtn 0.5s ease forwards;
+	animation-delay: 1s;
+}
+#mateMobile > section.cont[data-step="5"] .z-1 {
+	position: relative;
+	z-index: 1;
+}
+
+#mateMobile > section.cont[data-step="6"] button {
+	position: absolute;
+	width: 78.4%;
+	bottom: 4.679%;
+	margin-left: -39.2%;
+
+	opacity: 0;
+	animation: delayBtn 0.5s ease forwards;
+	animation-delay: 1s;
+}
+#mateMobile > section.cont[data-step="7"] button {
+	position: absolute;
+	width: 89.33%;
+	bottom: 2.955%;
+	left: 5.33%;
+}
+#mateMobile > section.cont[data-step="7"] .balloon {
+	position: absolute;
+	width: 62.88%;
+	bottom: 11.33%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+#mateMobile > section.cont[data-step="8"] button {
+	position: absolute;
+	width: 89.33%;
+	bottom: 2.955%;
+	left: 5.33%;
+}
+#mateMobile > section.cont[data-step="8"] .balloon {
+	position: absolute;
+	width: 57.56%;
+	bottom: 11.33%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+}
+
+
+
+
+@keyframes slide {
+    40% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-44%);
+	}
+}
